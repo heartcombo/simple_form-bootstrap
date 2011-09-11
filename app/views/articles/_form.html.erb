@@ -4,6 +4,7 @@
   <div class="inputs">
     <%= f.input :name %>
     <%= f.input :content %>
+    <%= f.input :content_type, :collection => ['Blog', 'Editorial'] %>
   </div>
 
   <div class="actions">
