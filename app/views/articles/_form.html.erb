@@ -5,6 +5,8 @@
     <%= f.input :name %>
     <%= f.input :content %>
     <%= f.input :content_type, :collection => ['Blog', 'Editorial'] %>
+    <%# should be f.input :disabled_text, :disabled => true %>
+    <%= f.input :disabled_text, :disabled => true, :input_html => { :class => 'disabled' } %>
   </div>
 
   <div class="actions">
