@@ -4,13 +4,14 @@ SimpleForm.setup do |config|
   # You can remove any component from the wrapper, change the order or even
   # add your own to the stack. The options given to the wrappers method
   # are used to wrap the whole input (if any exists).
-  config.wrappers :class => 'clearfix', :error_class => :error do |b|
+
+  config.wrappers "inline", :class => 'clearfix', :error_class => :error do |b|
     b.use :placeholder
     b.use :label
+    b.use :hint,  :tag => :span, :class => :'help-inline'
     b.use :tag => 'div', :class => 'input' do |ba|
-      ba.use :input #, :class => 'xlarge'
-      ba.use :hint,  :tag => :span, :class => :hint
-      ba.use :error, :tag => :span, :class => 'help-inline'
+      ba.use :input
+      ba.use :error, :tag => :span, :class => :'help-inline'
     end
   end
 
