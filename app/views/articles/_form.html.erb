@@ -1,4 +1,10 @@
+<div class="well">
+  <a href="#" class="btn" data-code="show">Show Code</a>
+</div>
+
 <%= simple_form_for(@article, :wrapper => "inline") do |f| %>
+ <pre> simple_form_for(@article, :wrapper => "inline") do |f| </pre>
+
 
   <% if f.error_notification %>
     <div class="alert-message warning fade in" data-alert="alert">
@@ -12,15 +18,23 @@
   <%= field_set_tag "Article" do %>
     <%= f.input :name, :input_html => { :class => "span12" },
                 :hint => "add your article title here" %>
+    <pre> f.input :name, :input_html => { :class => "span12" }, :hint => "add your article title here" </pre>
     <%= f.input :content_type, :collection => ['Blog', 'Editorial'],
                 :hint => "this is not used" %>
+    <pre> f.input :content_type, :collection => ['Blog', 'Editorial'], :hint => "this is not used" </pre>
     <%= f.input :content, :input_html => { :class => "span12" } %>
+    <pre> f.input :content, :input_html => { :class => "span12" } </pre>
     <%= f.input :disabled_text, :disabled => true,
                 :hint => "an example of disabled input" %>
+    <pre> f.input :disabled_text, :disabled => true, :hint => "an example of disabled input" </pre>
   <% end %>
 
   <div class="actions">
     <%= f.button :submit, :class => 'primary' %>
     <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
+
   </div>
+    <pre>
+ f.button :submit, :class => 'primary'
+ button_tag 'Cancel', :type => :reset, :class => "btn" </pre>
 <% end %>

@@ -9,3 +9,10 @@
 //= require bootstrap-alerts-1.3.0
 //= require bootstrap-dropdown-1.3.0
 //= require_tree .
+//
+
+$(function() {
+  $('a[data-code]').click(function() {
+    $('pre').toggle();
+  });
+});
