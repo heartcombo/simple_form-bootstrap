@@ -2,9 +2,8 @@
   <a href="#" class="btn" data-code="show">Show Code</a>
 </div>
 
-<%= simple_form_for(@article, :wrapper => "inline") do |f| %>
+<%= simple_form_for @article, :wrapper => "inline" do |f| %>
  <pre> simple_form_for(@article, :wrapper => "inline") do |f| </pre>
-
 
   <% if f.error_notification %>
     <div class="alert-message warning fade in" data-alert="alert">
@@ -12,8 +11,6 @@
       <p><%= f.error_notification %></p>
     </div>
   <% end %>
-
-  <%= f.error_notification %>
 
   <%= field_set_tag "Article" do %>
     <%= f.input :name, :input_html => { :class => "span12" },
@@ -32,7 +29,6 @@
   <div class="actions">
     <%= f.button :submit, :class => 'primary' %>
     <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
-
   </div>
     <pre>
  f.button :submit, :class => 'primary'

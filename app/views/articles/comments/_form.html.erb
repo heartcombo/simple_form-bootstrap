@@ -1,0 +1,15 @@
+<%= simple_form_for [@article, @comment ||= Comment.new], :wrapper => "stacked",
+                                      :html => { :class => "form-stacked" } do |f| %>
+  <%= field_set_tag "Comment (stacked-form)" do %>
+    <% f.with_options :input_html => {:class => "xxlarge"} do |opt| %>
+      <%= opt.input :name, :hint => "please, identify yourself" %>
+      <%= opt.input :body, :hint => "add your comment here",
+                    :input_html => { :rows => 4 } %>
+    <% end %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.button :submit, :class => 'primary' %>
+    <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
+  </div>
+<% end %>
