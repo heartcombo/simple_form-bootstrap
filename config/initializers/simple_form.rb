@@ -8,10 +8,10 @@ SimpleForm.setup do |config|
   config.wrappers "inline", :class => 'clearfix', :error_class => :error do |b|
     b.use :placeholder
     b.use :label
-    b.use :hint,  :tag => :span, :class => :'help-inline'
     b.use :tag => 'div', :class => 'input' do |ba|
       ba.use :input
       ba.use :error, :tag => :span, :class => :'help-inline'
+      ba.use :hint,  :tag => :span, :class => :'help-block'
     end
   end
 

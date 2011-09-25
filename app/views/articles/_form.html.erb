@@ -1,14 +1,26 @@
-<%= simple_form_for(@article) do |f| %>
+<%= simple_form_for(@article, :wrapper => "inline") do |f| %>
+
+  <% if f.error_notification %>
+    <div class="alert-message warning fade in" data-alert="alert">
+      <a class="close" href="#">×</a>
+      <p><%= f.error_notification %></p>
+    </div>
+  <% end %>
+
   <%= f.error_notification %>
 
-  <div class="inputs">
-    <%= f.input :name %>
-    <%= f.input :content %>
-    <%= f.input :content_type, :collection => ['Blog', 'Editorial'] %>
-    <%= f.input :disabled_text, :disabled => true %>
-  </div>
+  <%= field_set_tag "Article" do %>
+    <%= f.input :name, :input_html => { :class => "span12" },
+                :hint => "add your article title here" %>
+    <%= f.input :content_type, :collection => ['Blog', 'Editorial'],
+                :hint => "this is not used" %>
+    <%= f.input :content, :input_html => { :class => "span12" } %>
+    <%= f.input :disabled_text, :disabled => true,
+                :hint => "an example of disabled input" %>
+  <% end %>
 
   <div class="actions">
     <%= f.button :submit, :class => 'primary' %>
+    <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
   </div>
 <% end %>

@@ -1,15 +1,28 @@
-<p id="notice"><%= notice %></p>
+<ul class="breadcrumb">
+  <li><%= link_to "Home", root_path %> <span class="divider">/</span></li>
+  <li class="active"><%= @article.name %></li>
+</ul>
 
-<p>
-  <b>Name:</b>
-  <%= @article.name %>
-</p>
+<% if notice %>
+  <div class="alert-message success fade in" data-alert="alert">
+    <a class="close" href="#">×</a>
+    <p><%= notice %></p>
+  </div>
+<% end %>
 
-<p>
-  <b>Content:</b>
-  <%= @article.content %>
-</p>
+<article>
+  <header>
+    <h1><%= @article.name %></h1>
+  </header>
 
+  <div class="content">
+    <%= @article.content %>
+  </div>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+  <footer>
+    <div class="well" style="padding: 5px;">
+      <%= link_to 'Edit', edit_article_path(@article), :class => "btn" %>
+    </div>
+  </footer>
+</article>
+
