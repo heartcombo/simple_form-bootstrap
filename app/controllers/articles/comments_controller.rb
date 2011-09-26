@@ -5,7 +5,8 @@ class Articles::CommentsController < ApplicationController
   before_filter :find_article
 
   def create
-    @comment = @article.comments.new(params[:comment])
+    @comment = Comment.new(params[:comment])
+    @comment.article = @article
 
     respond_to do |format|
       if @comment.save
@@ -19,6 +20,6 @@ class Articles::CommentsController < ApplicationController
   private
 
   def find_article
-    @article ||= Article.includes(:comments).find(params[:article_id])
+    @article = Article.find(params[:article_id])
   end
 end
