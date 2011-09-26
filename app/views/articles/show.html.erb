@@ -1,13 +1,6 @@
-<ul class="breadcrumb">
+<% content_for :breadcrumb do %>
   <li><%= link_to "Home", root_path %> <span class="divider">/</span></li>
   <li class="active"><%= @article.name %></li>
-</ul>
-
-<% if notice %>
-  <div class="alert-message success fade in" data-alert="alert">
-    <a class="close" href="#">×</a>
-    <p><%= notice %></p>
-  </div>
 <% end %>
 
 <article>

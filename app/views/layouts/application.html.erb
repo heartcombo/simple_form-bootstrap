@@ -26,6 +26,17 @@
     </div>
   </header>
   <div class="container">
+    <ul class="breadcrumb">
+      <%= yield :breadcrumb %>
+    </ul>
+
+    <% if notice %>
+      <div class="alert-message success fade in" data-alert="alert">
+        <a class="close" href="#">×</a>
+        <p><%= notice %></p>
+      </div>
+    <% end %>
+
     <%= yield %>
   </div>
   <%= javascript_include_tag "application" %>
