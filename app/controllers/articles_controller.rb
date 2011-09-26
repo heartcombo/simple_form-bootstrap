@@ -76,7 +76,7 @@ class ArticlesController < ApplicationController
     @article.destroy
 
     respond_to do |format|
-      format.html { redirect_to articles_url }
+      format.html { redirect_to articles_url, :notice => 'Article was successfully deleted.' }
       format.json { head :ok }
     end
   end
