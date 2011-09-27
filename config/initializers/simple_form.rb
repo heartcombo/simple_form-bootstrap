@@ -25,6 +25,19 @@ SimpleForm.setup do |config|
     end
   end
 
+  config.wrappers :prepend, :class => "clearfix", :error_class => :error do |b|
+    b.use :placeholder
+    b.use :label
+    b.use :hint,  :tag => :span, :class => :'help-block'
+    b.use :tag => 'div', :class => 'input' do |input|
+      input.use :tag => 'div', :class => 'input-prepend' do |prepend|
+        prepend.use :tag => :span, :class => "add-on"
+        prepend.use :input
+      end
+      input.use :error, :tag => :span, :class => :'help-inline'
+    end
+  end
+
   # Method used to tidy up errors.
   # config.error_method = :first
 

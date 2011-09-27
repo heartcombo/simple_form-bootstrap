@@ -16,11 +16,29 @@
     <%= f.input :name, :input_html => { :class => "span12" },
                 :hint => "add your article title here" %>
     <pre> f.input :name, :input_html => { :class => "span12" }, :hint => "add your article title here" </pre>
-    <%= f.input :content_type, :collection => ['Blog', 'Editorial'],
-                :hint => "this is not used" %>
-    <pre> f.input :content_type, :collection => ['Blog', 'Editorial'], :hint => "this is not used" </pre>
+
+    <%= f.input :name, :wrapper => :prepend, :label => false do %>
+      <%= content_tag :span, "Name", :class => "add-on" %>
+      <%= f.text_field :name %>
+    <% end %>
+
+    <pre>
+f.input :name, :wrapper => :prepend, :label => false do %>
+  content_tag :span, "Name", :class => "add-on"
+  f.text_field :name
+end </pre>
+
+    <%= f.input :content_type, :collection => content_type_options,
+                :hint => "simple select box" %>
+    <pre> f.input :content_type, :collection => content_type_options, :hint => "simple select box" </pre>
+
+    <%= f.input :content_type, :collection => content_type_options,
+                :hint => "multiple select", :input_html => { :multiple => true } %>
+    <pre> f.input :content_type, :collection => content_type_options, :input_html => { :multiple => true } %> </pre>
+
     <%= f.input :content, :input_html => { :class => "span12" } %>
     <pre> f.input :content, :input_html => { :class => "span12" } </pre>
+
     <%= f.input :disabled_text, :disabled => true,
                 :hint => "an example of disabled input" %>
     <pre> f.input :disabled_text, :disabled => true, :hint => "an example of disabled input" </pre>
