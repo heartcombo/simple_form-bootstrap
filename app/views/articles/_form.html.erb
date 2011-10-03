@@ -2,7 +2,7 @@
   <a href="#" class="btn" data-code="show">Show Code</a>
 </div>
 
-<%= simple_form_for @article, :wrapper => "inline" do |f| %>
+<%= simple_form_for @article, :wrapper => :inline do |f| %>
  <pre> simple_form_for(@article, :wrapper => "inline") do |f| </pre>
 
   <% if f.error_notification %>
@@ -16,15 +16,63 @@
     <%= f.input :name, :input_html => { :class => "span12" },
                 :hint => "add your article title here" %>
     <pre> f.input :name, :input_html => { :class => "span12" }, :hint => "add your article title here" </pre>
-    <%= f.input :content_type, :collection => ['Blog', 'Editorial'],
-                :hint => "this is not used" %>
-    <pre> f.input :content_type, :collection => ['Blog', 'Editorial'], :hint => "this is not used" </pre>
+
+    <%= f.input :name, :wrapper => :prepend, :label => false do %>
+      <%= content_tag :span, "Name", :class => "add-on" %>
+      <%= f.text_field :name %>
+    <% end %>
+
+    <pre>
+f.input :name, :wrapper => :prepend, :label => false do %>
+  content_tag :span, "Name", :class => "add-on"
+  f.text_field :name
+end </pre>
+
+    <%= f.input :content_type, :collection => content_type_options,
+                :hint => "simple select box" %>
+    <pre> f.input :content_type, :collection => content_type_options, :hint => "simple select box" </pre>
+
+    <%= f.input :content_type, :collection => content_type_options,
+                :hint => "multiple select", :input_html => { :multiple => true } %>
+    <pre> f.input :content_type, :collection => content_type_options, :input_html => { :multiple => true } %> </pre>
+
     <%= f.input :content, :input_html => { :class => "span12" } %>
     <pre> f.input :content, :input_html => { :class => "span12" } </pre>
+
     <%= f.input :disabled_text, :disabled => true,
                 :hint => "an example of disabled input" %>
     <pre> f.input :disabled_text, :disabled => true, :hint => "an example of disabled input" </pre>
+
+    <%= f.input :disabled_text, :wrapper => :prepend do %>
+      <%= content_tag :label, :class => "add-on" do %>
+        <%= check_box_tag :remove, 'true' %>
+      <% end %>
+      <%= f.text_field :disabled_text %>
+    <% end %>
+<pre>
+f.input :disabled_text, :wrapper =&gt; :prepend do
+  content_tag :label, :class =&gt; "add-on" do
+    check_box_tag :remove, 'true'
+  end
+  f.text_field :disabled_text
+end
+</pre>
+
+    <%= f.input :disabled_text, :wrapper => :append do %>
+      <%= f.text_field :disabled_text, :class => :mini %>
+      <%= content_tag :label, :class => "add-on active" do %>
+        <%= check_box_tag :remove, 'true' %>
+      <% end %>
+    <% end %>
   <% end %>
+<pre>
+f.input :disabled_text, :wrapper =&gt; :append do
+  f.text_field :disabled_text, :class => :mini
+  content_tag :label, :class =&gt; "add-on active" do
+    check_box_tag :remove, 'true'
+  end
+end
+</pre>
 
   <div class="actions">
     <%= f.button :submit, :class => 'primary' %>
