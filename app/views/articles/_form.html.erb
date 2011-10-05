@@ -19,13 +19,13 @@
 
     <%= f.input :name, :wrapper => :prepend, :label => false do %>
       <%= content_tag :span, "Name", :class => "add-on" %>
-      <%= f.text_field :name %>
+      <%= f.input_field :name %>
     <% end %>
 
     <pre>
 f.input :name, :wrapper => :prepend, :label => false do %>
   content_tag :span, "Name", :class => "add-on"
-  f.text_field :name
+  f.input_field :name
 end </pre>
 
     <%= f.input :content_type, :collection => content_type_options,
@@ -47,19 +47,19 @@ end </pre>
       <%= content_tag :label, :class => "add-on" do %>
         <%= check_box_tag :remove, 'true' %>
       <% end %>
-      <%= f.text_field :disabled_text %>
+      <%= f.input_field :disabled_text %>
     <% end %>
 <pre>
 f.input :disabled_text, :wrapper =&gt; :prepend do
   content_tag :label, :class =&gt; "add-on" do
     check_box_tag :remove, 'true'
   end
-  f.text_field :disabled_text
+  f.input_field :disabled_text
 end
 </pre>
 
     <%= f.input :disabled_text, :wrapper => :append do %>
-      <%= f.text_field :disabled_text, :class => :mini %>
+      <%= f.input_field :disabled_text, :class => :mini %>
       <%= content_tag :label, :class => "add-on active" do %>
         <%= check_box_tag :remove, 'true' %>
       <% end %>
@@ -67,7 +67,7 @@ end
   <% end %>
 <pre>
 f.input :disabled_text, :wrapper =&gt; :append do
-  f.text_field :disabled_text, :class => :mini
+  f.input_field :disabled_text, :class => :mini
   content_tag :label, :class =&gt; "add-on active" do
     check_box_tag :remove, 'true'
   end
