@@ -28,6 +28,11 @@ f.input :name, :wrapper => :prepend, :label => false do %>
   f.input_field :name
 end </pre>
 
+    <%= f.input  :published, :as => :boolean %>
+
+    <pre>
+f.input :published, :as => :boolean</pre>
+
     <%= f.input :content_type, :collection => content_type_options,
                 :hint => "simple select box" %>
     <pre> f.input :content_type, :collection => content_type_options, :hint => "simple select box" </pre>
