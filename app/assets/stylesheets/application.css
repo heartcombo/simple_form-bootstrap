@@ -5,6 +5,10 @@
  *= require bootstrap
 */
 
+.alert p.error_notification {
+  margin-bottom: 0;
+}
+
 header.master {
   padding-top: 60px;
 }
@@ -43,3 +47,4 @@ article .content {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+

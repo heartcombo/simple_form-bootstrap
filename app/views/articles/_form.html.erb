@@ -6,9 +6,9 @@
  <pre> simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f| </pre>
 
   <% if f.error_notification %>
-    <div class="alert-message warning fade in" data-alert="alert">
-      <a class="close" href="#">×</a>
-      <p><%= f.error_notification %></p>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert" href="#">&times;</a>
+      <%= f.error_notification %>
     </div>
   <% end %>
 
