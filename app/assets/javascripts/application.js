@@ -6,8 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-alerts-1.3.0
-//= require bootstrap-dropdown-1.3.0
+//= require bootstrap
 //= require_tree .
 //
 
@@ -16,3 +15,4 @@ $(function() {
     $('pre').toggle();
   });
 });
+

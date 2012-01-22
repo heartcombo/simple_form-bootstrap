@@ -2,8 +2,8 @@
   <a href="#" class="btn" data-code="show">Show Code</a>
 </div>
 
-<%= simple_form_for @article, :wrapper => :inline do |f| %>
- <pre> simple_form_for(@article, :wrapper => "inline") do |f| </pre>
+<%= simple_form_for @article, :wrapper => :bootstrap, :html => { :class => 'form-horizontal' } do |f| %>
+ <pre> simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f| </pre>
 
   <% if f.error_notification %>
     <div class="alert-message warning fade in" data-alert="alert">
@@ -12,78 +12,103 @@
     </div>
   <% end %>
 
-  <%= field_set_tag "Article" do %>
-    <%= f.input :name, :input_html => { :class => "span12" },
-                :hint => "add your article title here" %>
-    <pre> f.input :name, :input_html => { :class => "span12" }, :hint => "add your article title here" </pre>
+  <legend>Article</legend>
+  <%= f.input :name, :input_html => { :class => "span6" },
+              :hint => "add your article title here" %>
+  <pre> f.input :name, :input_html =&gt; { :class =&gt; "span6" }, :hint =&gt; "add your article title here" </pre>
 
-    <%= f.input :name, :wrapper => :prepend, :label => false do %>
-      <%= content_tag :span, "Name", :class => "add-on" %>
-      <%= f.input_field :name %>
-    <% end %>
+  <%= f.input :name, :wrapper => :prepend, :label => false do %>
+    <%= content_tag :span, "Name", :class => "add-on" %>
+    <%= f.input_field :name %>
+  <% end %>
 
-    <pre>
-f.input :name, :wrapper => :prepend, :label => false do %>
-  content_tag :span, "Name", :class => "add-on"
+  <pre>
+f.input :name, :wrapper =&gt; :prepend, :label =&gt; false do
+  content_tag :span, "Name", :class =&gt; "add-on"
   f.input_field :name
 end </pre>
 
-    <%= f.input  :published, :as => :boolean %>
+  <%= f.input  :published, :wrapper => :checkbox, :as => :boolean %>
 
-    <pre>
-f.input :published, :as => :boolean</pre>
+  <pre> f.input :published, :wrapper =&gt; :checkbox, :as =&gt; :boolean</pre>
 
-    <%= f.input :content_type, :collection => content_type_options,
-                :hint => "simple select box" %>
-    <pre> f.input :content_type, :collection => content_type_options, :hint => "simple select box" </pre>
-
-    <%= f.input :content_type, :collection => content_type_options,
-                :hint => "multiple select", :input_html => { :multiple => true } %>
-    <pre> f.input :content_type, :collection => content_type_options, :input_html => { :multiple => true } %> </pre>
-
-    <%= f.input :content, :input_html => { :class => "span12" } %>
-    <pre> f.input :content, :input_html => { :class => "span12" } </pre>
-
-    <%= f.input :disabled_text, :disabled => true,
-                :hint => "an example of disabled input" %>
-    <pre> f.input :disabled_text, :disabled => true, :hint => "an example of disabled input" </pre>
-
-    <%= f.input :disabled_text, :wrapper => :prepend do %>
-      <%= content_tag :label, :class => "add-on" do %>
-        <%= check_box_tag :remove, 'true' %>
+  <%= content_tag :fieldset, :class => 'control-group' do %>
+    <%= content_tag :label, 'Options', :class => 'control-label' %>
+    <%= content_tag :div, :class => 'controls' do %>
+      <%= f.label :secret, :class => 'checkbox' do %>
+        <%= f.input :secret, :wrapper => :checkbox_inline, :as => :boolean %>
       <% end %>
-      <%= f.input_field :disabled_text %>
+      <%= f.label :draft, :class => 'checkbox' do %>
+        <%= f.input :draft, :wrapper => :checkbox_inline, :as => :boolean %>
+      <% end %>
     <% end %>
+  <% end %>
+
 <pre>
-f.input :disabled_text, :wrapper =&gt; :prepend do
-  content_tag :label, :class =&gt; "add-on" do
-    check_box_tag :remove, 'true'
+content_tag :fieldset, :class =&gt; 'control-group' do
+  content-tag :label, 'Options', :class =&gt; 'control-label' do
+    content-tag :div, :class =&gt; 'controls' do
+      f.label :secret, :class =&gt; 'checkbox' do
+        f.input :secret, :wrapper =&gt; :checkbox_inline, :as =&gt; :boolean
+      end
+      f.label :draft, :class =&gt; 'checkbox' do
+        f.input :draft, :wrapper =&gt; :checkbox_inline, :as =&gt; :boolean
+      end
+    end
   end
-  f.input_field :disabled_text
 end
 </pre>
 
-    <%= f.input :disabled_text, :wrapper => :append do %>
-      <%= f.input_field :disabled_text, :class => :mini %>
-      <%= content_tag :label, :class => "add-on active" do %>
-        <%= check_box_tag :remove, 'true' %>
-      <% end %>
+  <%= f.input :content_type, :collection => content_type_options,
+              :hint => "multiple select", :input_html => { :multiple => true } %>
+  <pre> f.input :content_type, :collection =&gt; content_type_options, :input_html =&gt; { :multiple =&gt; true } </pre>
+
+  <%= f.input :category, :collection => content_type_options,
+              :hint => "simple select box" %>
+  <pre> f.input :category, :collection =&gt; content_type_options, :hint =&gt; "simple select box" </pre>
+
+  <%= f.input :content, :input_html => { :class => "span6" } %>
+  <pre> f.input :content, :input_html =&gt; { :class =&gt; "span6" } </pre>
+
+  <%= f.input :disabled_text, :disabled => true,
+              :hint => "an example of disabled input" %>
+  <pre> f.input :disabled_text, :disabled =&gt; true, :hint =&gt; "an example of disabled input" </pre>
+
+  <%= f.input :disabled_text, :wrapper => :prepend do %>
+    <%= content_tag :label, :class => "add-on" do %>
+      <%= check_box_tag :remove, 'true' %>
+    <% end %>
+    <%= f.input_field :disabled_text %>
+  <% end %>
+<pre>
+f.input :disabled_text, :wrapper =&gt; :prepend do
+content_tag :label, :class =&gt; "add-on" do
+  check_box_tag :remove, 'true'
+end
+f.input_field :disabled_text
+end
+</pre>
+
+  <%= f.input :disabled_text, :wrapper => :append do %>
+    <%= f.input_field :disabled_text, :class => :mini %>
+    <%= content_tag :label, :class => "add-on active" do %>
+      <%= check_box_tag :remove, 'true' %>
     <% end %>
   <% end %>
 <pre>
 f.input :disabled_text, :wrapper =&gt; :append do
-  f.input_field :disabled_text, :class => :mini
+  f.input_field :disabled_text, :class =&gt; :mini
   content_tag :label, :class =&gt; "add-on active" do
     check_box_tag :remove, 'true'
   end
 end
 </pre>
 
-  <div class="actions">
+  <div class="form-actions">
     <%= f.button :submit, :class => 'primary' %>
     <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
   </div>
     <pre>
- f.button :submit, :class => 'primary'
- button_tag 'Cancel', :type => :reset, :class => "btn" </pre>
+ f.button :submit, :class =&gt; 'primary'
+ button_tag 'Cancel', :type =&gt; :reset, :class =&gt; "btn" </pre>
 <% end %>
