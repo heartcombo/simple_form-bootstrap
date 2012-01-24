@@ -3,7 +3,7 @@
 </div>
 
 <%= simple_form_for @article, :wrapper => :bootstrap, :html => { :class => 'form-horizontal' } do |f| %>
- <pre> simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f| </pre>
+ <pre class='prettyprint linenums lang-rb'> simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f| </pre>
 
   <% if f.error_notification %>
     <div class="alert alert-error fade in">
@@ -15,14 +15,14 @@
   <legend>Article</legend>
   <%= f.input :name, :input_html => { :class => "span6" },
               :hint => "add your article title here" %>
-  <pre> f.input :name, :input_html =&gt; { :class =&gt; "span6" }, :hint =&gt; "add your article title here" </pre>
+  <pre class='prettyprint linenums lang-rb'> f.input :name, :input_html =&gt; { :class =&gt; "span6" }, :hint =&gt; "add your article title here" </pre>
 
   <%= f.input :name, :wrapper => :prepend, :label => false do %>
     <%= content_tag :span, "Name", :class => "add-on" %>
     <%= f.input_field :name %>
   <% end %>
 
-  <pre>
+  <pre class='prettyprint linenums lang-rb'>
 f.input :name, :wrapper =&gt; :prepend, :label =&gt; false do
   content_tag :span, "Name", :class =&gt; "add-on"
   f.input_field :name
@@ -30,7 +30,7 @@ end </pre>
 
   <%= f.input  :published, :wrapper => :checkbox, :as => :boolean %>
 
-  <pre> f.input :published, :wrapper =&gt; :checkbox, :as =&gt; :boolean</pre>
+  <pre class='prettyprint linenums lang-rb'> f.input :published, :wrapper =&gt; :checkbox, :as =&gt; :boolean</pre>
 
   <%= content_tag :fieldset, :class => 'control-group' do %>
     <%= content_tag :label, 'Options', :class => 'control-label' %>
@@ -44,7 +44,7 @@ end </pre>
     <% end %>
   <% end %>
 
-<pre>
+<pre class='prettyprint linenums lang-rb'>
 content_tag :fieldset, :class =&gt; 'control-group' do
   content-tag :label, 'Options', :class =&gt; 'control-label' do
     content-tag :div, :class =&gt; 'controls' do
@@ -61,18 +61,18 @@ end
 
   <%= f.input :content_type, :collection => content_type_options,
               :hint => "multiple select", :input_html => { :multiple => true } %>
-  <pre> f.input :content_type, :collection =&gt; content_type_options, :input_html =&gt; { :multiple =&gt; true } </pre>
+  <pre class='prettyprint linenums lang-rb'> f.input :content_type, :collection =&gt; content_type_options, :input_html =&gt; { :multiple =&gt; true } </pre>
 
   <%= f.input :category, :collection => content_type_options,
               :hint => "simple select box" %>
-  <pre> f.input :category, :collection =&gt; content_type_options, :hint =&gt; "simple select box" </pre>
+  <pre class='prettyprint linenums lang-rb'> f.input :category, :collection =&gt; content_type_options, :hint =&gt; "simple select box" </pre>
 
   <%= f.input :content, :input_html => { :class => "span6" } %>
-  <pre> f.input :content, :input_html =&gt; { :class =&gt; "span6" } </pre>
+  <pre class='prettyprint linenums lang-rb'> f.input :content, :input_html =&gt; { :class =&gt; "span6" } </pre>
 
   <%= f.input :disabled_text, :disabled => true,
               :hint => "an example of disabled input" %>
-  <pre> f.input :disabled_text, :disabled =&gt; true, :hint =&gt; "an example of disabled input" </pre>
+  <pre class='prettyprint linenums lang-rb'> f.input :disabled_text, :disabled =&gt; true, :hint =&gt; "an example of disabled input" </pre>
 
   <%= f.input :disabled_text, :wrapper => :prepend do %>
     <%= content_tag :label, :class => "add-on" do %>
@@ -80,12 +80,12 @@ end
     <% end %>
     <%= f.input_field :disabled_text %>
   <% end %>
-<pre>
+<pre class='prettyprint linenums lang-rb'>
 f.input :disabled_text, :wrapper =&gt; :prepend do
-content_tag :label, :class =&gt; "add-on" do
-  check_box_tag :remove, 'true'
-end
-f.input_field :disabled_text
+  content_tag :label, :class =&gt; "add-on" do
+    check_box_tag :remove, 'true'
+  end
+  f.input_field :disabled_text
 end
 </pre>
 
@@ -95,10 +95,10 @@ end
       <%= check_box_tag :remove, 'true' %>
     <% end %>
   <% end %>
-<pre>
+<pre class='prettyprint linenums lang-rb'>
 f.input :disabled_text, :wrapper =&gt; :append do
   f.input_field :disabled_text, :class =&gt; :mini
-  content_tag :label, :class =&gt; "add-on active" do
+  content_tag :label, :class =&gt; "ad d-on active" do
     check_box_tag :remove, 'true'
   end
 end
@@ -108,7 +108,7 @@ end
     <%= f.button :submit, :class => 'primary' %>
     <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
   </div>
-    <pre>
+    <pre class='prettyprint linenums lang-rb'>
  f.button :submit, :class =&gt; 'primary'
  button_tag 'Cancel', :type =&gt; :reset, :class =&gt; "btn" </pre>
 <% end %>
