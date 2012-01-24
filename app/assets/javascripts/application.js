@@ -14,7 +14,7 @@ $(function() {
   prettyPrint();
 
   $('a[data-code]').click(function() {
-    $('pre').toggle();
+    $('pre').slideToggle();
   });
 });
 

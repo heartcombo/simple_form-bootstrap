@@ -1,9 +1,12 @@
 <div class="well">
-  <a href="#" class="btn" data-code="show">Show Code</a>
+  <a href="#" class="btn primary" data-code="show">
+    toggle code examples for each form element.
+  </a>
 </div>
 
 <%= simple_form_for @article, :wrapper => :bootstrap, :html => { :class => 'form-horizontal' } do |f| %>
 <pre class='prettyprint linenums lang-rb'>
+# Use the defined bootstrap wrapper on config/initializers/simple_form.rb to create your form
 simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
 </pre>
 
@@ -18,6 +21,7 @@ simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 
   <%= f.input :name, :input_html => { :class => "span6" },
               :hint => "add your article title here" %>
 <pre class='prettyprint linenums lang-rb'>
+  # You can use the same `span*` classes from the grid system.
   f.input :name, :input_html =&gt; { :class =&gt; "span6" }, :hint =&gt; "add your article title here"
 </pre>
 
@@ -27,6 +31,7 @@ simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 
   <% end %>
 
 <pre class='prettyprint linenums lang-rb'>
+  # Use different wrappers to use other elements from Bootstrap, like a 'prepend' box.
   f.input :name, :wrapper =&gt; :prepend, :label =&gt; false do
     content_tag :span, "Name", :class =&gt; "add-on"
     f.input_field :name
@@ -36,6 +41,7 @@ simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 
   <%= f.input  :published, :wrapper => :checkbox, :as => :boolean %>
 
 <pre class='prettyprint linenums lang-rb'>
+  # A specific wrapper for inline checkboxes.
   f.input :published, :wrapper =&gt; :checkbox, :as =&gt; :boolean
 </pre>
 
@@ -43,27 +49,28 @@ simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 
     <%= content_tag :label, 'Options', :class => 'control-label' %>
     <%= content_tag :div, :class => 'controls' do %>
       <%= f.label :secret, :class => 'checkbox' do %>
-        <%= f.input :secret, :wrapper => :checkbox_inline, :as => :boolean %>
+        <%= f.input :secret, :wrapper => :inline_checkbox, :as => :boolean %>
       <% end %>
       <%= f.label :draft, :class => 'checkbox' do %>
-        <%= f.input :draft, :wrapper => :checkbox_inline, :as => :boolean %>
+        <%= f.input :draft, :wrapper => :inline_checkbox, :as => :boolean %>
       <% end %>
     <% end %>
   <% end %>
 
 <pre class='prettyprint linenums lang-rb'>
-content_tag :fieldset, :class =&gt; 'control-group' do
-  content-tag :label, 'Options', :class =&gt; 'control-label' do
-    content-tag :div, :class =&gt; 'controls' do
-      f.label :secret, :class =&gt; 'checkbox' do
-        f.input :secret, :wrapper =&gt; :checkbox_inline, :as =&gt; :boolean
-      end
-      f.label :draft, :class =&gt; 'checkbox' do
-        f.input :draft, :wrapper =&gt; :checkbox_inline, :as =&gt; :boolean
+  # You can also use the inline checkboxes to create a list of items.
+  content_tag :fieldset, :class =&gt; 'control-group' do
+    content-tag :label, 'Options', :class =&gt; 'control-label' do
+      content-tag :div, :class =&gt; 'controls' do
+        f.label :secret, :class =&gt; 'checkbox' do
+          f.input :secret, :wrapper =&gt; :inline_checkbox, :as =&gt; :boolean
+        end
+        f.label :draft, :class =&gt; 'checkbox' do
+          f.input :draft, :wrapper =&gt; :inline_checkbox, :as =&gt; :boolean
+        end
       end
     end
   end
-end
 </pre>
 
   <%= f.input :content_type, :collection => content_type_options,
@@ -94,7 +101,7 @@ end
     <%= content_tag :label, :class => "add-on" do %>
       <%= check_box_tag :remove, 'true' %>
     <% end %>
-    <%= f.input_field :disabled_text %>
+    <%= f.input_field :disabled_text, :disabled => true %>
   <% end %>
 <pre class='prettyprint linenums lang-rb'>
 f.input :disabled_text, :wrapper =&gt; :prepend do
@@ -106,19 +113,20 @@ end
 </pre>
 
   <%= f.input :disabled_text, :wrapper => :append do %>
-    <%= f.input_field :disabled_text, :class => :mini %>
+    <%= f.input_field :disabled_text, :class => :mini, :disabled => true %>
     <%= content_tag :label, :class => "add-on active" do %>
       <%= check_box_tag :remove, 'true' %>
     <% end %>
   <% end %>
 
 <pre class='prettyprint linenums lang-rb'>
-f.input :disabled_text, :wrapper =&gt; :append do
-  f.input_field :disabled_text, :class =&gt; :mini
-  content_tag :label, :class =&gt; "ad d-on active" do
-    check_box_tag :remove, 'true'
+  # Use the 'append' wrapper the same way as the 'prepend' one.
+  f.input :disabled_text, :wrapper =&gt; :append do
+    f.input_field :disabled_text, :class =&gt; :mini
+    content_tag :label, :class =&gt; "ad d-on active" do
+      check_box_tag :remove, 'true'
+    end
   end
-end
 </pre>
 
   <div class="form-actions">
@@ -126,7 +134,7 @@ end
     <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
   </div>
 <pre class='prettyprint linenums lang-rb'>
- f.button :submit, :class =&gt; 'primary'
- button_tag 'Cancel', :type =&gt; :reset, :class =&gt; "btn"
+  f.button :submit, :class =&gt; 'primary'
+  button_tag 'Cancel', :type =&gt; :reset, :class =&gt; "btn"
 </pre>
 <% end %>
