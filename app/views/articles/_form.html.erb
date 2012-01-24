@@ -60,8 +60,8 @@ simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 
 <pre class='prettyprint linenums lang-rb'>
   # You can also use the inline checkboxes to create a list of items.
   content_tag :fieldset, :class =&gt; 'control-group' do
-    content-tag :label, 'Options', :class =&gt; 'control-label' do
-      content-tag :div, :class =&gt; 'controls' do
+    content_tag :label, 'Options', :class =&gt; 'control-label' do
+      content_tag :div, :class =&gt; 'controls' do
         f.label :secret, :class =&gt; 'checkbox' do
           f.input :secret, :wrapper =&gt; :inline_checkbox, :as =&gt; :boolean
         end
@@ -123,7 +123,7 @@ end
   # Use the 'append' wrapper the same way as the 'prepend' one.
   f.input :disabled_text, :wrapper =&gt; :append do
     f.input_field :disabled_text, :class =&gt; :mini
-    content_tag :label, :class =&gt; "ad d-on active" do
+    content_tag :label, :class =&gt; "add-on active" do
       check_box_tag :remove, 'true'
     end
   end
