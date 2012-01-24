@@ -47,6 +47,6 @@ module SimpleFormBootstrap
 
     config.app_generators.stylesheet_engine :less
 
-    config.less.paths << "#{Rails.root}/vendor/assets/bootstrap/lib"
+    config.less.paths << "#{Rails.root}/vendor/bootstrap/lib"
   end
 end
