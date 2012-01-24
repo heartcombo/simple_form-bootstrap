@@ -6,33 +6,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="master">
-    <div class="topbar">
-      <div class="topbar-inner">
-        <div class="container">
-          <a class="brand" href="#">SimpleForm Bootstrap</a>
-          <ul class="nav">
-            <li><%= link_to "Home", root_path %></li>
-            <li class="dropdown" data-dropdown="dropdown">
-              <a href="#" class="dropdown-toggle">Articles</a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "List", articles_path %></li>
-                <li><%= link_to "New Article", new_article_path %></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+  <header class="navbar navbar-fixed">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">SimpleForm Bootstrap</a>
+        <ul class="nav">
+          <li><%= link_to "Home", root_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle='dropdown'>
+              Articles
+              <b class='caret'></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "List", articles_path %></li>
+              <li><%= link_to "New Article", new_article_path %></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
-  <div class="container">
+  <div class="container master-container">
     <ul class="breadcrumb">
       <%= yield :breadcrumb %>
     </ul>
+    <div class='alert alert-info fade in' data-alert='alert'>
+      <a class="close" data-dismiss='alert' href="#">×</a>
+      <p><strong>SimpleForm 2.0 and Twitter Bootstrap sample application.</strong></p>
+      <p>Here you'll see the usage of SimpleForm and the Twitter Bootstrap toolkit on a Rails 3.2 application.</p>
+      <p>You can check the source code on <a href='https://github.com/rafaelfranca/simple_form-bootstrap'>GitHub</a>.</p>
+
+    </div>
 
     <% if notice %>
-      <div class="alert-message success fade in" data-alert="alert">
-        <a class="close" href="#">×</a>
+      <div class="alert alert-success fade in" data-alert="alert">
+        <a class="close" data-dismiss='alert' href="#">×</a>
         <p><%= notice %></p>
       </div>
     <% end %>
