@@ -27,7 +27,7 @@ SimpleForm.setup do |config|
     end
   end
 
-  config.wrappers :checkbox_inline, :tag => 'span', :error_class => 'error' do |b|
+  config.wrappers :inline_checkbox, :tag => 'span', :error_class => 'error' do |b|
     b.use :placeholder
     b.use :input
     b.use :label_text
