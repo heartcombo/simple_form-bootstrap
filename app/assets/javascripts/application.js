@@ -13,7 +13,8 @@
 $(function() {
   prettyPrint();
 
-  $('a[data-code]').click(function() {
+  $('a[data-code]').click(function(e) {
+    e.preventDefault();
     $('pre').slideToggle();
   });
 });
