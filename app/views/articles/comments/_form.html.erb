@@ -1,5 +1,4 @@
-<%= simple_form_for [@article, @comment ||= Comment.new],
-                    :wrapper => :bootstrap, :html => { :class => "form-vertical" } do |f| %>
+<%= simple_form_for [@article, @comment ||= Comment.new] do |f| %>
   <legend>Comment (stacked-form)</legend>
   <% f.with_options :input_html => {:class => "xxlarge"} do |opt| %>
     <%= opt.input :name, :hint => "please, identify yourself" %>
