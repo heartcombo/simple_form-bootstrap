@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SimpleFormBootstrap</title>
+  <title>Example application with SimpleForm and Twitter Bootstrap</title>
   <%= stylesheet_link_tag    "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -9,7 +9,7 @@
   <header class="navbar navbar-fixed">
     <div class="navbar-inner">
       <div class="container">
-        <a class="brand" href="#">SimpleForm Bootstrap</a>
+        <a class="brand" href="#">SimpleForm + Twitter Bootstrap</a>
         <ul class="nav">
           <li><%= link_to "Home", root_path %></li>
           <li class="dropdown">
@@ -18,8 +18,8 @@
               <b class='caret'></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "List", articles_path %></li>
-              <li><%= link_to "New Article", new_article_path %></li>
+              <li><%= link_to "List all articles", articles_path %></li>
+              <li><%= link_to "New article", new_article_path %></li>
             </ul>
           </li>
         </ul>
