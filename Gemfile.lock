@@ -1,7 +1,6 @@
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: 95f711366184cf38ebf9a571387ba5006114a40a
-  ref: 95f711366184cf38ebf9a571387ba5006114a40a
+  revision: 2505d54a3466c22ce9a99a7aab385a9aa6c2aa8a
   specs:
     simple_form (2.0.0.dev)
       actionpack (~> 3.0)
@@ -59,7 +58,7 @@ GEM
     multi_json (1.0.4)
     pg (0.12.2)
     polyglot (0.3.3)
-    rack (1.4.0)
+    rack (1.4.1)
     rack-cache (1.1)
       rack (>= 0.4)
     rack-ssl (1.3.2)

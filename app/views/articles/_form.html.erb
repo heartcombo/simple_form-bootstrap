@@ -4,10 +4,10 @@
   </a>
 </div>
 
-<%= simple_form_for @article, :wrapper => :bootstrap, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @article, :html => { :class => 'form-horizontal' } do |f| %>
 <pre class='prettyprint linenums lang-rb'>
-# Use the defined bootstrap wrapper on config/initializers/simple_form.rb to create your form
-simple_form_for(@article, :wrapper =&gt; :bootstrap, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
+# If you generated the SimpleForm configuration with `--bootstrap`, the `simple_form_for` helper will use the bootstrap wrapper by default.
+simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
 </pre>
 
   <% if f.error_notification %>
