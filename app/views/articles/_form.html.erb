@@ -38,39 +38,34 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
   end
 </pre>
 
-  <%= f.input  :published, :wrapper => :checkbox, :as => :boolean %>
+  <%= f.input  :published, :as => :boolean %>
 
 <pre class='prettyprint linenums lang-rb'>
   # A specific wrapper for inline checkboxes.
-  f.input :published, :wrapper =&gt; :checkbox, :as =&gt; :boolean
+  f.input :published, :as =&gt; :boolean
 </pre>
 
-  <%= content_tag :fieldset, :class => 'control-group' do %>
-    <%= content_tag :label, 'Options', :class => 'control-label' %>
-    <%= content_tag :div, :class => 'controls' do %>
-      <%= f.label :secret, :class => 'checkbox' do %>
-        <%= f.input :secret, :wrapper => :inline_checkbox, :as => :boolean %>
-      <% end %>
-      <%= f.label :draft, :class => 'checkbox' do %>
-        <%= f.input :draft, :wrapper => :inline_checkbox, :as => :boolean %>
-      <% end %>
-    <% end %>
-  <% end %>
+  <%= f.input :content_type, :collection => content_type_options, :as => :check_boxes, :label_html => { :class => 'checkbox' }, :label => 'Stacked checkboxes' %>
+<pre class='prettyprint linenums lang-rb'>
+  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :check_boxes, :label_html =&gt; { :class =&gt; &#x27;checkbox&#x27; }
+</pre>
+
+  <%= f.input :content_type, :collection => content_type_options, :as => :check_boxes, :label_html => { :class => 'checkbox inline' }, :label => 'Inline checkboxes' %>
+<pre class='prettyprint linenums lang-rb'>
+  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio, :label_html =&gt; { :class =&gt; &#x27;checkbox inline&#x27; }
+</pre>
+
+  <%= f.input :content_type, :collection => content_type_options, :as => :radio, :label_html => { :class => 'radio' }, :label => 'Stacked radios' %>
 
 <pre class='prettyprint linenums lang-rb'>
-  # You can also use the inline checkboxes to create a list of items.
-  content_tag :fieldset, :class =&gt; 'control-group' do
-    content_tag :label, 'Options', :class =&gt; 'control-label' do
-      content_tag :div, :class =&gt; 'controls' do
-        f.label :secret, :class =&gt; 'checkbox' do
-          f.input :secret, :wrapper =&gt; :inline_checkbox, :as =&gt; :boolean
-        end
-        f.label :draft, :class =&gt; 'checkbox' do
-          f.input :draft, :wrapper =&gt; :inline_checkbox, :as =&gt; :boolean
-        end
-      end
-    end
-  end
+  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio, :label_html =&gt; { :class =&gt; &#x27;radio&#x27; }
+</pre>
+
+
+  <%= f.input :content_type, :collection => content_type_options, :as => :radio, :label_html => { :class => 'radio inline' }, :label => 'Inline radios' %>
+
+<pre class='prettyprint linenums lang-rb'>
+  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio, :label_html =&gt; { :class =&gt; &#x27;radio inline&#x27; }
 </pre>
 
   <%= f.input :content_type, :collection => content_type_options,
