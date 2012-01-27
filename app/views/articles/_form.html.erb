@@ -44,7 +44,6 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
   <%= f.input  :published, :as => :boolean %>
 
 <pre class='prettyprint linenums lang-rb'>
-  # A specific wrapper for inline checkboxes.
   f.input :published, :as =&gt; :boolean
 </pre>
 
@@ -132,6 +131,7 @@ end
     <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
   </div>
 <pre class='prettyprint linenums lang-rb'>
+  # SimpleForm buttons already receive the 'btn' class for Bootstrap.
   f.button :submit, :class =&gt; 'primary'
   button_tag 'Cancel', :type =&gt; :reset, :class =&gt; "btn"
 </pre>
