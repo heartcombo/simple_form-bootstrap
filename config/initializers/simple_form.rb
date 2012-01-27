@@ -45,13 +45,6 @@ SimpleForm.setup do |config|
     b.use :error, :tag => :span, :class => :error
   end
 
-  
-  # Wrappers for forms and inputs using the Twitter Bootstrap toolkit.
-  # Check the Bootstrap docs (http://twitter.github.com/bootstrap)
-  # to learn about the different styles for forms and inputs,
-  # buttons and other elements.
-  config.default_wrapper = :bootstrap
-
   config.wrappers :bootstrap, :tag => 'fieldset', :class => 'control-group', :error_class => 'error' do |b|
     b.use :placeholder
     b.use :label, :class => 'control-label'
@@ -60,26 +53,6 @@ SimpleForm.setup do |config|
       ba.use :error, :tag => 'span', :class => 'help-inline'
       ba.use :hint,  :tag => 'p', :class => 'help-block'
     end
-  end
-
-  config.wrappers :checkbox, :tag => 'fieldset', :class => 'control-group', :error_class => 'error' do |b|
-    b.use :placeholder
-    b.use :label, :class => 'control-label'
-    b.use :tag => 'div', :class => 'controls' do |ba|
-      ba.use :tag => 'label', :class => 'checkbox' do |bb|
-        bb.use :input
-      end
-      ba.use :error, :tag => 'span', :class => 'help-inline'
-      ba.use :hint,  :tag => 'p', :class => 'help-block'
-    end
-  end
-
-  config.wrappers :inline_checkbox, :tag => 'span', :error_class => 'error' do |b|
-    b.use :placeholder
-    b.use :input
-    b.use :label_text
-    b.use :error, :tag => 'span', :class => 'help-inline'
-    b.use :hint,  :tag => 'p', :class => 'help-block'
   end
 
   config.wrappers :prepend, :tag => 'fieldset', :class => "control-group", :error_class => 'error' do |b|
@@ -105,7 +78,21 @@ SimpleForm.setup do |config|
       input.use :error, :tag => 'span', :class => 'help-inline'
     end
   end
-  
+
+  # Wrappers for forms and inputs using the Twitter Bootstrap toolkit.
+  # Check the Bootstrap docs (http://twitter.github.com/bootstrap)
+  # to learn about the different styles for forms and inputs,
+  # buttons and other elements.
+  config.default_wrapper = :bootstrap
+
+  # Define the way to render check boxes / radio buttons with labels.
+  # Defaults to :nested for bootstrap config.
+  #   :inline => input + label
+  #   :nested => label > input
+  config.boolean_style = :nested
+
+  # Default class for buttons
+  config.button_class = 'btn'
 
   # Method used to tidy up errors.
   # config.error_method = :first
@@ -175,7 +162,4 @@ SimpleForm.setup do |config|
 
   # Cache simple form inputs discovery
   # config.cache_discovery = !Rails.env.development?
-
-  # Default class for buttons
-  # config.button_class = 'button'
 end
