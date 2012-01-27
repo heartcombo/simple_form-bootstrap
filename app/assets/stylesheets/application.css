@@ -49,4 +49,14 @@ article .content {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+.form-actions {
+  height: 30px;
+}
+
+.btn.left {
+  float:left;
+}
+.btn.right {
+  float:right;
+}
 

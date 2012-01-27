@@ -17,5 +17,10 @@ $(function() {
     e.preventDefault();
     $('pre').slideToggle();
   });
+
+    $('#toggle-form').on('click', function(e) {
+      e.preventDefault();
+      $('.simple_form').toggleClass('form-vertical').toggleClass('form-horizontal');
+    })
 });
 
