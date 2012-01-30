@@ -3,10 +3,6 @@
  *= require google-code-prettify
 */
 
-.master-container {
-  padding-top: 50px;
-}
-
 .alert p.error_notification {
   margin-bottom: 0;
 }
