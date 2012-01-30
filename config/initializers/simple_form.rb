@@ -85,6 +85,7 @@ SimpleForm.setup do |config|
   # buttons and other elements.
   config.default_wrapper = :bootstrap
 
+
   # Define the way to render check boxes / radio buttons with labels.
   # Defaults to :nested for bootstrap config.
   #   :inline => input + label
@@ -118,8 +119,13 @@ SimpleForm.setup do |config|
   # You can define the class to use on all collection wrappers. Defaulting to none.
   # config.collection_wrapper_class = nil
 
-  # You can wrap each item in a collection of radio/check boxes with a tag, defaulting to span.
+  # You can wrap each item in a collection of radio/check boxes with a tag,
+  # defaulting to :span. Please note that when using :boolean_style = :nested,
+  # SimpleForm will force this option to be a label.
   # config.item_wrapper_tag = :span
+
+  # You can define a class to use in all item wrappers. Defaulting to none.
+  # config.item_wrapper_class = nil
 
   # How the label text should be generated altogether with the required text.
   # config.label_text = lambda { |label, required| "#{required} #{label}" }

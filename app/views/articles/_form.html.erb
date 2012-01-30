@@ -41,33 +41,33 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
   end
 </pre>
 
-  <%= f.input  :published, :as => :boolean %>
+  <%= f.input :published, :as => :boolean %>
 
 <pre class='prettyprint linenums lang-rb'>
   f.input :published, :as =&gt; :boolean
 </pre>
 
-  <%= f.input :content_type, :collection => content_type_options, :as => :check_boxes, :label_html => { :class => 'checkbox' }, :label => 'Stacked checkboxes' %>
+  <%= f.input :content_type, :collection => content_type_options, :as => :check_boxes, :label => 'Stacked checkboxes' %>
 <pre class='prettyprint linenums lang-rb'>
-  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :check_boxes, :label_html =&gt; { :class =&gt; &#x27;checkbox&#x27; }
+  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :check_boxes
 </pre>
 
-  <%= f.input :content_type, :collection => content_type_options, :as => :check_boxes, :label_html => { :class => 'checkbox inline' }, :label => 'Inline checkboxes' %>
+  <%= f.input :content_type, :collection => content_type_options, :as => :check_boxes, :item_wrapper_class => 'inline', :label => 'Inline checkboxes' %>
 <pre class='prettyprint linenums lang-rb'>
-  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio, :label_html =&gt; { :class =&gt; &#x27;checkbox inline&#x27; }
+  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio_buttons, :item_wrapper_class =&gt; &#x27inline&#x27;
 </pre>
 
-  <%= f.input :content_type, :collection => content_type_options, :as => :radio, :label_html => { :class => 'radio' }, :label => 'Stacked radios' %>
+  <%= f.input :content_type, :collection => content_type_options, :as => :radio_buttons, :label => 'Stacked radios' %>
 
 <pre class='prettyprint linenums lang-rb'>
-  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio, :label_html =&gt; { :class =&gt; &#x27;radio&#x27; }
+  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio_buttons
 </pre>
 
 
-  <%= f.input :content_type, :collection => content_type_options, :as => :radio, :label_html => { :class => 'radio inline' }, :label => 'Inline radios' %>
+  <%= f.input :content_type, :collection => content_type_options, :as => :radio_buttons, :item_wrapper_class => 'inline', :label => 'Inline radios' %>
 
 <pre class='prettyprint linenums lang-rb'>
-  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio, :label_html =&gt; { :class =&gt; &#x27;radio inline&#x27; }
+  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio_buttons, :item_wrapper_class =&gt; &#x27;inline&#x27;
 </pre>
 
   <%= f.input :content_type, :collection => content_type_options,
