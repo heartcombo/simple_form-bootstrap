@@ -60,3 +60,11 @@ article .content {
   float:right;
 }
 
+footer {
+  text-align: center;
+}
+
+.navbar-fixed .brand {
+  float: right;
+  padding-right: 0;
+}
