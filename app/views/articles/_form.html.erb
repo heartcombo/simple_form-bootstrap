@@ -1,5 +1,5 @@
 <div class="well form-actions">
-  <a href="#" class="btn primary left" data-code="show">
+  <a href="#" class="btn btn-primary left" data-code="show">
     toggle code examples for each form element.
   </a>
   <a href='#' id='toggle-form' class='btn right'>
@@ -127,12 +127,12 @@ end
 </pre>
 
   <div class="form-actions">
-    <%= f.button :submit, :class => 'primary' %>
-    <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= button_tag 'Cancel', :type => :reset, :class => "btn btn-danger" %>
   </div>
 <pre class='prettyprint linenums lang-rb'>
   # SimpleForm buttons already receive the 'btn' class for Bootstrap.
-  f.button :submit, :class =&gt; 'primary'
-  button_tag 'Cancel', :type =&gt; :reset, :class =&gt; "btn"
+  f.button :submit, :class =&gt; 'btn-primary'
+  button_tag 'Cancel', :type =&gt; :reset, :class =&gt; "btn btn-danger"
 </pre>
 <% end %>
