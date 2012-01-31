@@ -20,7 +20,7 @@
   <header class="navbar navbar-fixed">
     <div class="navbar-inner">
       <div class="container">
-        <a class="brand" href="#">SimpleForm + Twitter Bootstrap</a>
+        <a class="brand" href="#">Plataformatec SimpleForm + Twitter Bootstrap</a>
         <ul class="nav">
           <li><%= link_to "Home", root_path %></li>
           <li class="dropdown">
@@ -43,8 +43,12 @@
     </ul>
     <div class='alert alert-info fade in' data-alert='alert'>
       <a class="close" data-dismiss='alert' href="#">×</a>
-      <p><strong>SimpleForm 2.0 and Twitter Bootstrap sample application.</strong></p>
-      <p>Here you'll see the usage of SimpleForm and the Twitter Bootstrap toolkit on a Rails 3.2 application.</p>
+      <p>
+        <strong>
+          <a href="https://github.com/simple_form">SimpleForm</a> 2.0 and <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> sample application.
+        </strong>
+      </p>
+      <p>Here you'll see the usage of <a href="https://github.com/simple_form">SimpleForm</a> and the <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> toolkit on a Rails 3.2 application.</p>
       <p>You can check the source code on <a href='https://github.com/rafaelfranca/simple_form-bootstrap'>GitHub</a>.</p>
 
     </div>
@@ -58,6 +62,9 @@
 
     <%= yield %>
   </div>
+  <footer class="container">
+    Copyright 2012 <a href="http://www.plataformatec.com.br">Plataforma Tecnologia</a>
+  </footer>
   <%= javascript_include_tag "application" %>
 </body>
 </html>
