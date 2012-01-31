@@ -45,7 +45,7 @@ SimpleForm.setup do |config|
     b.use :error, :tag => :span, :class => :error
   end
 
-  config.wrappers :bootstrap, :tag => 'fieldset', :class => 'control-group', :error_class => 'error' do |b|
+  config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
     b.use :placeholder
     b.use :label, :class => 'control-label'
     b.use :tag => 'div', :class => 'controls' do |ba|
@@ -55,7 +55,7 @@ SimpleForm.setup do |config|
     end
   end
 
-  config.wrappers :prepend, :tag => 'fieldset', :class => "control-group", :error_class => 'error' do |b|
+  config.wrappers :prepend, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
     b.use :placeholder
     b.use :label, :class => 'control-label'
     b.use :hint,  :tag => 'span', :class => 'help-block'
@@ -67,7 +67,7 @@ SimpleForm.setup do |config|
     end
   end
 
-  config.wrappers :append, :tag => 'fieldset', :class => "control-group", :error_class => 'error' do |b|
+  config.wrappers :append, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
     b.use :placeholder
     b.use :label, :class => 'control-label'
     b.use :hint,  :tag => 'span', :class => 'help-block'
@@ -84,7 +84,6 @@ SimpleForm.setup do |config|
   # to learn about the different styles for forms and inputs,
   # buttons and other elements.
   config.default_wrapper = :bootstrap
-
 
   # Define the way to render check boxes / radio buttons with labels.
   # Defaults to :nested for bootstrap config.

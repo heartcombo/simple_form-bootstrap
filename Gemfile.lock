@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: 533b76a17c469d3b669a3aa6d4b79d3529b9aedf
+  revision: 5aaa775d8970440ac96e1f7d7db269dd02b77221
   specs:
     simple_form (2.0.0.dev)
       actionpack (~> 3.0)
