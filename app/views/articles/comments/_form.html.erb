@@ -1,13 +1,12 @@
-<%= simple_form_for [@article, @comment ||= Comment.new] do |f| %>
-  <legend>Comment (stacked-form)</legend>
-  <% f.with_options :input_html => {:class => "xxlarge"} do |opt| %>
-    <%= opt.input :name, :hint => "please, identify yourself" %>
-    <%= opt.input :body, :hint => "add your comment here",
-                  :input_html => { :rows => 4 } %>
-  <% end %>
+<%= simple_form_for [@article, @comment ||= Comment.new], :defaults => { :input_html => { :class => "xxlarge" } } do |f| %>
+  <fieldset>
+    <legend>Comment (stacked-form)</legend>
+    <%= f.input :name, :hint => "please, identify yourself" %>
+    <%= f.input :body, :hint => "add your comment here", :input_html => { :rows => 4 } %>
 
-  <div class="form-actions">
-    <%= f.button :submit, :class => 'primary' %>
-    <%= button_tag 'Cancel', :type => :reset, :class => "btn" %>
-  </div>
+    <div class="form-actions">
+      <%= f.button :submit, :class => 'btn-primary' %>
+      <%= submit_tag 'Cancel', :type => :reset, :class => "btn btn-danger" %>
+    </div>
+  </fieldset>
 <% end %>
