@@ -128,11 +128,11 @@ end
 
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
-    <%= button_tag 'Cancel', :type => :reset, :class => "btn btn-danger" %>
+    <%= submit_tag 'Cancel', :type => :reset, :class => "btn btn-danger" %>
   </div>
 <pre class='prettyprint linenums lang-rb'>
   # SimpleForm buttons already receive the 'btn' class for Bootstrap.
   f.button :submit, :class =&gt; 'btn-primary'
-  button_tag 'Cancel', :type =&gt; :reset, :class =&gt; "btn btn-danger"
+  submit_tag 'Cancel', :type =&gt; :reset, :class =&gt; "btn btn-danger"
 </pre>
 <% end %>
