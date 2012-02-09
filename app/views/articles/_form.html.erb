@@ -1,3 +1,4 @@
+
 <div class="well form-actions">
   <a href="#" class="btn btn-primary left" data-code="show">
     toggle code examples for each form element.
@@ -94,14 +95,14 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
   f.input :disabled_text, :disabled =&gt; true, :hint =&gt; "an example of disabled input"
 </pre>
 
-  <%= f.input :disabled_text, :wrapper => :prepend do %>
+  <%= f.input :disabled_text, :wrapper => :prepend, :hint => 'This is the hint text' do %>
     <%= content_tag :label, :class => "add-on" do %>
       <%= check_box_tag :remove, 'true' %>
     <% end %>
     <%= f.input_field :disabled_text, :disabled => true %>
   <% end %>
 <pre class='prettyprint linenums lang-rb'>
-f.input :disabled_text, :wrapper =&gt; :prepend do
+f.input :disabled_text, :wrapper =&gt; :prepend, :hint =&gt; "This is the hint text" do
   content_tag :label, :class =&gt; "add-on" do
     check_box_tag :remove, 'true'
   end
@@ -109,7 +110,7 @@ f.input :disabled_text, :wrapper =&gt; :prepend do
 end
 </pre>
 
-  <%= f.input :disabled_text, :wrapper => :append do %>
+  <%= f.input :disabled_text, :wrapper => :append, :hint => 'This is the hint text' do %>
     <%= f.input_field :disabled_text, :class => :mini, :disabled => true %>
     <%= content_tag :label, :class => "add-on active" do %>
       <%= check_box_tag :remove, 'true' %>
@@ -118,7 +119,7 @@ end
 
 <pre class='prettyprint linenums lang-rb'>
   # Use the 'append' wrapper the same way as the 'prepend' one.
-  f.input :disabled_text, :wrapper =&gt; :append do
+  f.input :disabled_text, :wrapper =&gt; :append, :hint =&gt; "This is the hint text" do
     f.input_field :disabled_text, :class =&gt; :mini
     content_tag :label, :class =&gt; "add-on active" do
       check_box_tag :remove, 'true'
