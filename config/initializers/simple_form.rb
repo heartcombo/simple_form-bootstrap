@@ -57,7 +57,7 @@ SimpleForm.setup do |config|
 
   config.wrappers :prepend, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
     b.use :placeholder
-    b.use :label, :wrap_with => { :class => 'control-label' }
+    b.use :label
     b.wrapper :tag => 'div', :class => 'controls' do |input|
       input.wrapper :tag => 'div', :class => 'input-prepend' do |prepend|
         prepend.use :input
@@ -69,7 +69,7 @@ SimpleForm.setup do |config|
 
   config.wrappers :append, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
     b.use :placeholder
-    b.use :label, :wrap_with => { :class => 'control-label' }
+    b.use :label
     b.wrapper :tag => 'div', :class => 'controls' do |input|
       input.wrapper :tag => 'div', :class => 'input-append' do |append|
         append.use :input
@@ -135,6 +135,9 @@ SimpleForm.setup do |config|
   # You can define the class to use on all forms. Default is simple_form.
   # config.form_class = :simple_form
 
+  # You can define which elements should obtain additional classes
+  # config.generate_additional_classes_for = [:wrapper, :label, :input]
+
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
 
@@ -165,6 +168,6 @@ SimpleForm.setup do |config|
   # Automatically discover new inputs in Rails' autoload path.
   # config.inputs_discovery = true
 
-  # Cache simple form inputs discovery
+  # Cache SimpleForm inputs discovery
   # config.cache_discovery = !Rails.env.development?
 end
