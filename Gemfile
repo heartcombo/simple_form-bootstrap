@@ -11,7 +11,7 @@ end
 
 gem 'jquery-rails'
 
-gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'
+gem 'simple_form', '~> 2.0.0'
 
 group :production do
   gem 'pg'
