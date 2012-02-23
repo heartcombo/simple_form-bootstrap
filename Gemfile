@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.2.1'
+gem 'rails', '~> 3.2.2.rc1'
 
 gem 'json'
 gem 'thin'
@@ -11,7 +11,7 @@ end
 
 gem 'jquery-rails'
 
-gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'
+gem 'simple_form', '~> 2.0.0'
 
 group :production do
   gem 'pg'
