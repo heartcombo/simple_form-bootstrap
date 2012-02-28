@@ -3,10 +3,10 @@
 This is a example application using [SimpleForm](https://github.com/plataformatec/simple_form)
 and [Twitter Bootstrap](http://twitter.github.com/bootstrap).
 
-A copy of the `bootstrap.css` from the [2.0-wip branch](https://github.com/twitter/bootstrap/tree/2.0-wip) is located at `vendor/assets/stylesheets/bootstrap.css`. To update it from the bootstrap repository, use the following:
+A copy of the `bootstrap.css` can be found from [Demo Site](http://twitter.github.com/bootstrap/) or download from the [Official home page](http://twitter.github.com/bootstrap/). To copy bootstrap from demo site, use the following:
 
 ```
-curl https://raw.github.com/twitter/bootstrap/2.0-wip/bootstrap.css > vendor/assets/stylesheets/bootstrap.css
+curl http://twitter.github.com/bootstrap/assets/css/bootstrap.css > vendor/assets/stylesheets/bootstrap.css
 ```
 
 ## License
