@@ -1,4 +1,3 @@
-
 <div class="well form-actions">
   <a href="#" class="btn btn-primary left" data-code="show">
     toggle code examples for each form element.
@@ -55,7 +54,7 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
 
   <%= f.input :content_type, :collection => content_type_options, :as => :check_boxes, :item_wrapper_class => 'inline', :label => 'Inline checkboxes' %>
 <pre class='prettyprint linenums lang-rb'>
-  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :radio_buttons, :item_wrapper_class =&gt; &#x27inline&#x27;
+  f.input :content_type, :collection =&gt; content_type_options, :as =&gt; :check_boxes, :item_wrapper_class =&gt; &#x27inline&#x27;
 </pre>
 
   <%= f.input :content_type, :collection => content_type_options, :as => :radio_buttons, :label => 'Stacked radios' %>
