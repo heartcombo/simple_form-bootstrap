@@ -17,4 +17,4 @@ group :production do
   gem 'pg'
 end
 
-gem 'sqlite3', group: [:test, :development]
+gem 'sqlite3', :groups => [:test, :development]
