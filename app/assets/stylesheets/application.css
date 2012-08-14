@@ -60,7 +60,7 @@ footer {
   text-align: center;
 }
 
-.navbar-fixed .brand {
+.navbar .brand {
   float: right;
   padding-right: 0;
 }
