@@ -3,12 +3,12 @@
  *= require google-code-prettify
 */
 
-.alert p.error_notification {
-  margin-bottom: 0;
+body {
+  padding-top: 60px;
 }
 
-header.master {
-  padding-top: 60px;
+.alert p.error_notification {
+  margin-bottom: 0;
 }
 
 div.well {
