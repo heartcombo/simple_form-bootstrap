@@ -56,10 +56,6 @@ article .content {
   float:right;
 }
 
-footer {
-  text-align: center;
-}
-
 .navbar .brand {
   float: right;
   padding-right: 0;
@@ -67,4 +63,25 @@ footer {
 
 .form-vertical .boolean .controls {
   display: inline-block;
+}
+
+.footer {
+  padding: 70px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+.footer-links li:first-child {
+  padding-left: 0;
 }
