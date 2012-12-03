@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.2.2.rc1'
+gem 'rails', '~> 3.2.8'
 
 gem 'json'
 gem 'thin'
@@ -17,4 +17,4 @@ group :production do
   gem 'pg'
 end
 
-gem 'sqlite3', group: [:test, :development]
+gem 'sqlite3', :groups => [:test, :development]

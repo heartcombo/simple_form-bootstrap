@@ -1,8 +1,8 @@
 <div class="well form-actions">
-  <a href="#" class="btn btn-primary left" data-code="show">
+  <a href="#" class="btn btn-primary pull-left" data-code="show">
     toggle code examples for each form element.
   </a>
-  <a href='#' id='toggle-form' class='btn right'>
+  <a href='#' id='toggle-form' class='btn pull-right'>
     toggle between vertical and horizontal form
   </a>
 </div>
@@ -13,10 +13,10 @@
 simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
 </pre>
 
-  <% if f.error_notification %>
+  <% if notification = f.error_notification %>
     <div class="alert alert-error fade in">
       <a class="close" data-dismiss="alert" href="#">&times;</a>
-      <%= f.error_notification %>
+      <%= notification %>
     </div>
   <% end %>
 
@@ -95,14 +95,14 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
 </pre>
 
   <%= f.input :disabled_text, :wrapper => :prepend, :hint => 'This is the hint text' do %>
-    <%= content_tag :label, :class => "add-on" do %>
+    <%= content_tag :span, :class => "add-on" do %>
       <%= check_box_tag :remove, 'true' %>
     <% end %>
     <%= f.input_field :disabled_text, :disabled => true %>
   <% end %>
 <pre class='prettyprint linenums lang-rb'>
 f.input :disabled_text, :wrapper =&gt; :prepend, :hint =&gt; "This is the hint text" do
-  content_tag :label, :class =&gt; "add-on" do
+  content_tag :span, :class =&gt; "add-on" do
     check_box_tag :remove, 'true'
   end
   f.input_field :disabled_text
@@ -111,7 +111,7 @@ end
 
   <%= f.input :disabled_text, :wrapper => :append, :hint => 'This is the hint text' do %>
     <%= f.input_field :disabled_text, :class => :mini, :disabled => true %>
-    <%= content_tag :label, :class => "add-on active" do %>
+    <%= content_tag :span, :class => "add-on active" do %>
       <%= check_box_tag :remove, 'true' %>
     <% end %>
   <% end %>
@@ -120,7 +120,7 @@ end
   # Use the 'append' wrapper the same way as the 'prepend' one.
   f.input :disabled_text, :wrapper =&gt; :append, :hint =&gt; "This is the hint text" do
     f.input_field :disabled_text, :class =&gt; :mini
-    content_tag :label, :class =&gt; "add-on active" do
+    content_tag :span, :class =&gt; "add-on active" do
       check_box_tag :remove, 'true'
     end
   end

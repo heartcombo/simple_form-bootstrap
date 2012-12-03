@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <title>Example application with SimpleForm and Twitter Bootstrap</title>
   <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
@@ -18,13 +19,13 @@
   </script>
 </head>
 <body>
-  <header class="navbar navbar-fixed">
+  <header class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <a href="http://github.com/rafaelfranca/simple_form-bootstrap">
-        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
       </a>
       <div class="container">
-        <a class="brand" href="#">Plataformatec SimpleForm + Twitter Bootstrap</a>
+        <a class="brand" href="#">SimpleForm & Twitter Bootstrap</a>
         <ul class="nav">
           <li><%= link_to "Home", root_path %></li>
           <li class="dropdown">
@@ -46,12 +47,11 @@
       <%= yield :breadcrumb %>
     </ul>
     <div class='alert alert-info fade in' data-alert='alert'>
-      <a class="close" data-dismiss='alert' href="#">×</a>
-      <p>
+      <h3>
         <strong>
           <a href="https://github.com/plataformatec/simple_form">SimpleForm</a> 2.0 and <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> sample application.
         </strong>
-      </p>
+      </h3>
       <p>Here you'll see the usage of <a href="https://github.com/plataformatec/simple_form">SimpleForm</a> and the <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> toolkit on a Rails 3.2 application.</p>
       <p>You can check the source code on <a href='https://github.com/rafaelfranca/simple_form-bootstrap'>GitHub</a>.</p>
 
@@ -66,8 +66,16 @@
 
     <%= yield %>
   </div>
-  <footer class="container">
-    Copyright 2012 <a href="http://www.plataformatec.com.br">Plataforma Tecnologia</a>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Copyright 2012 <a href="http://plataformatec.com.br">Plataformatec</a></p>
+      <ul class="footer-links">
+        <li><a href="http://blog.plataformatec.com.br">Plataformatec Blog</a></li>
+        <li class="muted">·</li>
+        <li><a href="https://github.com/plataformatec/simple_form">SimpleForm @ GitHub</a></li>
+      </ul>
+    </div>
   </footer>
   <%= javascript_include_tag "application" %>
 </body>
