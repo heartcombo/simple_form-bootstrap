@@ -25,8 +25,6 @@ article .content {
   padding: 10px;
   border: 1px solid #ccc;
   background: #f5f5f5;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   margin-bottom: 10px;
 }
@@ -49,13 +47,6 @@ article .content {
   height: 30px;
 }
 
-.btn.left {
-  float:left;
-}
-.btn.right {
-  float:right;
-}
-
 .navbar .brand {
   float: right;
   padding-right: 0;
@@ -71,17 +62,21 @@ article .content {
   border-top: 1px solid #e5e5e5;
   background-color: #f5f5f5;
 }
+
 .footer p {
   margin-bottom: 0;
   color: #777;
 }
+
 .footer-links {
   margin: 10px 0;
 }
+
 .footer-links li {
   display: inline;
   padding: 0 2px;
 }
+
 .footer-links li:first-child {
   padding-left: 0;
 }
