@@ -8,12 +8,10 @@ class Articles::CommentsController < ApplicationController
     @comment = Comment.new(params[:comment])
     @comment.article = @article
 
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @article, :notice => 'Comment was successfully created.' }
-      else
-        format.html { render "articles/show" }
-      end
+    if @comment.save
+      redirect_to @article, :notice => 'Comment was successfully created.'
+    else
+      render "articles/show"
     end
   end
 
