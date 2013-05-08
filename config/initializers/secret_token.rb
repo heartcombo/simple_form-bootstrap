@@ -1,7 +1,12 @@
 # Be sure to restart your server when you modify this file.
 
-# Your secret key for verifying the integrity of signed cookies.
+# Your secret key is used for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
+
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-SimpleFormBootstrap::Application.config.secret_token = '662ff406d99d71eeec6774183e82e5af4f3c96181ef4f53cb86d942d3a59c418957960f40143fe15b8e328df58c486ead4459911a798521a7b58004052d908ab'
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure your secret_key_base is kept private
+# if you're sharing your code publicly.
+SimpleFormBootstrap::Application.config.secret_key_base = '16d5681f86d30e433e10f37f059837c91510a8a9a410fb6234ae8a102882a669bcf19edd27be9d93562c7c49db6c7503051d97320d84d39c2648ff1b8c7d1e1f'
