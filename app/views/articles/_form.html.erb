@@ -21,7 +21,7 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
   <% end %>
 
   <legend>Article</legend>
-  <%= f.input :name, :input_html => { :class => "span6" },
+  <%= f.input :name, :label_html => { :class => "col-lg-1" },
               :hint => "add your article title here" %>
 <pre class='prettyprint linenums lang-rb'>
   # You can use the same `span*` classes from the grid system.
