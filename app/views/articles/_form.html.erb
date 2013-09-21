@@ -43,7 +43,16 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
   end
 </pre>
 
-  <%= f.input :published, :as => :boolean %>
+  <div class="form-group">
+    <div class="checkbox">
+      <div class="col-lg-offset-1 col-lg-10">
+        <%= f.label :published do %>
+          <%= f.check_box :published %>
+          Published
+        <% end -%>
+      </div>
+    </div>
+  </div>
 
 <pre class='prettyprint linenums lang-rb'>
   f.input :published, :as =&gt; :boolean
