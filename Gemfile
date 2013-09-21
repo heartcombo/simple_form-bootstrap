@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '2.0.0'
 
-gem 'rails', '~> 4.0.0.rc1'
+gem 'rails', '~> 4.0.0'
 
 gem 'json'
 gem 'thin'
@@ -9,7 +9,7 @@ gem 'thin'
 gem 'uglifier'
 gem 'jquery-rails'
 
-gem 'simple_form', '~> 3.0.0.beta1'
+gem 'simple_form', '~> 3.0.0'
 
 group :production do
   gem 'pg'
