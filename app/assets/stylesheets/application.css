@@ -43,13 +43,9 @@ article .content {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
 .form-actions {
   height: 30px;
-}
-
-.navbar .brand {
-  float: right;
-  padding-right: 0;
 }
 
 .form-vertical .boolean .controls {
