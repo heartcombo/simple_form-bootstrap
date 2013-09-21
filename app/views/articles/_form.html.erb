@@ -28,9 +28,11 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
   f.input :name, :input_html =&gt; { :class =&gt; "span6" }, :hint =&gt; "add your article title here"
 </pre>
 
-  <div class='input-group col-lg-4'>
-    <%= content_tag :span, "Name", :class => "input-group-addon" %>
-    <%= f.input_field :name %>
+  <div class="form-group">
+    <div class='input-group col-lg-offset-1 col-lg-4'>
+      <%= content_tag :span, "Name", :class => "input-group-addon" %>
+      <%= f.input_field :name %>
+    </div>
   </div>
 
 <pre class='prettyprint linenums lang-rb'>
