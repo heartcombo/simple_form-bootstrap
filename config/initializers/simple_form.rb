@@ -45,18 +45,18 @@ SimpleForm.setup do |config|
     b.use :error, :wrap_with => { :tag => :span, :class => :error }
   end
 
-  config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
+  config.wrappers :bootstrap, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
-    b.wrapper :tag => 'div', :class => 'controls' do |ba|
+    b.wrapper :tag => 'div', :class => 'col-lg-6' do |ba|
       ba.use :input
       ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
       ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end
   end
 
-  config.wrappers :prepend, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+  config.wrappers :prepend, :tag => 'div', :class => "form-group", :error_class => 'error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -69,7 +69,7 @@ SimpleForm.setup do |config|
     end
   end
 
-  config.wrappers :append, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+  config.wrappers :append, :tag => 'div', :class => "form-group", :error_class => 'error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -134,6 +134,7 @@ SimpleForm.setup do |config|
 
   # You can define the class to use on all labels. Default is nil.
   config.label_class = 'control-label'
+  config.input_class = 'form-control'
 
   # You can define the class to use on all forms. Default is simple_form.
   # config.form_class = :simple_form
