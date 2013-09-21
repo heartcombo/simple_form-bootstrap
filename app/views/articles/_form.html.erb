@@ -28,10 +28,10 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
   f.input :name, :input_html =&gt; { :class =&gt; "span6" }, :hint =&gt; "add your article title here"
 </pre>
 
-  <%= f.input :name, :wrapper => :prepend, :label => false do %>
-    <%= content_tag :span, "Name", :class => "add-on" %>
+  <div class='input-group col-lg-4'>
+    <%= content_tag :span, "Name", :class => "input-group-addon" %>
     <%= f.input_field :name %>
-  <% end %>
+  </div>
 
 <pre class='prettyprint linenums lang-rb'>
   # Use different wrappers to use other elements from Bootstrap, like a 'prepend' box.
