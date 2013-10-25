@@ -45,40 +45,40 @@ SimpleForm.setup do |config|
     b.use :error, :wrap_with => { :tag => :span, :class => :error }
   end
 
-  config.wrappers :bootstrap, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
+  config.wrappers :bootstrap, :tag => 'div', :class => 'form-group', :error_class => 'has-error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
     b.wrapper :tag => 'div', :class => 'col-lg-6' do |ba|
       ba.use :input
-      ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+      ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-block has-error' }
       ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end
   end
 
-  config.wrappers :prepend, :tag => 'div', :class => "form-group", :error_class => 'error' do |b|
+  config.wrappers :prepend, :tag => 'div', :class => "form-group", :error_class => 'has-error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
-    b.wrapper :tag => 'div', :class => 'controls' do |input|
-      input.wrapper :tag => 'div', :class => 'input-prepend' do |prepend|
+    b.wrapper :tag => 'div', :class => 'controls col-lg-6' do |input|
+      input.wrapper :tag => 'div', :class => 'input-group' do |prepend|
         prepend.use :input
       end
       input.use :hint,  :wrap_with => { :tag => 'span', :class => 'help-block' }
-      input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+      input.use :error, :wrap_with => { :tag => 'span', :class => 'help-block has-error' }
     end
   end
 
-  config.wrappers :append, :tag => 'div', :class => "form-group", :error_class => 'error' do |b|
+  config.wrappers :append, :tag => 'div', :class => "form-group", :error_class => 'has-error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
-    b.wrapper :tag => 'div', :class => 'controls' do |input|
-      input.wrapper :tag => 'div', :class => 'input-append' do |append|
+    b.wrapper :tag => 'div', :class => 'controls col-lg-6' do |input|
+      input.wrapper :tag => 'div', :class => 'input-group' do |append|
         append.use :input
       end
       input.use :hint,  :wrap_with => { :tag => 'span', :class => 'help-block' }
-      input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+      input.use :error, :wrap_with => { :tag => 'span', :class => 'help-block has-error' }
     end
   end
 
@@ -133,7 +133,7 @@ SimpleForm.setup do |config|
   # config.label_text = lambda { |label, required| "#{required} #{label}" }
 
   # You can define the class to use on all labels. Default is nil.
-  config.label_class = 'control-label'
+  config.label_class = 'control-label col-lg-2'
   config.input_class = 'form-control'
 
   # You can define the class to use on all forms. Default is simple_form.
@@ -174,4 +174,11 @@ SimpleForm.setup do |config|
 
   # Cache SimpleForm inputs discovery
   # config.cache_discovery = !Rails.env.development?
+end
+module SimpleForm
+  class FormBuilder
+    map_type :boolean, to: BS3BooleanInput
+    map_type :check_boxes, to: BS3CollectionCheckBoxesInput
+    map_type :radio_buttons, to: BS3CollectionRadioButtonsInput
+  end
 end
