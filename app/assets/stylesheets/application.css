@@ -52,6 +52,20 @@ article .content {
   display: inline-block;
 }
 
+.form-vertical .form-group .control-label {
+  display: block;
+  float: none;
+}
+
+.form-vertical .form-group .col-lg-6 {
+  float: none;
+}
+
+.form-vertical .form-group .radio.radio-inline,
+.form-vertical .form-group .checkbox.checkbox-inline {
+  margin-top: 0;
+}
+
 .footer {
   padding: 70px 0;
   margin-top: 70px;
