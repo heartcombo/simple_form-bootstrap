@@ -1,13 +1,14 @@
 <%= simple_form_for :article do |f| %>
-  <%= f.input :email, as: :string, label: 'Email Address' %>
+  <%= f.input :my_email, as: :string, label: 'Email Address' %>
 
-  <%= f.input :password, as: :password, label: 'Password' %>
+  <%= f.input :my_password, as: :password, label: 'Password' %>
 
-  <%= f.input :file, as: :file, label: 'File input' %>
+  <%= f.input :my_file, as: :file, label: 'File input' %>
 
-  <%= f.input :checkbox, as: :boolean, label: 'Check me out', :wrapper => :vertical_check_box %>
+  <%= f.input :my_checkbox, as: :boolean, label: 'Check me out', :wrapper => :vertical_check_box %>
 
-  <%= f.input :checkboxes, as: :check_boxes, collection: 2..4, label: 'More options' %>
+  <%= f.input :my_radio_buttons, as: :radio_buttons, label: 'This is a radio button' %>
 
   <%= f.button :submit %>
+
 <% end %>
