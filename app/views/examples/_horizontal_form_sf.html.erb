@@ -1,0 +1,11 @@
+<%= simple_form_for :article, wrapper: :bootstrap_horizontal, html: { class: 'form-horizontal' } do |f| %>
+  <%= f.input :email, as: :string, label: 'Email Address', input_html: {  } %>
+
+  <%= f.input :password, as: :password, label: 'Password' %>
+
+  <%= f.input :file, as: :file, label: 'File input' %>
+
+  <%= f.input :checkbox, as: :boolean, label: 'Check me out', :wrapper => :horizontal_check_box %>
+
+  <%= f.button :submit %>
+<% end %>

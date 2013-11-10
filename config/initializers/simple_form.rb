@@ -53,6 +53,45 @@ SimpleForm.setup do |config|
       ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
       ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end
+
+    # b.wrapper_for [:check_boxes, :boolean], :vertical_check_box
+  end
+
+  config.wrappers :vertical_check_box, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.wrapper :tag => 'div', :class => 'checkbox' do |ba|
+      ba.use :label_input
+    end
+    b.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+    b.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+  end
+
+  config.wrappers :bootstrap_horizontal, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.use :label, :class => 'col-sm-2'
+    # b.wrapper_for [:check_boxes, :boolean], :horizontal_check_box
+
+    b.wrapper :tag => 'div', :class => 'col-sm-9' do |ba|
+      ba.use :input
+      ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+      ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+    end
+  end
+
+  config.wrappers :horizontal_check_box, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
+    b.use :html5
+    b.use :placeholder
+
+    b.wrapper :tag => 'div', :class => 'col-sm-offset-2 col-sm-9' do |wr|
+      wr.wrapper :tag => 'div', :class => 'checkbox' do |ba|
+        ba.use :label_input, :class => 'col-sm-9'
+      end
+    end
+
+    b.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+    b.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
   end
 
   config.wrappers :prepend, :tag => 'div', :class => "form-group", :error_class => 'error' do |b|

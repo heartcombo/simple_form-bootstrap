@@ -5,7 +5,9 @@
 
   <%= f.input :file, as: :file, label: 'File input' %>
 
-  <%= f.input :checkbox, as: :boolean, label: 'Check me out' %>
+  <%= f.input :checkbox, as: :boolean, label: 'Check me out', :wrapper => :vertical_check_box %>
+
+  <%= f.input :checkboxes, as: :check_boxes, collection: 2..4, label: 'More options' %>
 
   <%= f.button :submit %>
 <% end %>
