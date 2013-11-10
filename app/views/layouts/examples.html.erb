@@ -33,20 +33,13 @@
       </div>
     </div>
   </header>
-  <div class="container master-container">
-    <ul class="breadcrumb">
-      <%= yield :breadcrumb %>
-    </ul>
-    <div class='alert alert-info fade in' data-alert='alert'>
-      <h3>
-        <strong>
-          <a href="https://github.com/plataformatec/simple_form">SimpleForm</a> 2.0 and <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> sample application.
-        </strong>
-      </h3>
-      <p>Here you'll see the usage of <a href="https://github.com/plataformatec/simple_form">SimpleForm</a> and the <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> toolkit on a Rails 4 application.</p>
-      <p>You can check the source code on <a href='https://github.com/rafaelfranca/simple_form-bootstrap'>GitHub</a>.</p>
 
-    </div>
+  <div class="container master-container">
+    <% if content_for? :breadcrumb %>
+      <ul class="breadcrumb">
+        <%= yield :breadcrumb %>
+      </ul>
+    <% end %>
 
     <% if notice %>
       <div class="alert alert-success fade in" data-alert="alert">

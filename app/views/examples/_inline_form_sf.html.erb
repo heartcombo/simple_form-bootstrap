@@ -1,0 +1,9 @@
+<%= simple_form_for :article, html: { class: 'form-inline' } do |f| %>
+  <%= f.input :email, as: :string, label: 'Email Address' %>
+
+  <%= f.input :password, as: :password, label: 'Password' %>
+
+  <%= f.input :checkbox, as: :boolean, label: 'Remember me' %>
+
+  <%= f.button :submit %>
+<% end %>

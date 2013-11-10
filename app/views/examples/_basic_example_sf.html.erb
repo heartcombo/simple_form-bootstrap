@@ -1,0 +1,11 @@
+<%= simple_form_for :article do |f| %>
+  <%= f.input :email, as: :string, label: 'Email Address' %>
+
+  <%= f.input :password, as: :password, label: 'Password' %>
+
+  <%= f.input :file, as: :file, label: 'File input' %>
+
+  <%= f.input :checkbox, as: :boolean, label: 'Check me out' %>
+
+  <%= f.button :submit %>
+<% end %>
