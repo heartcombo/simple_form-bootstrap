@@ -1,5 +1,16 @@
 en:
   simple_form:
+    hints:
+      article:
+        my_email: Lorem ipsum dolor sit amet
+        my_password: Lorem ipsum dolor sit amet
+        my_file: Lorem ipsum dolor sit amet
+        my_checkbox: Lorem ipsum dolor sit amet
+        my_radio_buttons: Lorem ipsum dolor sit amet
+    placeholders:
+      user:
+        username: 'Your username'
+        password: '****'
     "yes": 'Yes'
     "no": 'No'
     required:
