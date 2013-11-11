@@ -74,7 +74,7 @@ SimpleForm.setup do |config|
   config.wrappers :bootstrap_horizontal, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
     b.use :html5
     b.use :placeholder
-    b.use :label, :class => 'col-sm-2'
+    b.use :label, :class => 'col-sm-3'
     # b.wrapper_for [:check_boxes, :boolean], :horizontal_check_box
 
     b.wrapper :tag => 'div', :class => 'col-sm-9' do |ba|
