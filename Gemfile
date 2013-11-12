@@ -10,7 +10,6 @@ gem 'uglifier'
 gem 'jquery-rails'
 
 gem 'simple_form', '~> 3.0.0'
-gem 'pry'
 
 group :production do
   gem 'pg'
