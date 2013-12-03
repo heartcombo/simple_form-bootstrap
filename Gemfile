@@ -1,17 +1,15 @@
 source 'http://rubygems.org'
+ruby '2.0.0'
 
-gem 'rails', '~> 3.2.11'
+gem 'rails', '~> 4.0.2'
 
 gem 'json'
 gem 'thin'
 
-group :assets do
-  gem 'uglifier'
-end
-
+gem 'uglifier'
 gem 'jquery-rails'
 
-gem 'simple_form', '~> 2.0.0'
+gem 'simple_form', '~> 3.0.0'
 
 group :production do
   gem 'pg'
