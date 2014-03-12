@@ -7,9 +7,13 @@
 
   <%= f.input :my_checkbox, as: :boolean, label: 'Check me out', :wrapper => :horizontal_check_box %>
 
-  <%= f.input :my_checkbox, as: :check_boxes, label: 'A couple of checkboxes' %>
+  <%= f.input :my_checkboxes, as: :check_boxes, label: 'A couple of checkboxes',
+    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"],
+    wrapper: :horizontal_radio_button %>
 
-  <%= f.input :my_radio_buttons, as: :radio_buttons, label: 'A couple of radio button' %>
+  <%= f.input :my_radio_buttons, as: :radio_buttons, label: 'A couple of radio button',
+    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"],
+    wrapper: :horizontal_radio_button %>
 
   <%= f.button :submit %>
 <% end %>

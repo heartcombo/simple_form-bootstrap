@@ -77,11 +77,10 @@ SimpleForm.setup do |config|
   config.wrappers :bootstrap_horizontal, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
     b.use :html5
     b.use :placeholder
-    b.use :label, :class => 'col-sm-3'
-    # b.wrapper_for [:check_boxes, :boolean], :horizontal_check_box
+    b.use :label, :class => 'col-sm-3 control-label'
 
     b.wrapper :tag => 'div', :class => 'col-sm-9' do |ba|
-      ba.use :input
+      ba.use :input, class: 'form-control'
       ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
       ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end
@@ -91,14 +90,27 @@ SimpleForm.setup do |config|
     b.use :html5
     b.use :placeholder
 
-    b.wrapper :tag => 'div', :class => 'col-sm-offset-2 col-sm-9' do |wr|
+    b.wrapper :tag => 'div', :class => 'col-sm-offset-3 col-sm-9' do |wr|
       wr.wrapper :tag => 'div', :class => 'checkbox' do |ba|
         ba.use :label_input, :class => 'col-sm-9'
       end
-    end
 
-    b.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
-    b.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+      wr.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+      wr.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+    end
+  end
+
+  config.wrappers :horizontal_radio_button, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
+    b.use :html5
+    b.use :placeholder
+
+    b.use :label, :class => 'col-sm-3 control-label'
+
+    b.wrapper :tag => 'div', :class => 'col-sm-7' do |ba|
+      ba.use :input
+      ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+      ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+    end
   end
 
   config.wrappers :prepend, :tag => 'div', :class => "form-group", :error_class => 'error' do |b|
