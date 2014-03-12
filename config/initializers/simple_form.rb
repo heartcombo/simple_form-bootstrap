@@ -44,19 +44,16 @@ SimpleForm.setup do |config|
     b.use :error, :wrap_with => { :tag => :span, :class => :error }
   end
 
-
-
   config.wrappers :bootstrap, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
     b.use :html5
     b.use :placeholder
-    b.use :label
+    b.use :label, class: 'control-label'
+
     b.wrapper :tag => 'div' do |ba|
-      ba.use :input
+      ba.use :input, class: 'form-control'
       ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
       ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end
-
-    # b.wrapper_for [:check_boxes, :boolean], :vertical_check_box
   end
 
   config.wrappers :vertical_check_box, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
@@ -69,7 +66,13 @@ SimpleForm.setup do |config|
     b.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
   end
 
-
+  config.wrappers :vertical_radio_button, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.use :label_input
+    b.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+    b.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+  end
 
   config.wrappers :bootstrap_horizontal, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
     b.use :html5
@@ -97,8 +100,6 @@ SimpleForm.setup do |config|
     b.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
     b.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
   end
-
-
 
   config.wrappers :prepend, :tag => 'div', :class => "form-group", :error_class => 'error' do |b|
     b.use :html5
@@ -177,8 +178,9 @@ SimpleForm.setup do |config|
   # config.label_text = lambda { |label, required| "#{required} #{label}" }
 
   # You can define the class to use on all labels. Default is nil.
-  config.label_class = 'control-label'
-  config.input_class = 'form-control'
+  # config.label_class = 'control-label'
+  # config.input_class = 'form-control'
+  config.boolean_label_class = nil
 
   # You can define the class to use on all forms. Default is simple_form.
   # config.form_class = :simple_form

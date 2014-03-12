@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/plataformatec/simple_form.git
+  revision: 6b685618cb011389e7a4b0430f59a88fa1e14027
+  branch: bootstrap-3
+  specs:
+    simple_form (3.0.1)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -63,9 +72,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
-    simple_form (3.0.1)
-      actionpack (>= 4.0.0, < 4.1)
-      activemodel (>= 4.0.0, < 4.1)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -100,7 +106,7 @@ DEPENDENCIES
   json
   pg
   rails (~> 4.0.3)
-  simple_form (~> 3.0.0)
+  simple_form (~> 3.0.0)!
   sqlite3
   thin
   uglifier
