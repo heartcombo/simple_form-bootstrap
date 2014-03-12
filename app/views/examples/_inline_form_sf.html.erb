@@ -1,9 +1,9 @@
-<%= simple_form_for :article, html: { class: 'form-inline' } do |f| %>
-  <%= f.input :email, as: :string, label: 'Email Address' %>
+<%= simple_form_for :article, defaults: { label: false }, html: { class: 'form-inline' } do |f| %>
+  <%= f.input :email, as: :string, placeholder: 'Email Address' %>
 
-  <%= f.input :password, as: :password, label: 'Password' %>
+  <%= f.input :password, as: :password, placeholder: 'Password' %>
 
-  <%= f.input :checkbox, as: :boolean, label: 'Remember me' %>
+  <%= f.input :checkbox, as: :boolean, inline_label: 'Remember me', :wrapper => :vertical_check_box %>
 
   <%= f.button :submit %>
 <% end %>
