@@ -56,6 +56,18 @@ SimpleForm.setup do |config|
     end
   end
 
+  config.wrappers :vertical_file_input, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.use :label, class: 'control-label'
+
+    b.wrapper :tag => 'div' do |ba|
+      ba.use :input
+      ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+      ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+    end
+  end
+
   config.wrappers :vertical_check_box, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
     b.use :html5
     b.use :placeholder
@@ -81,6 +93,18 @@ SimpleForm.setup do |config|
 
     b.wrapper :tag => 'div', :class => 'col-sm-9' do |ba|
       ba.use :input, class: 'form-control'
+      ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+      ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+    end
+  end
+
+  config.wrappers :horizontal_file_input, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.use :label, :class => 'col-sm-3 control-label'
+
+    b.wrapper :tag => 'div', :class => 'col-sm-9' do |ba|
+      ba.use :input
       ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
       ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end
