@@ -11,4 +11,4 @@ curl -L http://twitter.github.io/bootstrap/assets/css/bootstrap.css > vendor/ass
 
 ## License
 
-MIT License. Copyright 2011-2013 Plataforma Tecnologia. [blog.plataformatec.com.br](http://blog.plataformatec.com.br)
+MIT License. Copyright 2011-2014 Plataformatec. [blog.plataformatec.com.br](http://blog.plataformatec.com.br)
