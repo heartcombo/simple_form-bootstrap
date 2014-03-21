@@ -9,7 +9,7 @@ gem 'thin'
 gem 'uglifier'
 gem 'jquery-rails'
 
-gem 'simple_form', '~> 3.0.0', github: 'plataformatec/simple_form', branch: 'bootstrap-3'
+gem 'simple_form', '~> 3.0.0', github: 'plataformatec/simple_form', branch: 'master'
 
 group :production do
   gem 'pg'
