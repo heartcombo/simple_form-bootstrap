@@ -1,19 +1,22 @@
-<%= simple_form_for :article do |f| %>
+<%= simple_form_for :article, wrapper_mappings: {
+  check_boxes: :vertical_radio_button,
+  radio_buttons: :vertical_radio_button,
+  file: :vertical_file_input,
+  boolean: :vertical_check_box
+} do |f| %>
   <%= f.input :my_email, as: :string, label: 'Email Address' %>
 
   <%= f.input :my_password, as: :password, label: 'Password' %>
 
-  <%= f.input :my_file, as: :file, label: 'File input', wrapper: :vertical_file_input %>
+  <%= f.input :my_file, as: :file, label: 'File input' %>
 
-  <%= f.input :my_checkbox, as: :boolean, label: 'Check me out', :wrapper => :vertical_check_box %>
+  <%= f.input :my_checkbox, as: :boolean, label: 'Check me out' %>
 
   <%= f.input :my_checkboxes, as: :check_boxes, label: 'This is a checkbox',
-    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"],
-    wrapper: :vertical_radio_button %>
+    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"] %>
 
   <%= f.input :my_radio_buttons, as: :radio_buttons, label: 'This is a radio button',
-    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"],
-    wrapper: :vertical_radio_button %>
+    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"] %>
 
   <%= f.button :submit %>
 <% end %>

@@ -1,9 +1,11 @@
-<%= simple_form_for :article, defaults: { label: false }, html: { class: 'form-inline' } do |f| %>
+<%= simple_form_for :article, defaults: { label: false }, html: { class: 'form-inline' }, wrapper_mappings: {
+  boolean: :vertical_check_box
+} do |f| %>
   <%= f.input :email, as: :string, placeholder: 'Email Address' %>
 
   <%= f.input :password, as: :password, placeholder: 'Password' %>
 
-  <%= f.input :checkbox, as: :boolean, inline_label: 'Remember me', :wrapper => :vertical_check_box %>
+  <%= f.input :checkbox, as: :boolean, inline_label: 'Remember me' %>
 
   <%= f.button :submit %>
 <% end %>

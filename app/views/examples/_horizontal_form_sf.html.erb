@@ -1,19 +1,22 @@
-<%= simple_form_for :article, wrapper: :bootstrap_horizontal, html: { class: 'form-horizontal' } do |f| %>
+<%= simple_form_for :article, html: { class: 'form-horizontal' }, wrapper: :bootstrap_horizontal, wrapper_mappings: {
+  check_boxes: :horizontal_radio_button,
+  radio_buttons: :horizontal_radio_button,
+  file: :horizontal_file_input,
+  boolean: :horizontal_check_box
+} do |f| %>
   <%= f.input :my_email, as: :string, label: 'Email' %>
 
   <%= f.input :my_password, as: :password, label: 'Password' %>
 
-  <%= f.input :my_file, as: :file, label: 'File input', wrapper: :horizontal_file_input %>
+  <%= f.input :my_file, as: :file, label: 'File input' %>
 
-  <%= f.input :my_checkbox, as: :boolean, label: 'Remember me', :wrapper => :horizontal_check_box %>
+  <%= f.input :my_checkbox, as: :boolean, label: 'Remember me' %>
 
   <%= f.input :my_checkboxes, as: :check_boxes, label: 'A couple of checkboxes',
-    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"],
-    wrapper: :horizontal_radio_button %>
+    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"] %>
 
   <%= f.input :my_radio_buttons, as: :radio_buttons, label: 'A couple of radio button',
-    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"],
-    wrapper: :horizontal_radio_button %>
+    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"] %>
 
   <%= f.button :submit %>
 <% end %>
