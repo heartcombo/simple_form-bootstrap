@@ -14,8 +14,8 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
 </pre>
 
   <% if notification = f.error_notification %>
-    <div class="alert alert-danger fade in">
-      <a class="close" data-dismiss="alert" href="#">&times;</a>
+    <div class="alert alert-danger alert-dismissable fade in">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <%= notification %>
     </div>
   <% end %>
