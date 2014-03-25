@@ -105,7 +105,7 @@ simple_form_for(@article, :html =&gt; { :class =&gt; 'form-horizontal' }) do |f|
   f.input :disabled_text, :disabled =&gt; true, :hint =&gt; "an example of disabled input"
 </pre>
 
-  <%= f.input :disabled_text, :wrapper => :prepend, :hint => 'This is the hint text' do %>
+  <%= f.input :disabled_text, :hint => 'This is the hint text' do %>
     <%= content_tag :span, :class => "add-on" do %>
       <%= check_box_tag :remove, 'true' %>
     <% end %>
@@ -120,7 +120,7 @@ f.input :disabled_text, :wrapper =&gt; :prepend, :hint =&gt; "This is the hint t
 end
 </pre>
 
-  <%= f.input :disabled_text, :wrapper => :append, :hint => 'This is the hint text' do %>
+  <%= f.input :disabled_text, :hint => 'This is the hint text' do %>
     <%= f.input_field :disabled_text, :class => :mini, :disabled => true %>
     <%= content_tag :span, :class => "add-on active" do %>
       <%= check_box_tag :remove, 'true' %>
