@@ -4,9 +4,9 @@
   file: :vertical_file_input,
   boolean: :vertical_boolean
 } do |f| %>
-  <%= f.input :my_email, as: :string, label: 'Email Address' %>
+  <%= f.input :my_email, as: :string, label: 'Email Address', placeholder: 'Enter email' %>
 
-  <%= f.input :my_password, as: :password, label: 'Password' %>
+  <%= f.input :my_password, as: :password, label: 'Password', placeholder: 'Password' %>
 
   <%= f.input :my_file, as: :file, label: 'File input' %>
 
