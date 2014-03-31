@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: e14437c29b7510d2d3524df5d9b97d710ddf4b14
+  revision: 429e918488f0a5f2d172aadb17f16f4ed7df05f7
   branch: master
   specs:
     simple_form (3.0.1)
