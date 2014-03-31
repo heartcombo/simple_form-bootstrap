@@ -20,12 +20,13 @@ en:
     #     edit:
     #       email: 'E-mail.'
     hints:
-      article:
-        my_email: Lorem ipsum dolor sit amet
-        my_password: Lorem ipsum dolor sit amet
-        my_file: Example block-level help text here.
-        my_checkbox: Lorem ipsum dolor sit amet
-        my_radio_buttons: Lorem ipsum dolor sit amet
+      user_basic: &hints
+        email: Lorem ipsum dolor sit amet
+        password: Lorem ipsum dolor sit amet
+        file: Example block-level help text here.
+        active: Lorem ipsum dolor sit amet
+        sex: Lorem ipsum dolor sit amet
+      user_horizontal: *hints
     placeholders:
       user:
         username: 'Your username'

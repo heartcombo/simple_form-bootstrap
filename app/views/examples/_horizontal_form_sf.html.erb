@@ -1,22 +1,24 @@
-<%= simple_form_for :article, html: { class: 'form-horizontal' }, wrapper: :horizontal_form, wrapper_mappings: {
-  check_boxes: :horizontal_radio_and_checkboxes,
-  radio_buttons: :horizontal_radio_and_checkboxes,
-  file: :horizontal_file_input,
-  boolean: :horizontal_boolean
-} do |f| %>
-  <%= f.input :my_email, as: :string, label: 'Email', placeholder: 'Email' %>
+<%= simple_form_for @user_horizontal, url: create_horizontal_examples_url, as: 'user_horizontal', html: { class: 'form-horizontal' },
+  wrapper: :horizontal_form,
+  wrapper_mappings: {
+    check_boxes: :horizontal_radio_and_checkboxes,
+    radio_buttons: :horizontal_radio_and_checkboxes,
+    file: :horizontal_file_input,
+    boolean: :horizontal_boolean
+  } do |f| %>
+  <%= f.input :email, placeholder: 'Email' %>
 
-  <%= f.input :my_password, as: :password, label: 'Password', placeholder: 'Password' %>
+  <%= f.input :password, placeholder: 'Password' %>
 
-  <%= f.input :my_file, as: :file, label: 'File input' %>
+  <%= f.input :file, as: :file %>
 
-  <%= f.input :my_checkbox, as: :boolean, label: 'Remember me' %>
+  <%= f.input :active %>
 
-  <%= f.input :my_checkboxes, as: :check_boxes, label: 'A couple of checkboxes',
+  <%= f.input :choices, as: :check_boxes,
     collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"] %>
 
-  <%= f.input :my_radio_buttons, as: :radio_buttons, label: 'A couple of radio button',
-    collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"] %>
+  <%= f.input :sex, as: :radio_buttons,
+    collection: ["Male", "Female"] %>
 
   <%= f.button :submit %>
 <% end %>
