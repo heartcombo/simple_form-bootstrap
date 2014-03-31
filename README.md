@@ -5,4 +5,4 @@ and [Bootstrap](http://getbootstrap.com/).
 
 ## License
 
-MIT License. Copyright 2011-2014 Plataforma Tecnologia. [blog.plataformatec.com.br](http://blog.plataformatec.com.br)
+MIT License. Copyright 2011-2014 Plataformatec. [blog.plataformatec.com.br](http://blog.plataformatec.com.br)
