@@ -7,20 +7,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require google-code-prettify
 //
-
-$(function() {
-  prettyPrint();
-
-  $('a[data-code]').click(function(e) {
-    e.preventDefault();
-    $('pre').slideToggle();
-  });
-
-    $('#toggle-form').on('click', function(e) {
-      e.preventDefault();
-      $('.simple_form').toggleClass('form-vertical').toggleClass('form-horizontal');
-    })
-});
-

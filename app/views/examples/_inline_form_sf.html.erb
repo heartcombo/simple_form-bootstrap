@@ -1,0 +1,14 @@
+<%= simple_form_for @user_inline, url: create_inline_examples_url, as: 'user_inline',
+  defaults: { label: false },
+  html: { class: 'form-inline' },
+  wrapper_mappings: {
+    boolean: :vertical_boolean
+  } do |f| %>
+  <%= f.input :email, placeholder: 'Enter email' %>
+
+  <%= f.input :password, placeholder: 'Password' %>
+
+  <%= f.input :active, inline_label: 'Remember me' %>
+
+  <%= f.button :submit %>
+<% end %>

@@ -1,13 +1,7 @@
-# SimpleForm and Twitter Bootstrap
+# Simple Form and Bootstrap
 
-This is a example application using [SimpleForm](https://github.com/plataformatec/simple_form)
-and [Twitter Bootstrap](http://twitter.github.io/bootstrap/).
-
-A copy of the `bootstrap.css` can be downloaded from the [official home page](http://twitter.github.io/bootstrap/), or using the following command to download from the demo site:
-
-```
-curl -L http://twitter.github.io/bootstrap/assets/css/bootstrap.css > vendor/assets/stylesheets/bootstrap.css
-```
+This is a example application using [Simple Form](https://github.com/plataformatec/simple_form)
+and [Bootstrap](http://getbootstrap.com/).
 
 ## License
 

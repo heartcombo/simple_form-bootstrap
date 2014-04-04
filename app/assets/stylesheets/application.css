@@ -1,59 +1,9 @@
 /*
  *= require bootstrap
- *= require google-code-prettify
 */
 
 body {
   padding-top: 60px;
-}
-
-.alert p.error_notification {
-  margin-bottom: 0;
-}
-
-div.well {
-  padding: 5px 10px;
-}
-
-pre { display: none; }
-
-article .content {
-  margin: 10px 0;
-}
-
-#article-comments {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background: #f5f5f5;
-  border-radius: 3px;
-  margin-bottom: 10px;
-}
-
-#comments {
-  margin-bottom: 10px;
-}
-
-#article-comments form {
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
-  margin-bottom: 0;
-}
-
-#article-comments .form-actions {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.form-actions {
-  height: 30px;
-}
-
-.navbar .brand {
-  float: right;
-  padding-right: 0;
-}
-
-.form-vertical .boolean .controls {
-  display: inline-block;
 }
 
 .footer {
@@ -70,6 +20,7 @@ article .content {
 
 .footer-links {
   margin: 10px 0;
+  padding: 0;
 }
 
 .footer-links li {

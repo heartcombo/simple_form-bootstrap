@@ -1,0 +1,19 @@
+<% content_for :breadcrumb do %>
+  <li><%= link_to "Home", root_path %></li>
+  <li class="active">Examples</li>
+<% end %>
+
+<div class="row">
+  <%= render partial: 'basic_example_tb', layout: 'tb_label', locals: { title: 'Basic Form' } %>
+  <%= render partial: 'basic_example_sf', layout: 'sf_label', locals: { title: 'Basic Form' } %>
+</div>
+
+<div class="row">
+  <%= render partial: 'inline_form_tb', layout: 'tb_label', locals: { title: 'Inline Form' } %>
+  <%= render partial: 'inline_form_sf', layout: 'sf_label', locals: { title: 'Inline Form' } %>
+</div>
+
+<div class="row">
+  <%= render partial: 'horizontal_form_tb', layout: 'tb_label', locals: { title: 'Horizontal Form' } %>
+  <%= render partial: 'horizontal_form_sf', layout: 'sf_label', locals: { title: 'Horizontal Form' } %>
+</div>
