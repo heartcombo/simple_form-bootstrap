@@ -1,4 +1,4 @@
-SimpleFormBootstrap::Application.routes.draw do
+Rails.application.routes.draw do
   resources :examples, only: :index do
     collection do
       post :create_basic
