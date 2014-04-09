@@ -1,0 +1,18 @@
+<% content_for :breadcrumb do %>
+  <li><%= link_to "Home", root_path %></li>
+  <li class="active">Documentation</li>
+<% end %>
+
+<div class'row'>
+  <h3>How to build your Rails application with Simple Form and Bootstrap</h3>
+</div>
+
+<div class'row'>
+  <ol>
+    <li>Create your new Rails application: rails new my_new_app</li>
+    <li>Open the generated Gemfile and add the Simple Form dependency: gem 'simple_form'</li>
+    <li>Bundle install</li>
+    <li>Install the Simple Form, using the --bootstrap option: rails generate simple_form:install --bootstrap</li>
+    <li>Now you have a new Rails application using Simple Form and configured to use Bootstrap</li>
+  </ol>
+</div>
