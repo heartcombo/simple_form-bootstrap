@@ -3,11 +3,12 @@
   <li class="active">Documentation</li>
 <% end %>
 
-<div class'row'>
+<div class='row'>
   <h3>How to build your Rails application with Simple Form and Bootstrap</h3>
 </div>
 
-<div class'row'>
+<div class='row'>
+  <h4>Configuring your Rails app with Simple Form and Bootstrap</h4>
   <ol>
     <li>Create your new Rails application: <code>rails new my_new_app</code></li>
     <li>Open the generated Gemfile and add the Simple Form dependency: <code>gem 'simple_form'</code></li>
@@ -15,4 +16,43 @@
     <li>Install the Simple Form, using the --bootstrap option: <code>rails generate simple_form:install --bootstrap</code></li>
     <li>Now you have a new Rails application using Simple Form and configured to use Bootstrap</li>
   </ol>
+</div>
+
+<div class='row'>
+  <h4>Building your first form</h4>
+
+  <p>
+    Example: Lets build the following form.
+  </p>
+
+  <div class=".col-md-8">
+    <%= image_tag 'simple_form_bootstrap_form_example.png' %>
+  </div>
+
+  <p>
+    The code is straightforward and looks like this:
+  </p>
+
+  <div class=".col-md-8">
+    <%= image_tag 'basic_form_example.png' %>
+  </div>
+
+  <p>
+    Note that the code is very simple, and the only think you have to set is
+    the wrapper option inside each field.
+  </p>
+
+  <p>
+    But it can get better! We can use the <code>wrapper_mapping</code> option
+    to remove this duplication. Lets see how our code will look like.
+  </p>
+
+  <div class=".col-md-8">
+    <%= image_tag 'improved_form_example.png' %>
+  </div>
+
+  <p>
+    Simple, right? You can see the code for the other examples
+    <%= link_to 'on github.', 'https://github.com/rafaelfranca/simple_form-bootstrap' %>
+  </p>
 </div>
