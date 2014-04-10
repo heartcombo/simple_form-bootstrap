@@ -35,7 +35,11 @@
     The code is straightforward and looks like this:
   </p>
 
-  <%= image_tag 'basic_form_example.png' %>
+  <pre>
+    <code data-language='ruby'>
+      <%= render_code('app/views/documentation/form_example.html.erb') %>
+    </code>
+  </pre>
 </div>
 
 <div class='row'>
@@ -51,9 +55,9 @@
 
   <p>
     Example:
-    <p>
-      <code>{ string: :string_wrapper, boolean: :boolean_wrapper }</code>
-    </p>
+    <pre>
+      <code data-language='ruby'>{ string: :string_wrapper, boolean: :boolean_wrapper }</code>
+    </pre>
 
     All the String inputs will now use the <code>:string_wrapper</code>, and the
     same applies to boolean fields, which will use the <code>:boolean_wrapper</code>
@@ -64,7 +68,11 @@
 </div>
 
 <div class="row">
-  <%= image_tag 'improved_form_example.png' %>
+  <pre>
+    <code data-language='ruby'>
+      <%= render_code('app/views/documentation/form_example_with_wrapper_mappings.html.erb') %>
+    </code>
+  </pre>
 </div>
 
 <div class="row">
