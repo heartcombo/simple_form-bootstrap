@@ -7,4 +7,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require rainbow
+//= require ruby
 //
