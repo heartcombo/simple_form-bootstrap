@@ -1,0 +1,77 @@
+<% content_for :breadcrumb do %>
+  <li><%= link_to "Home", root_path %></li>
+  <li class="active">Documentation</li>
+<% end %>
+
+<div class='row'>
+  <h3>How to build your Rails application with Simple Form and Bootstrap</h3>
+</div>
+
+<div class='row'>
+  <h4>Configuring your Rails app with Simple Form and Bootstrap</h4>
+  <ol>
+    <li>Create your new Rails application: <code>rails new my_new_app</code></li>
+    <li>Open the generated Gemfile and add the Simple Form dependency: <code>gem 'simple_form'</code></li>
+    <li>Install the dependencies: <code>bundle install</code></li>
+    <li>Install the Simple Form, using the --bootstrap option: <code>rails generate simple_form:install --bootstrap</code></li>
+    <li>Now you have a new Rails application using Simple Form and configured to use Bootstrap</li>
+  </ol>
+</div>
+
+<div class='row'>
+  <h4>Building your first form</h4>
+
+  <p>Example: Lets build the following form.</p>
+</div>
+
+<div class='row'>
+  <%= render partial: 'examples/basic_example_sf', layout: 'examples/sf_label', locals: { title: 'Basic Form' } %>
+</div>
+
+<div class='row'>
+  <p>The code is straightforward and looks like this:</p>
+
+  <pre>
+    <code data-language='ruby'>
+      <%= render file: 'documentation/form_example' %>
+    </code>
+  </pre>
+</div>
+
+<div class='row'>
+  <p>The code is very simple, isn't it?</p>
+
+  <p>
+    But it can get better! We can use the <code>wrapper_mapping</code> option
+    to remove that wrapper duplication. This option receives a Hash containing an input
+    type and the wrapper that will be used for all inputs with specified type.
+  </p>
+
+  <p>
+    Example:
+    <pre>
+      <code data-language='ruby'>{ string: :string_wrapper, boolean: :boolean_wrapper }</code>
+    </pre>
+
+    All the String inputs will now use the <code>:string_wrapper</code>, and the
+    same applies to boolean fields, which will use the <code>:boolean_wrapper</code>
+    for all its inputs.
+    You can see more information about wrapper_mappings
+    <%= link_to 'here.', 'https://github.com/plataformatec/simple_form/blob/v3.0.2/lib/simple_form.rb#L107-L111' %>
+  </p>
+</div>
+
+<div class="row">
+  <pre>
+    <code data-language='ruby'>
+      <%= render file: 'documentation/form_example_with_wrapper_mappings' %>
+    </code>
+  </pre>
+</div>
+
+<div class="row">
+  <p>
+    Simple, right? You can see the code for the other examples
+    <%= link_to 'on GitHub.', 'https://github.com/rafaelfranca/simple_form-bootstrap' %>
+  </p>
+</div>

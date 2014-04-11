@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'documentation', to: 'documentation#index', as: :documentation
+
   resources :examples, only: :index do
     collection do
       post :create_basic
