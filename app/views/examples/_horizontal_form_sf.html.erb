@@ -6,6 +6,8 @@
     file: :horizontal_file_input,
     boolean: :horizontal_boolean
   } do |f| %>
+  <%= f.error_notification %>
+
   <%= f.input :email, placeholder: 'Email' %>
 
   <%= f.input :password, placeholder: 'Password' %>

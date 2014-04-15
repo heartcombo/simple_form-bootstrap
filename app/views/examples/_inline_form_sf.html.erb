@@ -4,6 +4,8 @@
   wrapper_mappings: {
     boolean: :vertical_boolean
   } do |f| %>
+  <%= f.error_notification %>
+
   <%= f.input :email, placeholder: 'Enter email' %>
 
   <%= f.input :password, placeholder: 'Password' %>
