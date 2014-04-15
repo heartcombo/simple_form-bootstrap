@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/plataformatec/simple_form.git
+  revision: 15a958b56ef15d1e5e80fb25532786522576bd3a
+  specs:
+    simple_form (3.1.0.rc1)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -74,9 +82,6 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0.0)
-    simple_form (3.1.0.rc1)
-      actionpack (~> 4.0)
-      activemodel (~> 4.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -113,7 +118,7 @@ DEPENDENCIES
   pg
   rails (~> 4.1.0)
   sass-rails (~> 4.0.2)
-  simple_form (~> 3.1.0.rc1)
+  simple_form (~> 3.1.0.rc1)!
   sqlite3
   thin
   uglifier
