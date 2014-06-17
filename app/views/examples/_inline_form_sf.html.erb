@@ -1,5 +1,5 @@
 <%= simple_form_for @user_inline, url: create_inline_examples_url, as: 'user_inline',
-  defaults: { label: false },
+  wrapper: :inline_form,
   html: { class: 'form-inline' },
   wrapper_mappings: {
     boolean: :vertical_boolean
