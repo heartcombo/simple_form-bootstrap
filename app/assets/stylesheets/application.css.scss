@@ -1,7 +1,6 @@
-/*
- *= require bootstrap
- *= require github
-*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "github";
 
 body {
   padding-top: 60px;
