@@ -22,9 +22,9 @@ SimpleForm.setup do |config|
     b.use :placeholder
 
     ## Optional extensions
-    # They are disabled unless you pass `f.input EXTENSION_NAME => :lookup`
+    # They are disabled unless you pass `f.input EXTENSION_NAME => true`
     # to the input. If so, they will retrieve the values from the model
-    # if any exists. If you want to enable the lookup for any of those
+    # if any exists. If you want to enable any of those
     # extensions by default, you can change `b.optional` to `b.use`.
 
     # Calculates maxlength from length validations for string inputs
@@ -103,8 +103,9 @@ SimpleForm.setup do |config|
   # You can define the class to use on all labels. Default is nil.
   # config.label_class = nil
 
-  # You can define the class to use on all forms. Default is simple_form.
-  # config.form_class = :simple_form
+  # You can define the default class to be used on forms. Can be overriden
+  # with `html: { :class }`. Defaulting to none.
+  # config.default_form_class = nil
 
   # You can define which elements should obtain additional classes
   # config.generate_additional_classes_for = [:wrapper, :label, :input]
@@ -130,6 +131,10 @@ SimpleForm.setup do |config|
   # Custom wrappers for input types. This should be a hash containing an input
   # type as key and the wrapper that will be used for all inputs with specified type.
   # config.wrapper_mappings = { string: :prepend }
+
+  # Namespaces where SimpleForm should look for custom input classes that
+  # override default inputs.
+  # config.custom_inputs_namespaces << "CustomInputs"
 
   # Default priority for time_zone inputs.
   # config.time_zone_priority = nil
