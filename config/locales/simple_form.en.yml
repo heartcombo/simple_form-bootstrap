@@ -10,7 +10,7 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
-    # Labels and hints examples
+    # Examples
     # labels:
     #   defaults:
     #     password: 'Password'
@@ -19,15 +19,13 @@ en:
     #       email: 'E-mail to sign in.'
     #     edit:
     #       email: 'E-mail.'
-    hints:
-      user_basic: &hints
-        email: Lorem ipsum dolor sit amet
-        password: Lorem ipsum dolor sit amet
-        file: Example block-level help text here.
-        active: Lorem ipsum dolor sit amet
-        sex: Lorem ipsum dolor sit amet
-      user_horizontal: *hints
-    placeholders:
-      user:
-        username: 'Your username'
-        password: '****'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Rather not say'
+    # prompts:
+    #   defaults:
+    #     age: 'Select your age'
