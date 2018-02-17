@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '2.2.3'
 
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.10'
 
 gem 'json'
 gem 'thin'
