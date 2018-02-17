@@ -1,9 +1,9 @@
-<%= simple_form_for @user_basic, url: create_basic_examples_url, as: 'user_basic' do |f| %>
+<%= simple_form_for @user_basic, url: create_basic_examples_url, as: "user_basic" do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :email, placeholder: 'Enter email' %>
+  <%= f.input :email, placeholder: "Enter email" %>
 
-  <%= f.input :password, placeholder: 'Password' %>
+  <%= f.input :password, placeholder: "Password" %>
 
   <%= f.input :file, as: :file %>
 

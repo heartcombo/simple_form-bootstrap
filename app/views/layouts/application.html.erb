@@ -1,63 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <title>Example application with SimpleForm and Twitter Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Example application with SimpleForm and Bootstrap</title>
     <%= stylesheet_link_tag "application" %>
     <%= csrf_meta_tags %>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="navbar-inner">
-        <a href="http://github.com/rafaelfranca/simple_form-bootstrap">
-          <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
-        </a>
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Simple Form & Bootstrap</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Examples", examples_path %></li>
-            <li><%= link_to "Documentation", documentation_path %></li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <div class="container master-container">
-      <ul class="breadcrumb">
+    <%= render "header" %>
+
+    <div class="container">
+      <ol class="breadcrumb">
         <%= yield :breadcrumb %>
-      </ul>
-      <div class="alert alert-info fade in" data-alert="alert">
-        <h3>
-          <strong>
-            <a href="https://github.com/plataformatec/simple_form">Simple Form</a> and <a href="http://getbootstrap.com/">Bootstrap</a> sample application.
-          </strong>
+      </ol>
+
+      <div class="alert alert-info my-4" role="alert">
+        <h3 class="alert-heading">
+          <a href="https://github.com/plataformatec/simple_form">Simple Form</a> and <a href="http://getbootstrap.com/">Bootstrap</a> sample application.
         </h3>
         <p>Here you'll see the usage of <a href="https://github.com/plataformatec/simple_form">Simple Form</a> and the <a href="http://getbootstrap.com/">Bootstrap</a> toolkit on a Rails 5 application.</p>
-        <p>You can check the source code on <a href="https://github.com/rafaelfranca/simple_form-bootstrap">GitHub</a>.</p>
+        <hr />
+        <p class="mb-0">You can check the source code on <a href="https://github.com/rafaelfranca/simple_form-bootstrap">GitHub</a>.</p>
       </div>
 
       <% if notice %>
-        <div class="alert alert-success fade in" data-alert="alert">
-          <a class="close" data-dismiss="alert" href="#">×</a>
-          <p><%= notice %></p>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Notice!</strong> <%= notice %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
       <% end %>
 
       <%= yield %>
     </div>
 
-    <footer class="footer">
-      <div class="container">
-        <p>Copyright 2009-2014 <a href="http://plataformatec.com.br">Plataformatec</a></p>
-        <ul class="footer-links">
-          <li><a href="http://blog.plataformatec.com.br">Plataformatec Blog</a></li>
-          <li class="muted">·</li>
-          <li><a href="https://github.com/plataformatec/simple_form">Simple Form @ GitHub</a></li>
-        </ul>
-      </div>
-    </footer>
+    <%= render "footer" %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
