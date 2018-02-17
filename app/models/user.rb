@@ -1,3 +1,3 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   validates_presence_of :email, :password
 end
