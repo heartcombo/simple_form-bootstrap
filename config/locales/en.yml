@@ -31,3 +31,16 @@
 
 en:
   hello: "Hello world"
+  simple_form:
+    hints:
+      user_basic: &hints
+        email: Lorem ipsum dolor sit amet
+        password: Lorem ipsum dolor sit amet
+        file: Example block-level help text here.
+        active: Lorem ipsum dolor sit amet
+        sex: Lorem ipsum dolor sit amet
+      user_horizontal: *hints
+    placeholders:
+      user:
+        username: 'Your username'
+        password: '****'
