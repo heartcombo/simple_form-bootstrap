@@ -1,24 +1,18 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">Simple Form & Bootstrap</a>
+    <%= link_to "Simple Form & Bootstrap", root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbar-header">
-      <ul class="navbar-nav mr-auto">
-        <%= content_tag(:li, link_to("Home", root_path, class: "nav-link"), class: "nav-item #{is_active?(root_path)}") %>
+      <ul class="navbar-nav ml-auto">
         <%= content_tag(:li, link_to("Examples", examples_path, class: "nav-link"), class: "nav-item #{is_active?(examples_path)}") %>
         <%= content_tag(:li, link_to("Documentation", documentation_path, class: "nav-link"), class: "nav-item #{is_active?(documentation_path)}") %>
       </ul>
     </div>
   </div>
 </nav>
-
-<!-- <a href="http://github.com/rafaelfranca/simple_form-bootstrap">
-  <img class="github-fork" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
-</a> -->
-
 
 <a href="http://github.com/rafaelfranca/simple_form-bootstrap" class="github-corner" aria-label="View source on Github">
   <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
