@@ -1,0 +1,21 @@
+$jumbotron-padding-y: 3rem !default;
+
+.jumbotron {
+  padding-top: $jumbotron-padding-y * 3;
+  padding-bottom: $jumbotron-padding-y * 2;
+  margin-bottom: 1rem;
+  background-color: $white;
+  border-bottom: 1px solid $gray-300;
+
+  .container {
+    max-width: 40rem;
+  }
+
+  .jumbotron-heading {
+    font-weight: 300;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

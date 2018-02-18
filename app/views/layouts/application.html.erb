@@ -12,20 +12,12 @@
   </head>
   <body>
     <%= render "header" %>
+    <%= render "jumbotron" %>
 
     <div class="container">
-      <ol class="breadcrumb">
+      <ol class="breadcrumb bg-transparent px-0">
         <%= yield :breadcrumb %>
       </ol>
-
-      <div class="alert alert-info my-4" role="alert">
-        <h3 class="alert-heading">
-          <a href="https://github.com/plataformatec/simple_form">Simple Form</a> and <a href="http://getbootstrap.com/">Bootstrap</a> sample application.
-        </h3>
-        <p>Here you'll see the usage of <a href="https://github.com/plataformatec/simple_form">Simple Form</a> and the <a href="http://getbootstrap.com/">Bootstrap</a> toolkit on a Rails 5 application.</p>
-        <hr />
-        <p class="mb-0">You can check the source code on <a href="https://github.com/rafaelfranca/simple_form-bootstrap">GitHub</a>.</p>
-      </div>
 
       <% if notice %>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
