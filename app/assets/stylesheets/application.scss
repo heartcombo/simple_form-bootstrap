@@ -1,6 +1,9 @@
+$theme-colors: ( "bootstrap": #563d7c, "simpleform": #00617f );
 @import "bootstrap";
 
 // Sections
+@import "sections/breadcrumb";
+@import "sections/example";
 @import "sections/footer";
 @import "sections/header";
 @import "sections/jumbotron";

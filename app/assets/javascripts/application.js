@@ -17,3 +17,4 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require toggle_controller

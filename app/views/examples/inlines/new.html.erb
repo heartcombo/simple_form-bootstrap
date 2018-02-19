@@ -1,0 +1,12 @@
+<% content_for :breadcrumb do %>
+  <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+  <li class="breadcrumb-item"><%= link_to "Examples", examples_path %></li>
+  <li class="breadcrumb-item active">Inline Form</li>
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <%= render partial: "bootstrap", layout: "card_bootstrap", locals: { title: "Inline Form" } %>
+    <%= render partial: "form",      layout: "card_simple_form", locals: { title: "Inline Form" } %>
+  </div>
+</div>

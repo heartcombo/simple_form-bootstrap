@@ -1,6 +1,5 @@
-.footer {
+.app-footer {
   padding: 4.5rem 0;
-  margin-top: 4.5rem;
   border-top: 1px solid $gray-300;
   background-color: $gray-100;
 
@@ -21,5 +20,9 @@
       display: inline;
       padding: 0 .25rem;
     }
+  }
+
+  .container + & {
+    margin-top: 4.5rem;
   }
 }

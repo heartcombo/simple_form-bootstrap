@@ -1,26 +1,32 @@
-// http://tholman.com/github-corners/
-.github-corner {
-  svg {
-    fill: $teal;
-    color: $white;
-    position: fixed;
-    top: 0;
-    right: 0;
-    border: 0;
-    z-index: 1050;
+.app-header {
+  // http://tholman.com/github-corners/
+  .github-corner {
+    svg {
+      fill: $teal;
+      color: $white;
+      position: fixed;
+      top: 0;
+      right: 0;
+      border: 0;
+      z-index: 1050;
+    }
+
+    &:hover .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+
+    @include media-breakpoint-down(md) {
+      & { display: none; }
+    }
   }
 
-  &:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
+  @keyframes octocat-wave {
+    0%, 100% { transform:rotate(0) }
+    20%, 60% { transform:rotate(-25deg) }
+    40%, 80% { transform:rotate(10deg) }
   }
 
-  @include media-breakpoint-down(md) {
-    & { display: none; }
+  & + .app-breadcrumb {
+    margin-top: 4.5rem;
   }
-}
-
-@keyframes octocat-wave {
-  0%, 100% { transform:rotate(0) }
-  20%, 60% { transform:rotate(-25deg) }
-  40%, 80% { transform:rotate(10deg) }
 }

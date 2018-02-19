@@ -1,9 +1,16 @@
-<%= simple_form_for @user_basic, url: create_basic_examples_url, as: "user_basic" do |f| %>
+<%= simple_form_for @user, url: examples_horizontal_path,
+  wrapper: :horizontal_form,
+  wrapper_mappings: {
+    check_boxes: :horizontal_radio_and_checkboxes,
+    radio_buttons: :horizontal_radio_and_checkboxes,
+    file: :horizontal_file_input,
+    boolean: :horizontal_boolean
+  } do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :email, placeholder: "Enter email" %>
+  <%= f.input :email %>
 
-  <%= f.input :password, placeholder: "Password" %>
+  <%= f.input :password %>
 
   <%= f.input :file, as: :file %>
 

@@ -3,19 +3,26 @@
   <li class="breadcrumb-item active">Examples</li>
 <% end %>
 
-<div class="row">
-  <%= render partial: "basic_example_tb", layout: "tb_label", locals: { title: "Basic Form" } %>
-  <%= render partial: "basic_example_sf", layout: "sf_label", locals: { title: "Basic Form" } %>
-</div>
-<hr class="my-5" />
+<div class="app-example-overview bg-light py-5">
+  <div class="container">
+    <div class="row">
 
-<div class="row">
-  <%= render partial: "inline_form_tb", layout: "tb_label", locals: { title: "Inline Form" } %>
-  <%= render partial: "inline_form_sf", layout: "sf_label", locals: { title: "Inline Form" } %>
-</div>
-<hr class="my-5" />
+      <% Examples::BaseController::TYPES.each do |type| %>
+        <div class="col-md-4">
+          <div class="card box-shadow mb-4">
+            <%= link_to [:new, :examples, type] do %>
+              <%= image_tag "#{type}.png", class: "card-img-top" %>
+            <% end %>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on.</p>
+              <%= link_to type, [:new, :examples, type], class: "btn btn-outline-primary btn-block" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
 
-<div class="row">
-  <%= render partial: "horizontal_form_tb", layout: "tb_label", locals: { title: "Horizontal Form" } %>
-  <%= render partial: "horizontal_form_sf", layout: "sf_label", locals: { title: "Horizontal Form" } %>
+    </div>
+  </div>
 </div>

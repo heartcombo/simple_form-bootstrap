@@ -4,12 +4,10 @@
 <% end %>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
+  <div class="row justify-content-center">
+    <div class="col-12">
       <h3>How to build your Rails application with Simple Form and Bootstrap</h3>
-    </div>
 
-    <div class="col-md-12">
       <h4>Configuring your Rails app with Simple Form and Bootstrap</h4>
       <ol>
         <li>Create your new Rails application: <code>rails new my_new_app</code></li>
@@ -20,25 +18,22 @@
       </ol>
     </div>
 
-    <div class="col-md-12">
+    <div class="col-12 col-md-8">
       <h4>Building your first form</h4>
 
       <p>Example: Lets build the following form.</p>
-    </div>
 
-    <div class="col-md-12">
       <div class="row justify-content-center">
-        <%= render partial: "examples/basic_example_sf", layout: "examples/sf_label", locals: { title: "Basic Form" } %>
+        <div class="card mb-4">
+          <div class="card-body">
+            <%= render partial: "examples/verticals/form" %>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="col-md-12">
       <p>The code is straightforward and looks like this:</p>
+      <%= render_source File.read(File.join(Rails.root, 'app/views/examples/verticals/_form.html.erb')) %>
 
-      <%= render_source render(partial: "form_example") %>
-    </div>
-
-    <div class="col-md-12">
       <p>The code is very simple, isn't it?</p>
 
       <p>
@@ -57,13 +52,9 @@
         You can see more information about wrapper_mappings
         <%= link_to "here.", "https://github.com/plataformatec/simple_form/blob/master/lib/simple_form.rb#L133-L139" %>
       </p>
-    </div>
 
-    <div class="col-md-12">
-      <%= render_source render(partial: "form_example_with_wrapper_mappings") %>
-    </div>
+      <%= render_source File.read(File.join(Rails.root, 'app/views/documentation/_form_wrapper_mappings.html.erb')) %>
 
-    <div class="col-md-12">
       <p>
         Simple, right? You can see the code for the other examples
         <%= link_to "on GitHub.", "https://github.com/rafaelfranca/simple_form-bootstrap" %>

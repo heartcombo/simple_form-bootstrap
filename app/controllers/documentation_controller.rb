@@ -1,5 +1,5 @@
 class DocumentationController < ApplicationController
   def index
-    @user_basic = User.new
+    @user = User.new
   end
 end

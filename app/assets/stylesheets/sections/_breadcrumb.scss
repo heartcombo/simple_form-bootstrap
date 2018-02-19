@@ -1,0 +1,7 @@
+.app-breadcrumb {
+  .btn-group {
+    @include media-breakpoint-down(sm) {
+      & { display: none; }
+    }
+  }
+}
