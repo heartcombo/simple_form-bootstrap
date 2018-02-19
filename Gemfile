@@ -65,11 +65,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Custom
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'json'
-gem 'kramdown', '~> 1.16', '>= 1.16.2'
-gem 'rouge', '~> 3.1', '>= 3.1.1'
-gem 'simple_form', '~> 3.5', '>= 3.5.1'
-gem 'thin'
+gem 'kramdown', '~> 1.16'
+gem 'rouge', '~> 3.1'
+gem 'simple_form', '~> 3.5'
 
 group :test, :development do
   gem 'diffy'

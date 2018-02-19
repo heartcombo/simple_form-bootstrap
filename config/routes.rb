@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'documentation', to: 'documentation#index'
 
   resources :examples, only: :index
-  namespace :examples do
+  namespace :examples, path_names: { new: '' } do
     resource :vertical,   only: [:new, :create]
     resource :horizontal, only: [:new, :create]
     resource :inline,     only: [:new, :create]

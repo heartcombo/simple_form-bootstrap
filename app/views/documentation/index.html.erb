@@ -3,27 +3,31 @@
   <li class="breadcrumb-item active">Documentation</li>
 <% end %>
 
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Building your first form</h1>
+    <p class="lead">How to build your Rails application with Simple Form and Bootstrap</p>
+    <hr class="my-4">
+    <p>Configuring your Rails app with Simple Form and Bootstrap:</p>
+
+    <ol>
+      <li>Create your new Rails application: <code>rails new my_new_app</code></li>
+      <li>Open the generated Gemfile and add the Simple Form dependency: <code>gem 'simple_form'</code></li>
+      <li>Install the dependencies: <code>bundle install</code></li>
+      <li>Install the Simple Form, using the --bootstrap option: <code>rails generate simple_form:install --bootstrap</code></li>
+      <li>Now you have a new Rails application using Simple Form and configured to use Bootstrap</li>
+    </ol>
+  </div>
+</div>
+
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-12">
-      <h3>How to build your Rails application with Simple Form and Bootstrap</h3>
-
-      <h4>Configuring your Rails app with Simple Form and Bootstrap</h4>
-      <ol>
-        <li>Create your new Rails application: <code>rails new my_new_app</code></li>
-        <li>Open the generated Gemfile and add the Simple Form dependency: <code>gem 'simple_form'</code></li>
-        <li>Install the dependencies: <code>bundle install</code></li>
-        <li>Install the Simple Form, using the --bootstrap option: <code>rails generate simple_form:install --bootstrap</code></li>
-        <li>Now you have a new Rails application using Simple Form and configured to use Bootstrap</li>
-      </ol>
-    </div>
-
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-10 col-lg-8">
       <h4>Building your first form</h4>
 
       <p>Example: Lets build the following form.</p>
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mb-3">
         <div class="card mb-4">
           <div class="card-body">
             <%= render partial: "examples/verticals/form" %>

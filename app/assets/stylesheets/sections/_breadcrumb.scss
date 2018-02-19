@@ -1,5 +1,5 @@
 .app-breadcrumb {
-  .btn-group {
+  [data-toggle] {
     @include media-breakpoint-down(sm) {
       & { display: none; }
     }

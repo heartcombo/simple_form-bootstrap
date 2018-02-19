@@ -14,10 +14,9 @@
               <%= image_tag "#{type}.png", class: "card-img-top" %>
             <% end %>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on.</p>
-              <%= link_to type, [:new, :examples, type], class: "btn btn-outline-primary btn-block" %>
+              <h5 class="card-title"><%= t(".#{type}.title") %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= t(".#{type}.subtitle") %></h6>
+              <%= link_to t(".#{type}.link"), [:new, :examples, type], class: "btn btn-outline-primary mt-2" %>
             </div>
           </div>
         </div>

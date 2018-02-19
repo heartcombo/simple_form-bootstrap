@@ -16,7 +16,7 @@
               <%= link_to("Overview", examples_path, class: "dropdown-item") %>
               <div class="dropdown-divider"></div>
               <% Examples::BaseController::TYPES.each do |form| %>
-                <%= link_to form, [:new, :examples, form], class: "dropdown-item" %>
+                <%= link_to t("examples.index.#{form}.link"), [:new, :examples, form], class: "dropdown-item" %>
               <% end %>
             </div>
           </li>
