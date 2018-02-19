@@ -1,0 +1,31 @@
+de:
+  simple_form:
+    "yes": 'Ja'
+    "no": 'Nein'
+    required:
+      text: 'Pflichtfeld'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="Pflichtfeld">*</abbr>'
+    error_notification:
+      default_message: "Es gab folgende Fehler:"
+    # Examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-Mail zur Anmeldung.'
+    #     edit:
+    #       email: 'E-Mail.'
+    # hints:
+    #   defaults:
+    #     username: 'Benutzername für die Anmeldung.'
+    #     password: 'Keine Sonderzeichen, bitte.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Lieber nicht sagen'
+    # prompts:
+    #   defaults:
+    #     age: 'Wählen Sie Ihr Alter'
