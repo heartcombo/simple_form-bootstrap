@@ -80,6 +80,9 @@ GEM
     concurrent-ruby (1.0.5)
     crass (1.0.3)
     daemons (1.2.6)
+    diffy (3.2.0)
+    equivalent-xml (0.6.0)
+      nokogiri (>= 1.4.3)
     erubi (1.7.0)
     eventmachine (1.2.5)
     execjs (2.7.0)
@@ -222,6 +225,8 @@ DEPENDENCIES
   capybara (~> 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  diffy
+  equivalent-xml
   jbuilder (~> 2.5)
   jquery-rails
   json

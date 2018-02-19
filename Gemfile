@@ -71,7 +71,12 @@ gem 'rouge', '~> 3.1', '>= 3.1.1'
 gem 'simple_form', '~> 3.5', '>= 3.5.1'
 gem 'thin'
 
-gem 'sqlite3', :groups => [:test, :development]
+group :test, :development do
+  gem 'diffy'
+  gem 'equivalent-xml'
+  gem 'sqlite3'
+end
+
 group :production do
   gem 'pg'
 end
