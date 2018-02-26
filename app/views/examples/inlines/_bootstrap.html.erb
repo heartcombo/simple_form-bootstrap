@@ -1,16 +1,16 @@
-<form class="form-inline">
+<form class="form-inline needs-validation" novalidate>
   <label class="sr-only" for="inline-email">Email address</label>
-  <input type="text" class="form-control mb-2 mr-sm-2" id="inline-email" placeholder="Enter email">
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inline-email" placeholder="Enter email" required>
 
   <label class="sr-only" for="inline-password">Password</label>
-  <input type="password" class="form-control" id="inline-password" placeholder="Password">
+  <input type="password" class="form-control mb-2 mr-sm-2" id="inline-password" placeholder="Password" required>
 
   <div class="form-check mb-2 mr-sm-2">
-    <input class="form-check-input" type="checkbox" id="inline-check">
+    <input class="form-check-input" type="checkbox" id="inline-check" required>
     <label class="form-check-label" for="inline-check">
-      Remember me
+      Terms
     </label>
   </div>
 
-  <button type="submit" class="btn btn-primary">Create User</button>
+  <button type="submit" class="btn btn-primary mb-2 mr-sm-2">Create User!</button>
 </form>

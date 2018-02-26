@@ -1,13 +1,18 @@
 <%= simple_form_for @user, url: examples_inline_path,
   wrapper: :inline_form,
-  html: { class: "form-inline" } do |f| %>
+  html: { class: "form-inline" },
+  wrapper_mappings: {
+    boolean: :inline_boolean
+  } do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :email %>
+  <%= f.label :email, class: "sr-only" %>
+  <%= f.input_field :email, class: "form-control mb-2 mr-sm-2" %>
 
-  <%= f.input :password %>
+  <%= f.label :password, class: "sr-only" %>
+  <%= f.input_field :password, class: "form-control mb-2 mr-sm-2" %>
 
-  <%= f.input :active, inline_label: "Remember me" %>
+  <%= f.input :terms %>
 
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn-primary mb-2 mr-sm-2" %>
 <% end %>
