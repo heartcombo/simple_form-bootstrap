@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  password: MyString
+  avatar: MyString
+  bio: MyText
+  birthday: 2018-02-19
+  color: MyString
+  fruit: MyString
+  music: MyString
+  language: MyString
+  pill: MyString
+  choises: MyString
+  active: false
+  friends: 1
+  awake: 2018-02-19 22:25:47
+  first_kiss: 2018-02-19 22:25:47
+  terms: false
+
+two:
+  name: MyString
+  email: MyString
+  password: MyString
+  avatar: MyString
+  bio: MyText
+  birthday: 2018-02-19
+  color: MyString
+  fruit: MyString
+  music: MyString
+  language: MyString
+  pill: MyString
+  choises: MyString
+  active: false
+  friends: 1
+  awake: 2018-02-19 22:25:47
+  first_kiss: 2018-02-19 22:25:47
+  terms: false
