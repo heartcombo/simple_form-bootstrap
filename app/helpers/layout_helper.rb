@@ -12,7 +12,7 @@ module LayoutHelper
       input: 'GFM',
       syntax_highlighter: :rouge,
       syntax_highlighter_opts: {
-        css_class: 'highlight p-4'
+        css_class: 'highlight p-4 mb-0'
       }
     }
     Kramdown::Document.new(source, options).to_html.html_safe
