@@ -18,8 +18,8 @@ class FieldsWithErrorsTest < ActionView::TestCase
   def test_required_email_field_with_error
     actual = @builder.input(:email)
     expected = <<-HTML
-      <div class="form-group email required user_email has-invalid-feedback">
-        <label class="form-control-label email required" for="user_email">Email <abbr title="required">*</abbr></label>
+      <div class="form-group email required user_email form-group-invalid">
+        <label class="form-control-label email required" for="user_email">Email address <abbr title="required">*</abbr></label>
         <input aria-invalid="true" class="form-control string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
         <div class="invalid-feedback">Email is invalid</div>
         <small class="form-text text-muted">We'll never share your email with anyone else.</small>
