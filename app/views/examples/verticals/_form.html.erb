@@ -1,21 +1,40 @@
 <%= simple_form_for @user, url: examples_vertical_path do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :email %>
+  <%= f.input :name %>
 
-  <%= f.input :password %>
+  <%= f.input :email, input_html: { autocomplete: 'email' } %>
 
-  <%= f.input :file, as: :file %>
+  <%= f.input :password, input_html: { autocomplete: 'current-password' } %>
 
-  <%= f.input :active %>
+  <%= f.input :avatar, as: :file, input_html: { accept: User::AVATAR } %>
 
-  <%= f.input :choices, as: :check_boxes,
-    collection: [
-      "Option one is this and that—be sure to include why it's great",
-      "Option two can be something else and selecting it will deselect option one"] %>
+  <%= f.input :bio %>
 
-  <%= f.input :sex, as: :radio_buttons,
-    collection: ["Male", "Female"] %>
+  <%= f.input :birthday %>
 
-  <%= f.button :submit %>
+  <%= f.input :color, as: :radio_buttons, collection: User::COLOR, wrapper: :vertical_collection_inline %>
+
+  <%= f.input :fruit, as: :check_boxes, collection: User::FRUIT, wrapper: :vertical_collection_inline %>
+
+  <%= f.input :music, collection: User::MUSIC, input_html: { multiple: true } %>
+
+  <%= f.input :language, collection: User::LANGUAGE, prompt: :translate %>
+
+  <%= f.input :pill, as: :radio_buttons, collection: User::PILL %>
+
+  <%= f.input :choises, as: :check_boxes, collection: User::CHOISES %>
+
+  <%= f.input :friends %>
+
+  <%= f.input :awake %>
+
+  <%= f.input :first_kiss %>
+
+  <%= f.input :active, as: :radio_buttons %>
+
+  <%= f.input :terms %>
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
 <% end %>
