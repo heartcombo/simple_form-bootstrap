@@ -1,0 +1,16 @@
+<%= simple_form_for @user, url: examples_input_group_path,
+  wrapper: :input_group do |f| %>
+
+  <%= f.error_notification %>
+
+  <%= f.input :name, prepend: "@" %>
+
+  <%= f.input :email, prepend: "example-", append: "@gmail.com" %>
+
+  <%= f.input :password, append: "🙈" %>
+
+  <%= f.input :bio, prepend: "With textarea" %>
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>

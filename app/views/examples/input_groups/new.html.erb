@@ -1,0 +1,21 @@
+<% content_for :breadcrumb do %>
+  <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+  <li class="breadcrumb-item"><%= link_to "Examples", examples_path %></li>
+  <li class="breadcrumb-item active">Input Group Form</li>
+<% end %>
+
+<div class="app-example container">
+  <div class="row">
+    <%= render partial: "bootstrap", layout: "card_bootstrap", locals: { title: "Input Group" } %>
+    <%= render partial: "form",      layout: "card_simple_form", locals: { title: "Input Group" } %>
+  </div>
+
+  <%= render partial: "shared/tipps" %>
+
+  <%# move modals to bottom %>
+  <%= render partial: "shared/modal", locals: { id: "modal-bootstrap", title: "Bootstrap",
+    content: render_source(File.read(File.join(Rails.root, 'app/views/examples/input_groups/_bootstrap.html.erb'))) } %>
+
+  <%= render partial: "shared/modal", locals: { id: "modal-simpleform", title: "Simple Form",
+    content: render_source(File.read(File.join(Rails.root, 'app/views/examples/input_groups/_form.html.erb'))) } %>
+</div>
