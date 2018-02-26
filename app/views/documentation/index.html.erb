@@ -23,9 +23,9 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-md-10 col-lg-8">
-      <h4>Building your first form</h4>
+      <h4>Example</h4>
 
-      <p>Example: Lets build the following form.</p>
+      <p>Lets build the following form.</p>
 
       <div class="row justify-content-center mb-3">
         <div class="card mb-4">
@@ -37,6 +37,7 @@
 
       <p>The code is straightforward and looks like this:</p>
       <%= render_source File.read(File.join(Rails.root, 'app/views/examples/verticals/_form.html.erb')) %>
+      <hr />
 
       <p>The code is very simple, isn't it?</p>
 
@@ -49,6 +50,7 @@
       <p>
         Example:
         <%= render_source render(partial: "wrapper_mapping"), :json %>
+        <hr />
 
         All the String inputs will now use the <code>:string_wrapper</code>, and the
         same applies to boolean fields, which will use the <code>:boolean_wrapper</code>
@@ -58,6 +60,7 @@
       </p>
 
       <%= render_source File.read(File.join(Rails.root, 'app/views/documentation/_form_wrapper_mappings.html.erb')) %>
+      <hr />
 
       <p>
         Simple, right? You can see the code for the other examples
