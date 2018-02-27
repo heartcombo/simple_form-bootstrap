@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class HorizontalFormTest < ActionView::TestCase
-
   setup do
     @user    = User.new
     @builder = SimpleForm::FormBuilder.new(:user, @user, self, wrapper: :horizontal_form, wrapper_mappings: {})

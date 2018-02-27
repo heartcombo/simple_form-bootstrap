@@ -1,5 +1,4 @@
 class Examples::InlinesController < Examples::BaseController
-
   def new
     @user = User.new
   end
@@ -13,5 +12,4 @@ class Examples::InlinesController < Examples::BaseController
       render :new
     end
   end
-
 end

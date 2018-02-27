@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class FieldsWithErrorsTest < ActionView::TestCase
-
   setup do
     @user = User.new
     @user.errors.add(:email, :invalid)
@@ -28,5 +27,4 @@ class FieldsWithErrorsTest < ActionView::TestCase
     HTML
     assert_xml_equal expected, actual
   end
-
 end

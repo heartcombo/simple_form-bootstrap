@@ -1,5 +1,4 @@
 module LayoutHelper
-
   def controller?(*controller)
     controller.include?(params[:controller])
   end
@@ -22,5 +21,4 @@ module LayoutHelper
   def render_source(input, language = :erb)
     markdown "```#{language.to_s}\n#{input}```"
   end
-
 end

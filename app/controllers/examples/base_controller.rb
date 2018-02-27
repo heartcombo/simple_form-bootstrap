@@ -1,5 +1,4 @@
 class Examples::BaseController < ApplicationController
-
   TYPES = [:vertical, :horizontal, :inline]
 
   private

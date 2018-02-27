@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class InlineFormTest < ActionView::TestCase
-
   setup do
     @user    = User.new
     @builder = SimpleForm::FormBuilder.new(:user, @user, self, wrapper: :inline_form, wrapper_mappings: {})
