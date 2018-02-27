@@ -16,8 +16,31 @@
 #
 # This would use the information in config/locales/es.yml.
 #
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
   hello: "Hello world"
+  simple_form:
+    hints:
+      user_basic: &hints
+        email: Lorem ipsum dolor sit amet
+        password: Lorem ipsum dolor sit amet
+        file: Example block-level help text here.
+        active: Lorem ipsum dolor sit amet
+        sex: Lorem ipsum dolor sit amet
+      user_horizontal: *hints
+    placeholders:
+      user:
+        username: 'Your username'
+        password: '****'
