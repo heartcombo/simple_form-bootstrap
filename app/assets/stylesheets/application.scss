@@ -1,0 +1,15 @@
+$theme-colors: ( "bootstrap": #563d7c, "simpleform": #00617f );
+@import "bootstrap";
+
+// Sections
+@import "sections/breadcrumb";
+@import "sections/example";
+@import "sections/footer";
+@import "sections/header";
+@import "sections/jumbotron";
+
+// Syntax highlight
+@import "dracula/pygments/dracula";
+
+// simple_form helpers
+@import "simple_form-bootstrap/simple_form-bootstrap";

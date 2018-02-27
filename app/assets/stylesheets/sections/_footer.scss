@@ -1,0 +1,29 @@
+.app-footer {
+  padding: 4.5rem 0;
+  border-top: 1px solid $gray-300;
+  background-color: $white;
+
+  p {
+    margin-bottom: 0;
+    color: $gray-600;
+  }
+
+  .footer-links {
+    margin: .625rem 0;
+    padding: 0;
+
+    li {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      display: inline;
+      padding: 0 .25rem;
+    }
+  }
+
+  .container + & {
+    margin-top: 4.5rem;
+    background-color: $gray-100;
+  }
+}

@@ -1,0 +1,7 @@
+.app-breadcrumb {
+  [data-toggle] {
+    @include media-breakpoint-down(sm) {
+      & { display: none; }
+    }
+  }
+}

@@ -1,19 +1,27 @@
 <% content_for :breadcrumb do %>
-  <li><%= link_to "Home", root_path %></li>
-  <li class="active">Examples</li>
+  <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+  <li class="breadcrumb-item active">Examples</li>
 <% end %>
 
-<div class="row">
-  <%= render partial: 'basic_example_tb', layout: 'tb_label', locals: { title: 'Basic Form' } %>
-  <%= render partial: 'basic_example_sf', layout: 'sf_label', locals: { title: 'Basic Form' } %>
-</div>
+<div class="app-example-overview bg-light py-5">
+  <div class="container">
+    <div class="row">
 
-<div class="row">
-  <%= render partial: 'inline_form_tb', layout: 'tb_label', locals: { title: 'Inline Form' } %>
-  <%= render partial: 'inline_form_sf', layout: 'sf_label', locals: { title: 'Inline Form' } %>
-</div>
+      <% Examples::BaseController::TYPES.each do |type| %>
+        <div class="col-md-4">
+          <div class="card box-shadow mb-4">
+            <%= link_to [:new, :examples, type] do %>
+              <%= image_tag "#{type}.png", class: "card-img-top" %>
+            <% end %>
+            <div class="card-body">
+              <h5 class="card-title"><%= t(".#{type}.title") %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= t(".#{type}.subtitle") %></h6>
+              <%= link_to t(".#{type}.link"), [:new, :examples, type], class: "btn btn-outline-primary mt-2" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
 
-<div class="row">
-  <%= render partial: 'horizontal_form_tb', layout: 'tb_label', locals: { title: 'Horizontal Form' } %>
-  <%= render partial: 'horizontal_form_sf', layout: 'sf_label', locals: { title: 'Horizontal Form' } %>
+    </div>
+  </div>
 </div>

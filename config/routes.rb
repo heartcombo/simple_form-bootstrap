@@ -3,12 +3,11 @@ Rails.application.routes.draw do
 
   get 'documentation', to: 'documentation#index'
 
-  resources :examples, only: :index do
-    collection do
-      post :create_basic
-      post :create_horizontal
-      post :create_inline
-    end
+  resources :examples, only: :index
+  namespace :examples, path_names: { new: '' } do
+    resource :vertical,   only: [:new, :create]
+    resource :horizontal, only: [:new, :create]
+    resource :inline,     only: [:new, :create]
   end
 
   root to: 'examples#index'

@@ -1,0 +1,13 @@
+<%= simple_form_for @user, url: examples_inline_path,
+  wrapper: :inline_form,
+  html: { class: "form-inline" } do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :email %>
+
+  <%= f.input :password %>
+
+  <%= f.input :active, inline_label: "Remember me" %>
+
+  <%= f.button :submit %>
+<% end %>

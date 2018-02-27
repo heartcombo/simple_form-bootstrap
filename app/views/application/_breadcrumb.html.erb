@@ -1,0 +1,22 @@
+<div class="app-breadcrumb container">
+  <div class="d-flex flex-row justify-content-between">
+    <ol class="breadcrumb bg-transparent px-0">
+      <%= yield :breadcrumb %>
+    </ol>
+
+    <div>
+      <button type="button" class="btn btn-sm btn-outline-secondary mt-2 mr-2 d-none" data-toggle="button" aria-pressed="false" autocomplete="off">
+        Swap
+      </button>
+
+      <div class="btn-group btn-group-toggle mt-2 d-none" data-toggle="buttons">
+        <label class="btn btn-sm btn-outline-secondary">
+          <input type="radio" name="view" id="stack" autocomplete="off"> Stack
+        </label>
+        <label class="btn btn-sm btn-outline-secondary active">
+          <input type="radio" name="view" id="split" autocomplete="off" checked> Split
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

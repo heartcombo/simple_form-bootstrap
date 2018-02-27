@@ -30,17 +30,30 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  examples:
+    index:
+      horizontal:
+        link: Horizontal Form
+        subtitle: Reference Examples
+        title: Horizontal Form
+      inline:
+        link: Inline Form
+        subtitle: Reference Examples
+        title: Inline Form
+      vertical:
+        link: Vertical Form
+        subtitle: Reference Examples
+        title: Vertical Form
   simple_form:
     hints:
-      user_basic: &hints
-        email: Lorem ipsum dolor sit amet
-        password: Lorem ipsum dolor sit amet
-        file: Example block-level help text here.
+      user:
         active: Lorem ipsum dolor sit amet
+        choices: Lorem ipsum dolor sit amet
+        email: We'll never share your email with anyone else.
+        file: Example block-level help text here.
+        password: Lorem ipsum dolor sit amet
         sex: Lorem ipsum dolor sit amet
-      user_horizontal: *hints
     placeholders:
       user:
-        username: 'Your username'
-        password: '****'
+        email: Enter email
+        password: '••••••••••'

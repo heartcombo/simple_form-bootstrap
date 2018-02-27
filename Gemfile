@@ -63,13 +63,18 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 # Custom
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'json'
-gem 'simple_form', '~> 3.5', '>= 3.5.1'
-gem 'thin'
+gem 'kramdown', '~> 1.16'
+gem 'rouge', '~> 3.1'
+gem 'simple_form', '~> 3.5'
 
-gem 'sqlite3', :groups => [:test, :development]
+group :test, :development do
+  gem 'diffy'
+  gem 'equivalent-xml'
+  gem 'sqlite3'
+end
+
 group :production do
   gem 'pg'
 end
