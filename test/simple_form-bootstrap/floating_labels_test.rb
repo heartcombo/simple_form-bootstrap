@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class FloatingLabelsFormTest < ActionView::TestCase
-
   setup do
     @user    = User.new
     wrapper_mappings = {
@@ -65,5 +64,4 @@ class FloatingLabelsFormTest < ActionView::TestCase
     HTML
     assert_xml_equal expected, actual
   end
-
 end

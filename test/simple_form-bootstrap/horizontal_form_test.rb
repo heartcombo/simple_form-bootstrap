@@ -298,7 +298,6 @@ class HorizontalFormTest < ActionView::TestCase
     assert_xml_equal expected, actual
   end
 
-
   def test_textarea_field
     actual = @builder.input(:bio)
     expected = <<-HTML
@@ -312,5 +311,4 @@ class HorizontalFormTest < ActionView::TestCase
     HTML
     assert_xml_equal expected, actual
   end
-
 end

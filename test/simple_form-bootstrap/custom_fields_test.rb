@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class CustomFieldsTest < ActionView::TestCase
-
   setup do
     @user    = User.new
     wrapper_mappings = {
@@ -178,5 +177,4 @@ class CustomFieldsTest < ActionView::TestCase
     HTML
     assert_xml_equal expected, actual
   end
-
 end

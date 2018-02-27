@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class VerticalFormTest < ActionView::TestCase
-
   include SimpleForm::ActionViewExtensions::FormHelper
 
   setup do
@@ -58,5 +57,4 @@ class VerticalFormTest < ActionView::TestCase
     HTML
     assert_xml_equal expected, actual
   end
-
 end

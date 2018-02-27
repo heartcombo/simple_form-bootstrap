@@ -39,5 +39,4 @@ class InlineFormTest < ActionView::TestCase
     HTML
     assert_xml_equal expected, actual
   end
-
 end

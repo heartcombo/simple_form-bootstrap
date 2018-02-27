@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SubmitTest < ActionView::TestCase
-
   setup do
     @user    = User.new
     @builder = SimpleForm::FormBuilder.new(:user, @user, self, wrapper: :vertical_form, wrapper_mappings: {})
@@ -41,5 +40,4 @@ class SubmitTest < ActionView::TestCase
     HTML
     assert_xml_equal expected, @builder.button(:submit, class: "btn-primary")
   end
-
 end
