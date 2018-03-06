@@ -1,8 +1,0 @@
-// simple_form adds aria-invalid data attr. by default
-[aria-invalid="true"] {
-  @extend .is-invalid;
-
-  ~ .invalid-feedback {
-    display: block;
-  }
-}

@@ -67,7 +67,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'kramdown', '~> 1.16'
 gem 'rouge', '~> 3.1'
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'validates_timeliness', '~> 4.0'
 
 group :test, :development do
