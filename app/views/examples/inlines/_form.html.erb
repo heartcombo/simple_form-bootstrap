@@ -4,15 +4,11 @@
   wrapper_mappings: {
     boolean: :inline_boolean
   } do |f| %>
-  <%= f.error_notification %>
+  <%= f.input :email, input_html: { class: "mr-sm-2" } %>
 
-  <%= f.label :email, class: "sr-only" %>
-  <%= f.input_field :email, class: "form-control mb-2 mr-sm-2" %>
-
-  <%= f.label :password, class: "sr-only" %>
-  <%= f.input_field :password, class: "form-control mb-2 mr-sm-2" %>
+  <%= f.input :password, input_html: { class: "mr-sm-2" } %>
 
   <%= f.input :terms %>
 
-  <%= f.button :submit, class: "btn-primary mb-2 mr-sm-2" %>
+  <%= f.button :submit, class: "btn-primary mx-sm-2" %>
 <% end %>

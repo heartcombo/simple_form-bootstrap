@@ -201,7 +201,7 @@ SimpleForm.setup do |config|
   # inline forms
   #
   # inline default_wrapper
-  config.wrappers :inline_form, tag: 'div', class: 'form-group', error_class: 'form-group-invalid' do |b|
+  config.wrappers :inline_form, tag: 'span', error_class: 'form-group-invalid' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
@@ -212,17 +212,17 @@ SimpleForm.setup do |config|
     b.use :label, class: 'sr-only'
 
     b.use :input, class: 'form-control', error_class: 'is-invalid'
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+    b.use :error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
     b.optional :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
   end
 
   # inline input for boolean
-  config.wrappers :inline_boolean, tag: 'div', class: 'form-check mb-2 mr-sm-2', error_class: 'form-group-invalid' do |b|
+  config.wrappers :inline_boolean, tag: 'span', class: 'form-check flex-wrap justify-content-start mr-sm-2', error_class: 'form-group-invalid' do |b|
     b.use :html5
     b.optional :readonly
     b.use :input, class: 'form-check-input', error_class: 'is-invalid'
     b.use :label, class: 'form-check-label'
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+    b.use :error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
     b.optional :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
   end
 
