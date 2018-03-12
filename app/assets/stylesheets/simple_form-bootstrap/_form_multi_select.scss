@@ -7,3 +7,10 @@
     &:last-of-type { margin-right: 0 !important; }
   }
 }
+
+.custom-select {
+  &:only-child {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
