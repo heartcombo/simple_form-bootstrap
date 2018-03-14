@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/plataformatec/simple_form.git
-  revision: 6243a634f9077306bcfb0f52cf819a7c66e669ca
+  revision: ca27feb7679eeabce1fba27ceba5057740733bd8
+  branch: plataformatec/frg-api-to-register-components
   specs:
     simple_form (3.5.1)
       actionpack (> 4, < 5.2)
