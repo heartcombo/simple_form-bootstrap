@@ -1,4 +1,11 @@
 # frozen_string_literal: true
+#
+# Uncomment this and change the path if necessary to include your own
+# components.
+# See https://github.com/plataformatec/simple_form#custom-components to know
+# more about custom components.
+Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
+
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
   # Default class for buttons
@@ -379,7 +386,3 @@ SimpleForm.setup do |config|
   #   time:          :custom_multi_select
   # }
 end
-
-
-# load custom components
-Dir[Rails.root.join('app/components/**/*.rb')].each { |f| require f }
