@@ -26,7 +26,4 @@ $(document).ready(function() {
   $(document).keypress("s", function(e) {
     if(e.ctrlKey) { $button.click(); }
   });
-
-  // bootstrap tooltip
-  $('[data-tooltip]').tooltip();
 });
