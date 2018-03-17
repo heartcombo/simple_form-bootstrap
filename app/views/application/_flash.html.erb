@@ -1,10 +1,30 @@
-<% if notice %>
-  <div class="container">
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>Success!</strong> <%= notice %>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+<% if flash.any? %>
+  <div class="app-flash">
+    <% flash.each do |type, body| %>
+      <%# only render the usual messages %>
+      <% next unless %w(success notice error info).include?(type.to_s) %>
+
+      <%= content_tag :div, class: "alert alert-#{type} alert-flash" do %>
+        <div class="container">
+
+          <div class="media">
+            <%= icon_svg("alerts/#{type}.svg", class: "d-flex mr-3 icon icon-3x") %>
+            <div class="media-body">
+              <%= content_tag(:h6, t(".headline.#{type}"), class: "text-uppercase text-reset my-1") %>
+              <% if body.kind_of?(Array) %>
+                <ul class="mb-0">
+                  <% body.each do |message| %>
+                    <%= content_tag(:li, message) %>
+                  <% end %>
+                </ul>
+              <% else %>
+                <p class="mb-0"><%= body %></p>
+              <% end %>
+            </div>
+          </div>
+
+        </div>
+      <% end if body.present? %>
+    <% end %>
   </div>
 <% end %>

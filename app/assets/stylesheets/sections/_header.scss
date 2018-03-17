@@ -26,6 +26,10 @@
     40%, 80% { transform:rotate(10deg) }
   }
 
+  & + .app-flash {
+    margin-top: 3.5rem;
+  }
+
   & + .app-breadcrumb {
     margin-top: 4.5rem;
   }

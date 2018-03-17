@@ -7,7 +7,7 @@ class Examples::InputGroupsController < Examples::BaseController
     @user = User.new(user_params)
 
     if @user.valid?
-      redirect_to new_examples_input_group_path, notice: 'User is valid'
+      redirect_to new_examples_input_group_path, flash: { success: 'Form is valid' }
     else
       render :new
     end

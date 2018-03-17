@@ -7,7 +7,7 @@ class Examples::FloatingLabelsController < Examples::BaseController
     @user = User.new(user_params)
 
     if @user.valid?
-      redirect_to new_examples_floating_label_path, notice: 'User is valid'
+      redirect_to new_examples_floating_label_path, flash: { success: 'Form is valid' }
     else
       render :new
     end

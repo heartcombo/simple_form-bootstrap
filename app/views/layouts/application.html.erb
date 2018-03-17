@@ -12,10 +12,11 @@
   </head>
   <body>
     <%= render "header" %>
+    <%= render "flash" %>
+
     <%= render "jumbotron" if controller?("examples") %>
     <%= render "breadcrumb" %>
 
-    <%= render "flash" %>
     <%= yield %>
 
     <%= render "footer" %>

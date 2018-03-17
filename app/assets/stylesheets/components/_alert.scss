@@ -1,0 +1,3 @@
+// Alerts
+.alert-notice { @extend .alert-warning; }
+.alert-error  { @extend .alert-danger; }
