@@ -5,7 +5,6 @@
   } do |f| %>
 
   <%= f.error_notification %>
-  <%= f.error_messages %>
 
   <%= render partial: "shared/form_unused_as_hidden", locals: {
     f: f, fields: [:name, :avatar, :bio, :birthday, :color, :fruit, :pill, :choises, :active, :friends, :awake, :first_kiss]
