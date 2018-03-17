@@ -9,15 +9,12 @@
     time:          :custom_multi_select,
     select:        :custom_multi_select
   } do |f| %>
+
   <%= f.error_notification %>
 
-  <!-- pre-fill unused attributes-->
-  <%= f.hidden_field(:name, value: "John Smith") %>
-  <%= f.hidden_field(:email, value: "john@smith.com") %>
-  <%= f.hidden_field(:password, value: "correct-horse-battery-staple") %>
-  <%= f.hidden_field(:bio, value: ("a" * 100)) %>
-  <%= f.hidden_field(:active, value: "1") %>
-  <%= f.hidden_field(:friends, value: "1") %>
+  <%= render partial: "shared/form_unused_as_hidden", locals: {
+    f: f, fields: [:name, :email, :password, :bio, :active, :friends]
+  } %>
 
   <%= f.input :birthday %>
 

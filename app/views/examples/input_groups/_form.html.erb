@@ -3,6 +3,10 @@
 
   <%= f.error_notification %>
 
+  <%= render partial: "shared/form_unused_as_hidden", locals: {
+    f: f, fields: [:avatar, :birthday, :color, :fruit, :music, :language, :pill, :choises, :active, :friends, :awake, :first_kiss]
+  } %>
+
   <%= f.input :name, prepend: "@" %>
 
   <%= f.input :email, prepend: "example-", append: "@gmail.com" %>

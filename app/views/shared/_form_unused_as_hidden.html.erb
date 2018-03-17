@@ -1,0 +1,7 @@
+<% fields = local_assigns[:fields] %>
+
+<% if fields.any? %>
+  <% fields.each do |field| %>
+    <%= f.hidden_field(field) %>
+  <% end %>
+<% end %>
