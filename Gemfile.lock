@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/plataformatec/simple_form.git
-  revision: ca27feb7679eeabce1fba27ceba5057740733bd8
-  branch: plataformatec/frg-api-to-register-components
+  remote: https://github.com/m5o/simple_form.git
+  revision: 2f71508d6bda2e4bc9ec24b70724989aa044f3f6
+  branch: css_on_wrapper_when_valid-v2
   specs:
     simple_form (3.5.1)
       actionpack (> 4, < 5.2)
@@ -114,7 +114,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.2.1)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -154,8 +154,8 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
+    rails-html-sanitizer (1.0.4)
+      loofah (~> 2.2, >= 2.2.2)
     rails-i18n (5.1.1)
       i18n (>= 0.7, < 2)
       railties (>= 5.0, < 6)
