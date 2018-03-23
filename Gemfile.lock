@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/m5o/simple_form.git
-  revision: 2f71508d6bda2e4bc9ec24b70724989aa044f3f6
+  revision: be3e4eff7fe9feaa27147d463b4537a1d1267f38
   branch: css_on_wrapper_when_valid-v2
   specs:
     simple_form (3.5.1)
