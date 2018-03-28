@@ -1,7 +1,6 @@
 GIT
-  remote: https://github.com/m5o/simple_form.git
-  revision: be3e4eff7fe9feaa27147d463b4537a1d1267f38
-  branch: css_on_wrapper_when_valid-v2
+  remote: https://github.com/plataformatec/simple_form.git
+  revision: dd05b56df12c7a21368f7870b1cff92abc793656
   specs:
     simple_form (3.5.1)
       actionpack (> 4, < 5.2)
@@ -136,7 +135,7 @@ GEM
     public_suffix (3.0.2)
     puma (3.11.2)
     rack (2.0.4)
-    rack-test (0.8.3)
+    rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.2.0.rc2)
       actioncable (= 5.2.0.rc2)

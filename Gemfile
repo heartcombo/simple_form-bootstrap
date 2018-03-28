@@ -69,7 +69,7 @@ gem 'jquery-rails'
 gem 'kramdown', '~> 1.16'
 gem 'rails-i18n', '~> 5.1'
 gem 'rouge', '~> 3.1'
-gem 'simple_form', github: 'm5o/simple_form', branch: 'css_on_wrapper_when_valid-v2'
+gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'validates_timeliness', '~> 4.0'
 
 group :test, :development do
