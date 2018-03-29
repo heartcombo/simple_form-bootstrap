@@ -71,14 +71,29 @@
 
       <h2>Styling</h2>
       <p>
-        To perfectly match bootstrap output these additional styles are suggested:
+        To perfectly match bootstrap output these additional styles are suggested.<br />
+        Load simple_form helpers in e.g. <code>application.scss</code>.
       </p>
-      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_simple_form-bootstrap.scss')), :scss, 'simple_form-bootstrap/_simple_form-bootstrap.scss' %>
-      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_abbr.scss')), :scss, 'simple_form-bootstrap/_form_abbr.scss' %>
-      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_collection_label.scss')), :scss, 'simple_form-bootstrap/_form_collection_label.scss' %>
-      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_custom_checkbox_switch.scss')), :scss, 'simple_form-bootstrap/_form_custom_checkbox_switch.scss' %>
-      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_floating_labels.scss')), :scss, 'simple_form-bootstrap/_form_floating_labels.scss' %>
-      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_multi_select.scss')), :scss, 'simple_form-bootstrap/_form_multi_select.scss' %>
+      <% file_path = 'app/assets/stylesheets/application.scss' %>
+      <%= render_source File.read(File.join(Rails.root, file_path)), :scss, file_path %>
+
+      <% file_path = 'app/assets/stylesheets/simple_form-bootstrap/_simple_form-bootstrap.scss' %>
+      <%= render_source File.read(File.join(Rails.root, file_path)), :scss, file_path %>
+
+      <% file_path = 'app/assets/stylesheets/simple_form-bootstrap/_form_abbr.scss' %>
+      <%= render_source File.read(File.join(Rails.root, file_path)), :scss, file_path %>
+
+      <% file_path = 'app/assets/stylesheets/simple_form-bootstrap/_form_collection_label.scss' %>
+      <%= render_source File.read(File.join(Rails.root, file_path)), :scss, file_path %>
+
+      <% file_path = 'app/assets/stylesheets/simple_form-bootstrap/_form_custom_checkbox_switch.scss' %>
+      <%= render_source File.read(File.join(Rails.root, file_path)), :scss, file_path %>
+
+      <% file_path = 'app/assets/stylesheets/simple_form-bootstrap/_form_floating_labels.scss' %>
+      <%= render_source File.read(File.join(Rails.root, file_path)), :scss, file_path %>
+
+      <% file_path = 'app/assets/stylesheets/simple_form-bootstrap/_form_multi_select.scss' %>
+      <%= render_source File.read(File.join(Rails.root, file_path)), :scss, file_path %>
     </div>
   </div>
 </div>
