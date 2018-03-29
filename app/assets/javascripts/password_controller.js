@@ -1,10 +1,13 @@
 $(document).ready(function() {
   'use strict';
 
-  var $pw_append = $('#user_password').next('.input-group-append');
+  var $bootstrap = $('#exampleInputPassword').next('.input-group-append');
+  var $simple_form = $('#user_password').next('.input-group-append');
+
+  var $pw_appends = $bootstrap.add($simple_form);
 
   // password show/hide toggle
-  $pw_append.click(function() {
+  $pw_appends.click(function() {
     $(this).toggleClass('active');
     if ( $(this).hasClass('active') ) {
       $(this).prev().prop("type", "text");
@@ -17,5 +20,5 @@ $(document).ready(function() {
   });
 
   // styling
-  $pw_append.css('cursor', 'pointer').prop('title', 'toggle me');
+  $pw_appends.css('cursor', 'pointer').prop('title', 'toggle me');
 });
