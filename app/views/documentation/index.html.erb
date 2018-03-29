@@ -66,6 +66,19 @@
         Simple, right? You can see the code for the other examples
         <%= link_to "on GitHub.", "https://github.com/rafaelfranca/simple_form-bootstrap" %>
       </p>
+
+      <hr class="my-5" />
+
+      <h2>Styling</h2>
+      <p>
+        To perfectly match bootstrap output these additional styles are suggested:
+      </p>
+      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_simple_form-bootstrap.scss')), :scss, 'simple_form-bootstrap/_simple_form-bootstrap.scss' %>
+      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_abbr.scss')), :scss, 'simple_form-bootstrap/_form_abbr.scss' %>
+      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_collection_label.scss')), :scss, 'simple_form-bootstrap/_form_collection_label.scss' %>
+      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_custom_checkbox_switch.scss')), :scss, 'simple_form-bootstrap/_form_custom_checkbox_switch.scss' %>
+      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_floating_labels.scss')), :scss, 'simple_form-bootstrap/_form_floating_labels.scss' %>
+      <%= render_source File.read(File.join(Rails.root, 'app/assets/stylesheets/simple_form-bootstrap/_form_multi_select.scss')), :scss, 'simple_form-bootstrap/_form_multi_select.scss' %>
     </div>
   </div>
 </div>
