@@ -2,8 +2,8 @@
 #
 # Uncomment this and change the path if necessary to include your own
 # components.
-# See https://github.com/plataformatec/simple_form#custom-components to know
-# more about custom components.
+# See https://github.com/plataformatec/simple_form#custom-components
+# to know more about custom components.
 Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
 
 # Use this setup block to configure all options available in SimpleForm.
@@ -34,6 +34,10 @@ SimpleForm.setup do |config|
   # :first lists the first message for each field.
   # :to_sentence to list all errors for each field.
   config.error_method = :to_sentence
+
+  # add validation classes to `input_field`
+  config.input_field_error_class = 'is-invalid'
+  config.input_field_valid_class = 'is-valid'
 
 
   # vertical forms
