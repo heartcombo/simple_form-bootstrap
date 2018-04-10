@@ -33,7 +33,7 @@
 
   <%= f.input :choises, as: :check_boxes, collection: User::CHOISES %>
 
-  <%= f.input :mood, as: :range %>
+  <%= f.input :mood, as: :range, input_html: { step: 10 } %>
 
   <%= f.input :awake %>
 
