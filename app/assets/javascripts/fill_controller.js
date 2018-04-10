@@ -15,6 +15,7 @@ $(document).ready(function() {
     language:   'en',
     pill:       'red',
     friends:    '99',
+    mood:       '60',
     awake:      ['08', '30'],
     first_kiss: ['21', '30'],
     active:     'Yes',
@@ -50,6 +51,7 @@ $(document).ready(function() {
     $('#exampleRadiosPillRed').prop('checked', true);
     $('#exampleCheckActive').prop('checked', User.active);
     $('#exampleInputFriends').val(User.friends);
+    $('#exampleRangeMood').val(User.mood);
     $('#exampleInputTimeHour').val(User.awake[0]);
     $('#exampleInputTimeMinute').val(User.awake[1]);
     $('#exampleInputDatetimeYear').val(date_today_year);
@@ -83,6 +85,7 @@ $(document).ready(function() {
     $('#user_choises').val(User.choises[0]);
     $('#user_choises_b, #user_choises_d').prop('checked', true);
     $('#user_friends').val(User.friends);
+    $('#user_mood').val(User.mood);
     $('#user_awake').val(User.awake[0]);
     $('#user_awake_4i').val(User.awake[0]);
     $('#user_awake_5i').val(User.awake[1]);

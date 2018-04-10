@@ -6,8 +6,8 @@ class Examples::BaseController < ApplicationController
     def user_params
       params.require(:user).permit(
         :name, :email, :password, :avatar, :bio, :birthday,
-        :language, :friends, :awake, :first_kiss, :active, :terms,
-        :color, :pill, :choises, :fruit, :music,
+        :language, :friends, :mood, :awake, :first_kiss, :active,
+        :terms, :color, :pill, :choises, :fruit, :music,
         :choises => [], :fruit => [], :music => []
       )
     end

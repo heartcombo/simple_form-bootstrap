@@ -10,6 +10,7 @@ class HorizontalFormTest < ActionView::TestCase
       datetime:      :horizontal_multi_select,
       file:          :horizontal_file,
       radio_buttons: :horizontal_collection,
+      range:         :horizontal_range,
       time:          :horizontal_multi_select
     }
     @builder = SimpleForm::FormBuilder.new(:user, @user, self, wrapper: :horizontal_form, wrapper_mappings: wrapper_mappings)
@@ -242,6 +243,20 @@ class HorizontalFormTest < ActionView::TestCase
         <div class="col-sm-9">
           <input class="form-control password optional" id="user_password" name="user[password]" placeholder="Password" type="password"/>
           <small class="form-text text-muted">Password input example</small>
+        </div>
+      </div>
+    HTML
+    assert_xml_equal expected, actual
+  end
+
+  def test_range_field
+    actual = @builder.input(:mood, as: :range)
+    expected = <<-HTML
+      <div class="form-group row range optional user_mood">
+        <label class="col-sm-3 form-control-label range optional" for="user_mood">Mood</label>
+        <div class="col-sm-9">
+          <input class="form-control-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
+          <small class="form-text text-muted">Integer range example</small>
         </div>
       </div>
     HTML

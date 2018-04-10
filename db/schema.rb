@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2018_02_19_221860) do
     t.string "choises"
     t.string "language"
     t.integer "friends"
+    t.integer "mood"
     t.time "awake"
     t.datetime "first_kiss"
     t.boolean "active"

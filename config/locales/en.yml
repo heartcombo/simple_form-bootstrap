@@ -101,6 +101,7 @@ en:
         pill: Collection as radio buttons example
         choises: Collection as check boxes example
         friends: Integer input example
+        mood: Integer range example
         awake: Time multi select example
         first_kiss: Datetime multi select example
         active: Boolean as radio button example

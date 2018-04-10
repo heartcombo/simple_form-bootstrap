@@ -14,6 +14,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :choises
       t.string :language
       t.integer :friends
+      t.integer :mood
       t.time :awake
       t.datetime :first_kiss
       t.boolean :active

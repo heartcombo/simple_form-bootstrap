@@ -17,6 +17,7 @@
 #  choises         :string
 #  active          :boolean
 #  friends         :integer
+#  mood            :integer
 #  awake           :time
 #  first_kiss      :datetime
 #  terms           :boolean
@@ -51,6 +52,7 @@ class User < ApplicationRecord
   validates :choises,     presence: true, exclusion_array: { in: User::CHOISES.first, presence: true, deny_blank: true }
   validates :active,      presence: true, acceptance: true
   validates :friends,     numericality: { only_integer: true, greater_than: 1, less_than: 10_000 }
+  validates :mood,        numericality: { only_integer: true, greater_than: 50, less_than: 101 }
   validates :awake,       presence: true, timeliness: { type: :time, before: '12:00' }
   validates :first_kiss,  presence: true, timeliness: { type: :datetime, after: '20:00' }
   validates :terms,       acceptance: true

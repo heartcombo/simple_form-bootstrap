@@ -118,6 +118,18 @@ SimpleForm.setup do |config|
     b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
   end
 
+  # vertical range input
+  config.wrappers :vertical_range, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.optional :readonly
+    b.optional :step
+    b.use :label
+    b.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  end
+
 
   # horizontal forms
   #
@@ -203,6 +215,20 @@ SimpleForm.setup do |config|
       ba.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |bb|
         bb.use :input, class: 'form-control mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
       end
+      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+    end
+  end
+
+  # horizontal range input
+  config.wrappers :horizontal_range, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.optional :readonly
+    b.optional :step
+    b.use :label, class: 'col-sm-3 form-control-label'
+    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+      ba.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
       ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
     end
@@ -315,6 +341,18 @@ SimpleForm.setup do |config|
     b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
   end
 
+  # custom range input
+  config.wrappers :custom_range, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.optional :readonly
+    b.optional :step
+    b.use :label, class: 'form-control-label'
+    b.use :input, class: 'custom-range', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  end
+
 
   # Input Group
   config.wrappers :input_group, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
@@ -376,6 +414,7 @@ SimpleForm.setup do |config|
     datetime:      :vertical_multi_select,
     file:          :vertical_file,
     radio_buttons: :vertical_collection,
+    range:         :vertical_range,
     time:          :vertical_multi_select
   }
 
@@ -387,6 +426,7 @@ SimpleForm.setup do |config|
   #   datetime:      :custom_multi_select,
   #   file:          :custom_file,
   #   radio_buttons: :custom_collection,
+  #   range:         :custom_range,
   #   time:          :custom_multi_select
   # }
 end

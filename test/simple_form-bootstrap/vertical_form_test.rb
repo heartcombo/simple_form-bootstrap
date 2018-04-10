@@ -212,6 +212,18 @@ class VerticalFormTest < ActionView::TestCase
     assert_xml_equal expected, actual
   end
 
+  def test_range_field
+    actual = @builder.input(:mood, as: :range)
+    expected = <<-HTML
+      <div class="form-group range optional user_mood">
+        <label class="range optional" for="user_mood">Mood</label>
+        <input class="form-control-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
+        <small class="form-text text-muted">Integer range example</small>
+      </div>
+    HTML
+    assert_xml_equal expected, actual
+  end
+
   def test_select_field
     actual = @builder.input(:language, collection: %w(a b))
     expected = <<-HTML
