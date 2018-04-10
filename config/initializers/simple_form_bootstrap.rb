@@ -349,7 +349,7 @@ SimpleForm.setup do |config|
     b.optional :step
     b.use :label, class: 'form-control-label'
     b.use :input, class: 'custom-range', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
     b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
   end
 
