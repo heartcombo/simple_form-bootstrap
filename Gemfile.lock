@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/parnic/bootstrap-rubygem.git
+  revision: 199eec6a0c2a0aa0c560ba6f44f130c126a7d5e0
+  specs:
+    bootstrap (4.1.0)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.12.9, < 2)
+      sass (>= 3.5.2)
+
+GIT
   remote: https://github.com/plataformatec/simple_form.git
   revision: 10c05896fa7c3be134b1bd5cc728670f383644c6
   specs:
@@ -55,15 +64,11 @@ GEM
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    autoprefixer-rails (8.0.0)
+    autoprefixer-rails (8.2.0)
       execjs
     bindex (0.5.0)
     bootsnap (1.1.8)
       msgpack (~> 1.0)
-    bootstrap (4.0.0)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
     builder (3.2.3)
     byebug (10.0.0)
     capybara (2.18.0)
@@ -92,7 +97,7 @@ GEM
       nokogiri (>= 1.4.3)
     erubi (1.7.1)
     execjs (2.7.0)
-    ffi (1.9.21)
+    ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.0)
@@ -165,13 +170,13 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (12.3.0)
-    rb-fsevent (0.10.2)
+    rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rouge (3.1.1)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
-    sass (3.5.5)
+    sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -227,7 +232,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  bootstrap (~> 4.0.0)
+  bootstrap!
   byebug
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
