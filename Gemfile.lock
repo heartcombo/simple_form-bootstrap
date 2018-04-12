@@ -7,14 +7,6 @@ GIT
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
 
-GIT
-  remote: https://github.com/plataformatec/simple_form.git
-  revision: 10c05896fa7c3be134b1bd5cc728670f383644c6
-  specs:
-    simple_form (3.5.1)
-      actionpack (> 4, < 5.2)
-      activemodel (> 4, < 5.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -91,7 +83,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
-    crass (1.0.3)
+    crass (1.0.4)
     diffy (3.2.0)
     equivalent-xml (0.6.0)
       nokogiri (>= 1.4.3)
@@ -190,6 +182,9 @@ GEM
     selenium-webdriver (3.9.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    simple_form (4.0.0)
+      actionpack (> 4)
+      activemodel (> 4)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -251,7 +246,7 @@ DEPENDENCIES
   rouge (~> 3.1)
   sass-rails (~> 5.0)
   selenium-webdriver
-  simple_form!
+  simple_form (~> 4.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
