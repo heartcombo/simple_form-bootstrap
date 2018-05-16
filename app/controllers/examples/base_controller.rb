@@ -8,7 +8,7 @@ class Examples::BaseController < ApplicationController
         :name, :email, :password, :avatar, :bio, :birthday,
         :language, :friends, :mood, :awake, :first_kiss, :active,
         :terms, :color, :pill, :choises, :fruit, :music,
-        :choises => [], :fruit => [], :music => []
+        choises: [], fruit: [], music: []
       )
     end
 end
