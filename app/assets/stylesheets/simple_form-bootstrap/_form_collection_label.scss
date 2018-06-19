@@ -1,0 +1,33 @@
+// vertical form
+.form-check {
+  > .collection_check_boxes,
+  > .collection_radio_buttons {
+    @extend .form-check-label;
+    // fix missing space between input & label
+    margin-right: .265625rem;
+  }
+}
+
+// custom form
+.custom-control {
+  > .collection_check_boxes,
+  > .collection_radio_buttons {
+    @extend .custom-control-label;
+    // fix missing space between input & label
+    margin-right: .265625rem;
+  }
+}
+
+// custom form radio button fix
+.form-group.radio_buttons {
+  > .custom-control {
+    @extend .custom-radio;
+  }
+}
+
+// custom form check box fix
+.form-group.check_boxes {
+  > .custom-control {
+    @extend .custom-checkbox;
+  }
+}

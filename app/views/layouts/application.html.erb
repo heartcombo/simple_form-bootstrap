@@ -7,18 +7,20 @@
     <title>Example Rails application with SimpleForm and Bootstrap</title>
     <%= stylesheet_link_tag "application" %>
     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   </head>
-  <body>
+  <%= content_tag :body, data: { action: action_name, controller: controller_name, path: request.path } do %>
     <%= render "header" %>
+    <%= render "flash" %>
+
     <%= render "jumbotron" if controller?("examples") %>
     <%= render "breadcrumb" %>
 
-    <%= render "flash" %>
     <%= yield %>
 
     <%= render "footer" %>
     <%= javascript_include_tag "application" %>
-  </body>
+  <% end %>
 </html>

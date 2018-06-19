@@ -7,3 +7,8 @@
 .app-example {
   min-height: 25rem;
 }
+
+// makes comparison easier
+.needs-validation.was-validated {
+  > .alert-danger { display: block !important; }
+}

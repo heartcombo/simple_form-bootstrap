@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+valid:
+  name: John Smith
+  email: john@smith.com
+  password: correct-horse-battery-staple
+  avatar: 'avatar.jpg'
+  bio: 'Everyone wants to enjoy the good parts - but you have to build the framework first. Now, we are going to fluff this cloud.'
+  birthday: 2040-12-25
+  color: blue
+  fruit: '<%= ['cherry', 'lime', 'mango'].to_json %>'
+  music: '<%= ['pop', 'dance'].to_json %>'
+  language: en
+  pill: red
+  choises: '<%= ['b', 'd'].to_json %>'
+  active: true
+  friends: 5
+  mood: 60
+  awake: 2018-12-25 08:30:00
+  first_kiss: 2018-12-25 21:30:00
+  terms: true
+  updated_at: <%= 3.months.ago %>
+  created_at: <%= 3.months.ago %>
+
+invalid:
+  name:
+  email: john@smith.com
+  password: correct-horse-battery-staple
+  avatar: 'avatar.jpg'
+  bio: 'Everyone wants to enjoy the good parts - but you have to build the framework first. Now, we are going to fluff this cloud.'
+  birthday: 2040-12-25
+  color: blue
+  fruit: '<%= ['cherry', 'lime', 'mango'].to_json %>'
+  music: '<%= ['pop', 'dance'].to_json %>'
+  language: en
+  pill: red
+  choises: '<%= ['b', 'd'].to_json %>'
+  active: true
+  friends: 5
+  mood: 60
+  awake: 2018-12-25 08:30:00
+  first_kiss: 2018-12-25 21:30:00
+  terms: true
+  updated_at: <%= 3.months.ago %>
+  created_at: <%= 3.months.ago %>

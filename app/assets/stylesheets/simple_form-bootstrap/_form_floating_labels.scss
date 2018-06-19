@@ -1,0 +1,74 @@
+// extracted from:
+// http://getbootstrap.com/docs/4.0/examples/floating-labels/
+
+$sf-floating-input-padding-x: $input-padding-x !default;
+$sf-floating-input-padding-y: $input-padding-y * 2 !default;
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group > input,
+.form-label-group > select,
+.form-label-group > label {
+  padding: $sf-floating-input-padding-y $sf-floating-input-padding-x;
+}
+
+.form-label-group {
+  > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0; /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+    user-select: none;
+  }
+
+  select,
+  input {
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:not(:placeholder-shown) {
+      padding-top: $sf-floating-input-padding-y + $sf-floating-input-padding-y * (2 / 3);
+      padding-bottom: $sf-floating-input-padding-y / 3;
+
+      ~ label {
+        padding-top: $sf-floating-input-padding-y / 3;
+        padding-bottom: $sf-floating-input-padding-y / 3;
+        font-size: 12px;
+        color: #777;
+      }
+    }
+  }
+
+  .custom-select,
+  select.form-control {
+    font-size: inherit;
+    padding-bottom: 2px;
+
+    ~ label {
+      width: auto;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  select[multiple] {
+    ~ label {
+      background-color: $input-bg;
+      padding: 0 0 0 $sf-floating-input-padding-x;
+      margin-top: $input-border-width;
+      margin-left: $input-border-width * 2;
+      width: 99%;
+    }
+  }
+}

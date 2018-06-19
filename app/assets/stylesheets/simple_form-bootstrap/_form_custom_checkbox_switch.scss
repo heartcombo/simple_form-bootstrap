@@ -1,0 +1,43 @@
+// credits: http://wingman.mediumra.re/components-bootstrap.html#forms
+.custom-control.custom-checkbox-switch {
+  padding-left: 0;
+
+  label {
+    display: flex;
+
+    &:before {
+      top: 0;
+      left: 0;
+      position: relative;
+      border-radius: $spacer !important;
+      width: $spacer * 2;
+      height: $spacer;
+      transition: background-color .2s ease;
+      display: inline-block;
+      margin-right: $spacer / 2;
+      align-self: center;
+    }
+
+    &:after {
+      content: '';
+      transition: left .2s ease;
+      position: absolute;
+      transform: scale(0.7);
+      height: $spacer;
+      width: $spacer;
+      border-radius: 50%;
+      left: 0;
+      background: $white;
+    }
+  }
+
+  input:checked {
+    + label {
+      background-image: none !important;
+
+      &:after {
+        left: $spacer;
+      }
+    }
+  }
+}

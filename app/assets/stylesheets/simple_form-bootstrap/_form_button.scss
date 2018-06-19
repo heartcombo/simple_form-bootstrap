@@ -1,0 +1,4 @@
+// apply primary button style to buttons with only `btn` class
+[class="btn"] {
+  @extend .btn-primary;
+}

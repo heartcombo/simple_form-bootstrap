@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.3'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0.rc1'
+gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # Use Puma as the app server
@@ -52,7 +52,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.15'
+  gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
@@ -63,11 +63,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 # Custom
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.1.1'
+gem 'inline_svg', '~> 1.3', '>= 1.3.1'
 gem 'jquery-rails'
 gem 'kramdown', '~> 1.16'
+gem 'rails-i18n', '~> 5.1'
 gem 'rouge', '~> 3.1'
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', '~> 4.0'
+gem 'validates_timeliness', '~> 4.0'
 
 group :test, :development do
   gem 'diffy'

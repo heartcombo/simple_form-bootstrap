@@ -30,8 +30,37 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  errors:
+    messages:
+      invalid_date: "is not a valid date"
+      invalid_time: "is not a valid time"
+      invalid_datetime: "is not a valid datetime"
+      is_at: "must be at %{restriction}"
+      before: "must be before %{restriction}"
+      on_or_before: "must be on or before %{restriction}"
+      after: "must be after %{restriction}"
+      on_or_after: "must be on or after %{restriction}"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            choises:
+              blacklist: First item is forbidden.
+            fruit:
+              blacklist: Apple is forbidden.
+            music:
+              blacklist: Rock is forbidden.
   examples:
     index:
+      custom:
+        link: Custom Form
+        subtitle: Reference Examples
+        title: Custom Form
+      floating_label:
+        link: Floating Labels Form
+        subtitle: Reference Examples
+        title: Floating Labels Form
       horizontal:
         link: Horizontal Form
         subtitle: Reference Examples
@@ -40,20 +69,95 @@ en:
         link: Inline Form
         subtitle: Reference Examples
         title: Inline Form
+      input_group:
+        link: Input Group Form
+        subtitle: Reference Examples
+        title: Input Group Form
       vertical:
         link: Vertical Form
         subtitle: Reference Examples
         title: Vertical Form
+  helpers:
+    submit:
+      user:
+        create: "Create %{model}!"
   simple_form:
+    labels:
+      user:
+        email: Email address
+        first_kiss: First kiss
     hints:
       user:
-        active: Lorem ipsum dolor sit amet
-        choices: Lorem ipsum dolor sit amet
+        name: Text input example
         email: We'll never share your email with anyone else.
-        file: Example block-level help text here.
-        password: Lorem ipsum dolor sit amet
-        sex: Lorem ipsum dolor sit amet
+        password: Password input example
+        avatar: File input example
+        bio: Textarea input example
+        birthday: Date multi select example
+        color: Collection as inline radio buttons example
+        fruit: Collection as inline check boxes example
+        music: Collection multiple select example
+        language: Collection select example
+        pill: Collection as radio buttons example
+        choises: Collection as check boxes example
+        friends: Integer input example
+        mood: Integer range example
+        awake: Time multi select example
+        first_kiss: Datetime multi select example
+        active: Boolean as radio button example
+        terms: Boolean as check box example
+    options:
+      user:
+        color:
+          red: Red
+          pink: Pink
+          violet: Violet
+          indigo: Indigo
+          blue: Blue
+          teal: Teal
+          green: Green
+          yellow: Yellow
+        fruit:
+          apple: Apple
+          banana: Banana
+          cherry: Cherry
+          coconut: Coconut
+          grape: Grape
+          lime: Lime
+          mango: Mango
+          orange: Orange
+          pear: Pear
+          pineapple: Pineapple
+        pill:
+          red: Red pill
+          blue: Blue pill
+        choises:
+          a: Learn the Ruby programming language
+          b: Create a Ruby on Rails application
+          c: Practice Ruby, Rails, Tests and Simple Form
+          d: Deploy your application in the cloud
+        music:
+          rock: Rock
+          pop: Pop
+          jazz: Jazz
+          heavy_metal: Heavy Metal
+          hip_hop: Hip Hop
+          house: House
+          electronic_dance: EDM
+          dance: Dance
+          techno: Techno
+        language:
+          en: English
+          de: German
+          es: Spanish
+          ru: Russian
+    prompts:
+      user:
+        language: Select your Language
     placeholders:
       user:
+        name: Your name
         email: Enter email
-        password: '••••••••••'
+        password: Password
+        bio: Tell us your story
+        friends: Number of Friends

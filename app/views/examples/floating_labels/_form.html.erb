@@ -1,0 +1,23 @@
+<%= simple_form_for @user, url: examples_floating_label_path,
+  wrapper: :floating_labels_form,
+  wrapper_mappings: {
+    select:        :floating_labels_select
+  } do |f| %>
+
+  <%= f.error_notification %>
+
+  <%= render partial: "shared/form_unused_as_hidden", locals: {
+    f: f, fields: [:name, :avatar, :bio, :birthday, :color, :fruit, :pill, :choises, :active, :friends, :mood, :awake, :first_kiss]
+  } %>
+
+  <%= f.input :email %>
+
+  <%= f.input :password %>
+
+  <%= f.input :music, collection: User::MUSIC, input_html: { multiple: true } %>
+
+  <%= f.input :language, collection: User::LANGUAGE, prompt: :translate %>
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>

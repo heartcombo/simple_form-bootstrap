@@ -1,7 +1,14 @@
 <div class="col-md-6" data-target="toggle.grid">
   <div class="card border-bootstrap box-shadow mb-4">
-    <div class="card-header text-bootstrap">
-      <strong>Bootstrap</strong>: <%= title %>
+    <div class="card-header text-bootstrap d-flex align-items-center justify-content-between">
+      <div>
+        <strong>Bootstrap</strong>: <%= title %><br />
+        <small class="text-muted">Static Bootstrap markup from docs</small>
+      </div>
+      <div>
+        <button class="btn btn-sm btn-outline-bootstrap" data-toggle="modal" data-target="#modal-bootstrap" data-tooltip title="View form source code">Source</button>
+        <button class="btn btn-sm btn-bootstrap" data-fill="bootstrap" data-tooltip title="Fill form with valid data">Fill</button>
+      </div>
     </div>
     <div class="card-body">
       <%= yield %>

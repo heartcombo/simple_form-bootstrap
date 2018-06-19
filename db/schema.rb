@@ -10,17 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140331205449) do
+ActiveRecord::Schema.define(version: 2018_02_19_221860) do
 
   create_table "users", force: :cascade do |t|
+    t.string "name"
     t.string "email"
     t.string "password"
-    t.string "file"
+    t.string "avatar"
+    t.text "bio"
+    t.date "birthday"
+    t.string "color"
+    t.string "fruit"
+    t.string "music"
+    t.string "pill"
+    t.string "choises"
+    t.string "language"
+    t.integer "friends"
+    t.integer "mood"
+    t.time "awake"
+    t.datetime "first_kiss"
     t.boolean "active"
-    t.string "choices"
-    t.string "sex"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.boolean "terms"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

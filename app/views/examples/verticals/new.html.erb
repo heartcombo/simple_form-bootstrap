@@ -9,4 +9,13 @@
     <%= render partial: "bootstrap", layout: "card_bootstrap", locals: { title: "Vertical Form" } %>
     <%= render partial: "form",      layout: "card_simple_form", locals: { title: "Vertical Form" } %>
   </div>
+
+  <%= render partial: "shared/tipps" %>
+
+  <%# move modals to bottom %>
+  <%= render partial: "shared/modal", locals: { id: "modal-bootstrap", title: "Bootstrap",
+    content: render_source(File.read(File.join(Rails.root, 'app/views/examples/verticals/_bootstrap.html.erb'))) } %>
+
+  <%= render partial: "shared/modal", locals: { id: "modal-simpleform", title: "Simple Form",
+    content: render_source(File.read(File.join(Rails.root, 'app/views/examples/verticals/_form.html.erb'))) } %>
 </div>

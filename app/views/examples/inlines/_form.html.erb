@@ -1,13 +1,19 @@
 <%= simple_form_for @user, url: examples_inline_path,
   wrapper: :inline_form,
-  html: { class: "form-inline" } do |f| %>
-  <%= f.error_notification %>
+  html: { class: "form-inline" },
+  wrapper_mappings: {
+    boolean: :inline_boolean
+  } do |f| %>
 
-  <%= f.input :email %>
+  <%= render partial: "shared/form_unused_as_hidden", locals: {
+    f: f, fields: [:name, :avatar, :bio, :birthday, :color, :fruit, :music, :language, :pill, :choises, :active, :friends, :mood, :awake, :first_kiss]
+  } %>
 
-  <%= f.input :password %>
+  <%= f.input :email, input_html: { class: "mr-sm-2" } %>
 
-  <%= f.input :active, inline_label: "Remember me" %>
+  <%= f.input :password, input_html: { class: "mr-sm-2" } %>
 
-  <%= f.button :submit %>
+  <%= f.input :terms %>
+
+  <%= f.button :submit, class: "btn-primary mx-sm-2" %>
 <% end %>
