@@ -57,7 +57,7 @@ GEM
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
     builder (3.2.3)
-    byebug (10.0.0)
+    byebug (10.0.2)
     capybara (2.18.0)
       addressable
       mini_mime (>= 0.1.3)
