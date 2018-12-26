@@ -168,7 +168,7 @@ class CustomFieldsTest < ActionView::TestCase
     actual = @builder.input(:terms, wrapper: :custom_boolean_switch)
     expected = <<-HTML
       <fieldset class="form-group boolean optional user_terms">
-        <div class="custom-control custom-checkbox-switch">
+        <div class="custom-control custom-switch">
           <input name="user[terms]" type="hidden" value="0"/>
           <input class="custom-control-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
           <label class="custom-control-label boolean optional" for="user_terms">Terms</label>
