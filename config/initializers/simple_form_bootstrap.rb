@@ -287,7 +287,7 @@ SimpleForm.setup do |config|
   config.wrappers :custom_boolean_switch, tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
     b.use :html5
     b.optional :readonly
-    b.wrapper :form_check_wrapper, tag: 'div', class: 'custom-control custom-checkbox-switch' do |bb|
+    b.wrapper :form_check_wrapper, tag: 'div', class: 'custom-control custom-switch' do |bb|
       bb.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
       bb.use :label, class: 'custom-control-label'
       bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
