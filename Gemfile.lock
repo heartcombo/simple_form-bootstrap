@@ -80,7 +80,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.3)
     crass (1.0.4)
-    diffy (3.2.1)
+    diffy (3.3.0)
     equivalent-xml (0.6.0)
       nokogiri (>= 1.4.3)
     erubi (1.7.1)
