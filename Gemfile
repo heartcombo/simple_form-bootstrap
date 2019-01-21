@@ -66,7 +66,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.2.1'
 gem 'inline_svg', '~> 1.3', '>= 1.3.1'
 gem 'jquery-rails'
-gem 'kramdown', '~> 1.17'
+gem 'kramdown', '~> 2.0'
 gem 'rails-i18n', '~> 5.1'
 gem 'rouge', '~> 3.3'
 gem 'simple_form', '~> 4.1'
