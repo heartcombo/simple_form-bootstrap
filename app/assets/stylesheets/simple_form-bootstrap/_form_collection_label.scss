@@ -1,4 +1,4 @@
-// vertical & horizontal forms
+// optional vertical & horizontal form spacing
 .form-check-inline {
   .form-check-label {
     &.collection_check_boxes,
@@ -8,7 +8,7 @@
   }
 }
 
-// custom form
+// optional custom form spacing
 .custom-control-inline {
   .custom-control-label {
     &.collection_check_boxes,
@@ -18,14 +18,14 @@
   }
 }
 
-// custom form radio button fix
+// required custom form radio button fix
 .form-group.radio_buttons {
   > .custom-control {
     @extend .custom-radio;
   }
 }
 
-// custom form check box fix
+// required custom form check box fix
 .form-group.check_boxes {
   > .custom-control {
     @extend .custom-checkbox;
