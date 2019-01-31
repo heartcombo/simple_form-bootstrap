@@ -1,10 +1,10 @@
 // vertical & horizontal forms
-.form-check {
-  > .collection_check_boxes,
-  > .collection_radio_buttons {
-    @extend .form-check-label;
-    // fix missing space between input & label
-    margin-right: .265625rem;
+.form-check-inline {
+  .form-check-label {
+    &.collection_check_boxes,
+    &.collection_radio_buttons {
+      margin-right: .265625rem;
+    }
   }
 }
 
