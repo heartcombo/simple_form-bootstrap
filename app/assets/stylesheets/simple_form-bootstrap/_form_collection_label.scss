@@ -9,12 +9,12 @@
 }
 
 // custom form
-.custom-control {
-  > .collection_check_boxes,
-  > .collection_radio_buttons {
-    @extend .custom-control-label;
-    // fix missing space between input & label
-    margin-right: .265625rem;
+.custom-control-inline {
+  .custom-control-label {
+    &.collection_check_boxes,
+    &.collection_radio_buttons {
+      margin-right: .265625rem;
+    }
   }
 }
 
