@@ -1,7 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/simple_form.git
-  revision: 54f4d960a1a54ce5d5ecd96a626e2aec5e299103
-  branch: frg-custom-classes-for-inline-checkboxes-and-radiobuttons
+  revision: d49ccb74955bed905f089e1c8b374960cf740ef1
   specs:
     simple_form (4.1.0)
       actionpack (>= 5.0)
