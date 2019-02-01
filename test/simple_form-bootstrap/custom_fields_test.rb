@@ -20,7 +20,7 @@ class CustomFieldsTest < ActionView::TestCase
     actual = @builder.input(:avatar, as: :file)
     expected = <<-HTML
       <div class="form-group file required user_avatar">
-        <label class="form-control-label file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
+        <label class="file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
         <div class="custom-file">
           <input class="custom-file-input file required" id="user_avatar" name="user[avatar]" type="file"/>
           <label class="custom-file-label file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
@@ -183,7 +183,7 @@ class CustomFieldsTest < ActionView::TestCase
     actual = @builder.input(:mood, as: :range)
     expected = <<-HTML
       <div class="form-group range optional user_mood">
-        <label class="form-control-label range optional" for="user_mood">Mood</label>
+        <label class="range optional" for="user_mood">Mood</label>
         <input class="custom-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
         <small class="form-text text-muted">Integer range example</small>
       </div>
