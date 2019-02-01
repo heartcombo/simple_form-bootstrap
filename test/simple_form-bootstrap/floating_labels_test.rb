@@ -14,7 +14,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="form-label-group email required user_email">
         <input class="form-control string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
-        <label class="form-control-label email required" for="user_email">Email address <abbr title="required">*</abbr></label>
+        <label class="email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <small class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
     HTML
@@ -26,7 +26,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="form-label-group password optional user_password">
         <input class="form-control password optional" id="user_password" name="user[password]" placeholder="Password" type="password"/>
-        <label class="form-control-label password optional" for="user_password">Password</label>
+        <label class="password optional" for="user_password">Password</label>
         <small class="form-text text-muted">Password input example</small>
       </div>
     HTML
@@ -42,7 +42,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
           <option value="a">a</option>
           <option value="b">b</option>
         </select>
-        <label class="form-control-label select optional" for="user_language">Language</label>
+        <label class="select optional" for="user_language">Language</label>
         <small class="form-text text-muted">Collection select example</small>
       </div>
     HTML
@@ -58,7 +58,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
           <option value="a">a</option>
           <option value="b">b</option>
         </select>
-        <label class="form-control-label select required" for="user_music">Music <abbr title="required">*</abbr></label>
+        <label class="select required" for="user_music">Music <abbr title="required">*</abbr></label>
         <small class="form-text text-muted">Collection multiple select example</small>
       </div>
     HTML

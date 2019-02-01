@@ -84,7 +84,7 @@ en:
   simple_form:
     labels:
       user:
-        email: Email address
+        email: Email
         first_kiss: First kiss
     hints:
       user:

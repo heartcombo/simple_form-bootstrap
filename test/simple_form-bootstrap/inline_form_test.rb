@@ -13,7 +13,7 @@ class InlineFormTest < ActionView::TestCase
     actual = @builder.input(:email, input_html: { class: "mb-2 mr-sm-2" })
     expected = <<-HTML
       <span class="email required user_email">
-        <label class="sr-only email required" for="user_email">Email address <abbr title="required">*</abbr></label>
+        <label class="sr-only email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <input class="form-control string email required mb-2 mr-sm-2" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
       </span>
     HTML
@@ -31,7 +31,7 @@ class InlineFormTest < ActionView::TestCase
   def test_boolean_as_check_box
     actual = @builder.input(:terms)
     expected = <<-HTML
-      <span class="form-check flex-wrap justify-content-start mr-sm-2 boolean optional user_terms">
+      <span class="form-check mb-2 mr-sm-2 boolean optional user_terms">
         <input name="user[terms]" type="hidden" value="0"/>
         <input class="form-check-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
         <label class="form-check-label boolean optional" for="user_terms">Terms</label>

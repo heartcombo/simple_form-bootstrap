@@ -20,7 +20,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:email)
     expected = <<-HTML
       <div class="form-group row email required user_email">
-        <label class="col-sm-3 col-form-label email required" for="user_email">Email address <abbr title="required">*</abbr></label>
+        <label class="col-sm-3 col-form-label email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <div class="col-sm-9">
           <input class="form-control string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
           <small class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -35,7 +35,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:color, as: :radio_buttons, collection: [:a, :b], wrapper: :horizontal_collection_inline)
     expected = <<-HTML
       <div class="form-group row radio_buttons required user_color">
-        <label class="col-sm-3 form-control-label radio_buttons required">Color <abbr title="required">*</abbr></label>
+        <label class="col-sm-3 col-form-label pt-0 radio_buttons required">Color <abbr title="required">*</abbr></label>
         <div class="col-sm-9">
           <input name="user[color]" type="hidden" value=""/>
           <div class="form-check form-check-inline">
@@ -58,7 +58,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:pill, as: :radio_buttons, collection: [:a, :b])
     expected = <<-HTML
       <div class="form-group row radio_buttons optional user_pill">
-        <label class="col-sm-3 form-control-label radio_buttons optional">Pill</label>
+        <label class="col-sm-3 col-form-label pt-0 radio_buttons optional">Pill</label>
         <div class="col-sm-9">
           <input name="user[pill]" type="hidden" value=""/>
           <div class="form-check">
@@ -81,7 +81,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:pill, as: :radio_buttons, collection: [:a, :b], legend_tag: false)
     expected = <<-HTML
       <div class="form-group row radio_buttons optional user_pill">
-        <label class="col-sm-3 form-control-label radio_buttons optional">Pill</label>
+        <label class="col-sm-3 col-form-label pt-0 radio_buttons optional">Pill</label>
         <div class="col-sm-9">
           <input name="user[pill]" type="hidden" value=""/>
           <div class="form-check">
@@ -104,7 +104,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:fruit, as: :check_boxes, collection: [:a, :b], wrapper: :horizontal_collection_inline)
     expected = <<-HTML
       <div class="form-group row check_boxes required user_fruit">
-        <label class="col-sm-3 form-control-label check_boxes required">Fruit <abbr title="required">*</abbr></label>
+        <label class="col-sm-3 col-form-label pt-0 check_boxes required">Fruit <abbr title="required">*</abbr></label>
         <div class="col-sm-9">
           <input name="user[fruit][]" type="hidden" value=""/>
           <div class="form-check form-check-inline">
@@ -127,7 +127,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:choises, as: :check_boxes, collection: %w(a b))
     expected = <<-HTML
       <div class="form-group row check_boxes required user_choises">
-        <label class="col-sm-3 form-control-label check_boxes required">Choises <abbr title="required">*</abbr></label>
+        <label class="col-sm-3 col-form-label pt-0 check_boxes required">Choises <abbr title="required">*</abbr></label>
         <div class="col-sm-9">
           <input name="user[choises][]" type="hidden" value=""/>
           <div class="form-check">
@@ -149,7 +149,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:choises, as: :check_boxes, collection: %w(a b), legend_tag: false)
     expected = <<-HTML
       <div class="form-group row check_boxes required user_choises">
-        <label class="col-sm-3 form-control-label check_boxes required">Choises <abbr title="required">*</abbr></label>
+        <label class="col-sm-3 col-form-label pt-0 check_boxes required">Choises <abbr title="required">*</abbr></label>
         <div class="col-sm-9">
           <input name="user[choises][]" type="hidden" value=""/>
           <div class="form-check">
@@ -171,7 +171,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:active, as: :radio_buttons)
     expected = <<-HTML
       <div class="form-group row radio_buttons required user_active">
-        <label class="col-sm-3 form-control-label radio_buttons required">Active <abbr title="required">*</abbr></label>
+        <label class="col-sm-3 col-form-label pt-0 radio_buttons required">Active <abbr title="required">*</abbr></label>
         <div class="col-sm-9">
           <input name="user[active]" type="hidden" value=""/>
           <div class="form-check">
@@ -211,7 +211,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:avatar, as: :file)
     expected = <<-HTML
       <div class="form-group row file required user_avatar">
-        <label class="col-sm-3 form-control-label file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
+        <label class="col-sm-3 col-form-label file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
         <div class="col-sm-9">
           <input class="file required" id="user_avatar" name="user[avatar]" type="file"/>
           <small class="form-text text-muted">File input example</small>
@@ -253,7 +253,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:mood, as: :range)
     expected = <<-HTML
       <div class="form-group row range optional user_mood">
-        <label class="col-sm-3 form-control-label range optional" for="user_mood">Mood</label>
+        <label class="col-sm-3 col-form-label range optional" for="user_mood">Mood</label>
         <div class="col-sm-9">
           <input class="form-control-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
           <small class="form-text text-muted">Integer range example</small>
