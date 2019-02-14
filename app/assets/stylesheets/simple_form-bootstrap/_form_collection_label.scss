@@ -1,31 +1,31 @@
-// vertical & horizontal forms
-.form-check {
-  > .collection_check_boxes,
-  > .collection_radio_buttons {
-    @extend .form-check-label;
-    // fix missing space between input & label
-    margin-right: .265625rem;
+// optional vertical & horizontal form spacing
+.form-check-inline {
+  .form-check-label {
+    &.collection_check_boxes,
+    &.collection_radio_buttons {
+      margin-right: .265625rem;
+    }
   }
 }
 
-// custom form
-.custom-control {
-  > .collection_check_boxes,
-  > .collection_radio_buttons {
-    @extend .custom-control-label;
-    // fix missing space between input & label
-    margin-right: .265625rem;
+// optional custom form spacing
+.custom-control-inline {
+  .custom-control-label {
+    &.collection_check_boxes,
+    &.collection_radio_buttons {
+      margin-right: .265625rem;
+    }
   }
 }
 
-// custom form radio button fix
+// required custom form radio button fix
 .form-group.radio_buttons {
   > .custom-control {
     @extend .custom-radio;
   }
 }
 
-// custom form check box fix
+// required custom form check box fix
 .form-group.check_boxes {
   > .custom-control {
     @extend .custom-checkbox;

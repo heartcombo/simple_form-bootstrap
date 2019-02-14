@@ -18,7 +18,6 @@ class VerticalFormTest < ActionView::TestCase
     assert_xml_equal expected, actual
   end
 
-  # todo: refactor collection_radio_buttons to form-check-label
   def test_collection_as_radio_buttons_inline
     actual = @builder.input(:color, as: :radio_buttons, collection: [:a, :b], wrapper: :vertical_collection_inline)
     expected = <<-HTML
@@ -27,11 +26,11 @@ class VerticalFormTest < ActionView::TestCase
         <input name="user[color]" type="hidden" value=""/>
         <div class="form-check form-check-inline">
           <input class="form-check-input radio_buttons required" id="user_color_a" name="user[color]" type="radio" value="a"/>
-          <label class="collection_radio_buttons" for="user_color_a">a</label>
+          <label class="form-check-label collection_radio_buttons" for="user_color_a">a</label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input radio_buttons required" id="user_color_b" name="user[color]" type="radio" value="b"/>
-          <label class="collection_radio_buttons" for="user_color_b">b</label>
+          <label class="form-check-label collection_radio_buttons" for="user_color_b">b</label>
         </div>
         <small class="form-text text-muted">Collection as inline radio buttons example</small>
       </fieldset>
@@ -39,7 +38,6 @@ class VerticalFormTest < ActionView::TestCase
     assert_xml_equal expected, actual
   end
 
-  # todo: refactor collection_radio_buttons to form-check-label
   def test_collection_as_radio_buttons
     actual = @builder.input(:pill, as: :radio_buttons, collection: [:a, :b])
     expected = <<-HTML
@@ -48,11 +46,11 @@ class VerticalFormTest < ActionView::TestCase
         <input name="user[pill]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input radio_buttons optional" id="user_pill_a" name="user[pill]" type="radio" value="a"/>
-          <label class="collection_radio_buttons" for="user_pill_a">a</label>
+          <label class="form-check-label collection_radio_buttons" for="user_pill_a">a</label>
         </div>
         <div class="form-check">
           <input class="form-check-input radio_buttons optional" id="user_pill_b" name="user[pill]" type="radio" value="b"/>
-          <label class="collection_radio_buttons" for="user_pill_b">b</label>
+          <label class="form-check-label collection_radio_buttons" for="user_pill_b">b</label>
         </div>
         <small class="form-text text-muted">Collection as radio buttons example</small>
       </fieldset>
@@ -60,7 +58,6 @@ class VerticalFormTest < ActionView::TestCase
     assert_xml_equal expected, actual
   end
 
-  # todo: refactor collection_radio_buttons to form-check-label
   def test_collection_as_radio_buttons_without_label
     actual = @builder.input(:pill, as: :radio_buttons, collection: [:a, :b], legend_tag: false)
     expected = <<-HTML
@@ -68,11 +65,11 @@ class VerticalFormTest < ActionView::TestCase
         <input name="user[pill]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input radio_buttons optional" id="user_pill_a" name="user[pill]" type="radio" value="a"/>
-          <label class="collection_radio_buttons" for="user_pill_a">a</label>
+          <label class="form-check-label collection_radio_buttons" for="user_pill_a">a</label>
         </div>
         <div class="form-check">
           <input class="form-check-input radio_buttons optional" id="user_pill_b" name="user[pill]" type="radio" value="b"/>
-          <label class="collection_radio_buttons" for="user_pill_b">b</label>
+          <label class="form-check-label collection_radio_buttons" for="user_pill_b">b</label>
         </div>
         <small class="form-text text-muted">Collection as radio buttons example</small>
       </fieldset>
@@ -80,7 +77,6 @@ class VerticalFormTest < ActionView::TestCase
     assert_xml_equal expected, actual
   end
 
-  # todo: refactor collection_check_boxes to form-check-label
   def test_collection_as_check_boxes_inline
     actual = @builder.input(:fruit, as: :check_boxes, collection: [:a, :b], wrapper: :vertical_collection_inline)
     expected = <<-HTML
@@ -89,11 +85,11 @@ class VerticalFormTest < ActionView::TestCase
         <input name="user[fruit][]" type="hidden" value=""/>
         <div class="form-check form-check-inline">
           <input class="form-check-input check_boxes required" id="user_fruit_a" name="user[fruit][]" type="checkbox" value="a"/>
-          <label class="collection_check_boxes" for="user_fruit_a">a</label>
+          <label class="form-check-label collection_check_boxes" for="user_fruit_a">a</label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input check_boxes required" id="user_fruit_b" name="user[fruit][]" type="checkbox" value="b"/>
-          <label class="collection_check_boxes" for="user_fruit_b">b</label>
+          <label class="form-check-label collection_check_boxes" for="user_fruit_b">b</label>
         </div>
         <small class="form-text text-muted">Collection as inline check boxes example</small>
       </fieldset>
@@ -101,7 +97,6 @@ class VerticalFormTest < ActionView::TestCase
     assert_xml_equal expected, actual
   end
 
-  # todo: refactor collection_check_boxes to form-check-label
   def test_collection_as_check_boxes
     actual = @builder.input(:choises, as: :check_boxes, collection: %w(a b))
     expected = <<-HTML
@@ -110,11 +105,11 @@ class VerticalFormTest < ActionView::TestCase
         <input name="user[choises][]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input check_boxes required" id="user_choises_a" name="user[choises][]" type="checkbox" value="a"/>
-          <label class="collection_check_boxes" for="user_choises_a">a</label>
+          <label class="form-check-label collection_check_boxes" for="user_choises_a">a</label>
         </div>
         <div class="form-check">
           <input class="form-check-input check_boxes required" id="user_choises_b" name="user[choises][]" type="checkbox" value="b"/>
-          <label class="collection_check_boxes" for="user_choises_b">b</label>
+          <label class="form-check-label collection_check_boxes" for="user_choises_b">b</label>
         </div>
         <small class="form-text text-muted">Collection as check boxes example</small>
       </fieldset>
@@ -129,11 +124,11 @@ class VerticalFormTest < ActionView::TestCase
         <input name="user[choises][]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input check_boxes required" id="user_choises_a" name="user[choises][]" type="checkbox" value="a"/>
-          <label class="collection_check_boxes" for="user_choises_a">a</label>
+          <label class="form-check-label collection_check_boxes" for="user_choises_a">a</label>
         </div>
         <div class="form-check">
           <input class="form-check-input check_boxes required" id="user_choises_b" name="user[choises][]" type="checkbox" value="b"/>
-          <label class="collection_check_boxes" for="user_choises_b">b</label>
+          <label class="form-check-label collection_check_boxes" for="user_choises_b">b</label>
         </div>
         <small class="form-text text-muted">Collection as check boxes example</small>
       </fieldset>
@@ -149,11 +144,11 @@ class VerticalFormTest < ActionView::TestCase
         <input name="user[active]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input radio_buttons required" id="user_active_true" name="user[active]" type="radio" value="true"/>
-          <label class="collection_radio_buttons" for="user_active_true">Yes</label>
+          <label class="form-check-label collection_radio_buttons" for="user_active_true">Yes</label>
         </div>
         <div class="form-check">
           <input class="form-check-input radio_buttons required" id="user_active_false" name="user[active]" readonly="readonly" type="radio" value="false"/>
-          <label class="collection_radio_buttons" for="user_active_false">No</label>
+          <label class="form-check-label collection_radio_buttons" for="user_active_false">No</label>
         </div>
         <small class="form-text text-muted">Boolean as radio button example</small>
       </fieldset>
