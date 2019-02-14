@@ -37,7 +37,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
     actual = @builder.input(:language, collection: %w(a b))
     expected = <<-HTML
       <div class="form-label-group select optional user_language">
-        <select class="custom-select custom-select-lg select optional" id="user_language" name="user[language]">
+        <select class="custom-select select optional" id="user_language" name="user[language]">
           <option value=""/>
           <option value="a">a</option>
           <option value="b">b</option>
@@ -54,7 +54,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="form-label-group select required user_music">
         <input name="user[music][]" type="hidden" value=""/>
-        <select class="custom-select custom-select-lg select required" id="user_music" multiple="multiple" name="user[music][]">
+        <select class="custom-select select required" id="user_music" multiple="multiple" name="user[music][]">
           <option value="a">a</option>
           <option value="b">b</option>
         </select>
