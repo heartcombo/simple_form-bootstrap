@@ -78,7 +78,7 @@ gem 'simple_form', github: 'plataformatec/simple_form'
 group :test, :development do
   gem 'diffy'
   gem 'equivalent-xml'
-  gem 'sqlite3', '~> 1.3', '< 1.4'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :production do
