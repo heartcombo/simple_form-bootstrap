@@ -102,9 +102,8 @@ GEM
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
     io-like (0.3.0)
-    jbuilder (2.8.0)
+    jbuilder (2.9.1)
       activesupport (>= 4.2.0)
-      multi_json (>= 1.2)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -129,7 +128,6 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     msgpack (1.2.10)
-    multi_json (1.13.1)
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
@@ -248,7 +246,7 @@ DEPENDENCIES
   diffy
   equivalent-xml
   inline_svg (~> 1.4)
-  jbuilder (~> 2.8)
+  jbuilder (~> 2.9)
   jquery-rails
   kramdown (~> 2.1)
   kramdown-parser-gfm (~> 1.0, >= 1.0.1)
