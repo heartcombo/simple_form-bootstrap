@@ -129,7 +129,7 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.10)
     nio4r (2.4.0)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     pg (1.1.4)
     popper_js (1.14.5)
