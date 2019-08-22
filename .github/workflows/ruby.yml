@@ -12,7 +12,7 @@ jobs:
     - name: Set up Ruby
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        ruby-version: 2.5.x
     - name: Build and test with Rake
       run: |
         gem install bundler
