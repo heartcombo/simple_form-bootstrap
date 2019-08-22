@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # Use Puma as the app server
@@ -68,7 +68,7 @@ gem 'inline_svg', '~> 1.5'
 gem 'jquery-rails'
 gem 'kramdown', '~> 2.1'
 gem 'kramdown-parser-gfm', '~> 1.1'
-gem 'rails-i18n', '~> 5.1'
+gem 'rails-i18n', '~> 6.0'
 gem 'rouge', '~> 3.9'
 # gem 'simple_form', '~> 4.1'
 gem 'validates_timeliness', '~> 4.1'
