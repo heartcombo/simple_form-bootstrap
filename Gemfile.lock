@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/simple_form.git
-  revision: fc25ab40a28ad477e1ac0e45ddcf7ad2b64891f3
+  revision: 6f677ec0e992d0cc7ebd8eb477dffc39530413c3
   specs:
     simple_form (4.1.0)
       actionpack (>= 5.0)
@@ -226,7 +226,7 @@ GEM
     websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.1.9)
+    zeitwerk (2.1.10)
 
 PLATFORMS
   ruby
