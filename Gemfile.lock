@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/plataformatec/simple_form.git
-  revision: 62408e80ae0f7c69784d887e26117e2c8eeb8199
+  revision: 440ed5f2fe093d9066940ab6979099a409576ad9
   specs:
-    simple_form (4.1.0)
+    simple_form (5.0.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
 
@@ -92,7 +92,7 @@ GEM
     diffy (3.3.0)
     equivalent-xml (0.6.0)
       nokogiri (>= 1.4.3)
-    erubi (1.8.0)
+    erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.11.1)
     globalid (0.4.2)
@@ -115,7 +115,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.2.3)
+    loofah (2.3.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -126,7 +126,7 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.12.0)
+    minitest (5.12.2)
     msgpack (1.3.1)
     nio4r (2.5.1)
     nokogiri (1.10.4)
