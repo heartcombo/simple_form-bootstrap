@@ -65,7 +65,7 @@ gem 'rouge', '~> 3.11'
 # gem 'simple_form', '~> 4.1'
 gem 'validates_timeliness', '~> 4.1'
 
-gem 'simple_form', github: 'plataformatec/simple_form'
+gem 'simple_form'
 
 group :test, :development do
   gem 'diffy'
