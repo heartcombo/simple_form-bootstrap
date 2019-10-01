@@ -62,10 +62,8 @@ gem 'kramdown', '~> 2.1'
 gem 'kramdown-parser-gfm', '~> 1.1'
 gem 'rails-i18n', '~> 6.0'
 gem 'rouge', '~> 3.11'
-# gem 'simple_form', '~> 4.1'
+gem 'simple_form', '~> 5.0'
 gem 'validates_timeliness', '~> 4.1'
-
-gem 'simple_form'
 
 group :test, :development do
   gem 'diffy'

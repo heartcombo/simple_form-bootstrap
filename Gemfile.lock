@@ -246,7 +246,7 @@ DEPENDENCIES
   rouge (~> 3.11)
   sass-rails (~> 6.0)
   selenium-webdriver
-  simple_form
+  simple_form (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
