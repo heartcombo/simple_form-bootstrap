@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/plataformatec/simple_form.git
-  revision: 440ed5f2fe093d9066940ab6979099a409576ad9
-  specs:
-    simple_form (5.0.0)
-      actionpack (>= 5.0)
-      activemodel (>= 5.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -189,6 +181,9 @@ GEM
     selenium-webdriver (3.142.4)
       childprocess (>= 0.5, < 3.0)
       rubyzip (~> 1.2, >= 1.2.2)
+    simple_form (5.0.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -251,7 +246,7 @@ DEPENDENCIES
   rouge (~> 3.11)
   sass-rails (~> 6.0)
   selenium-webdriver
-  simple_form!
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
