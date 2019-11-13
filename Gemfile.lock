@@ -241,7 +241,7 @@ DEPENDENCIES
   rails (~> 6.0.1)
   rails-i18n (~> 6.0)
   rouge (~> 3.13)
-  sass-rails (~> 6.0)
+  sass-rails (>= 6)
   selenium-webdriver
   simple_form (~> 5.0)
   spring
