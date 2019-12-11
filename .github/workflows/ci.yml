@@ -1,0 +1,32 @@
+name: Continuous integration
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+    - name: Install SQLite
+      run: sudo apt-get install libsqlite3-dev
+    - name: Cache gems
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gem-
+    - name: Build
+      run: |
+        gem install bundler
+        bundle config path vendor/bundle
+        bundle install --without production --jobs 4 --retry 3
+    - name: Test
+      run: bundle exec rake test
+      env:
+        PARALLEL_WORKERS: 1
