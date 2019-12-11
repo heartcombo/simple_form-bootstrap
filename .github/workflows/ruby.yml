@@ -12,6 +12,8 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.x
+    - name: Install SQLite
+      run: sudo apt-get install libsqlite3-dev
     - name: Build
       run: |
         gem install bundler
