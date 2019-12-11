@@ -20,3 +20,5 @@ jobs:
         bundle install --without production --jobs 4 --retry 3
     - name: Test
       run: bundle exec rake test
+      env:
+        PARALLEL_WORKERS: 1
