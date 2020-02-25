@@ -61,7 +61,7 @@ GEM
     autoprefixer-rails (9.7.3)
       execjs
     bindex (0.8.1)
-    bootsnap (1.4.5)
+    bootsnap (1.4.6)
       msgpack (~> 1.0)
     bootstrap (4.4.1)
       autoprefixer-rails (>= 9.1.0)
@@ -117,7 +117,7 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
-    msgpack (1.3.1)
+    msgpack (1.3.3)
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
