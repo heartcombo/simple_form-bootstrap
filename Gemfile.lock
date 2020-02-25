@@ -78,7 +78,7 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     crass (1.0.6)
     diffy (3.3.0)
     equivalent-xml (0.6.0)
@@ -90,7 +90,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
-    inline_svg (1.6.0)
+    inline_svg (1.7.0)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
     jbuilder (2.9.1)
@@ -230,7 +230,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   diffy
   equivalent-xml
-  inline_svg (~> 1.6)
+  inline_svg (~> 1.7)
   jbuilder (~> 2.9)
   jquery-rails
   kramdown (~> 2.1)
