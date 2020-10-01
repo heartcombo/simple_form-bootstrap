@@ -9,7 +9,7 @@ and [Bootstrap](http://getbootstrap.com/).
 
 An example application is running:
 
-:tv: http://simple-form-bootstrap.plataformatec.com.br/
+:tv: https://simple-form-bootstrap.herokuapp.com/
 
 ## License
 
