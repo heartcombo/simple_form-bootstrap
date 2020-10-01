@@ -18,6 +18,7 @@ $(document).ready(function() {
 
   // stack / split view
   $buttons.click(function(event) {
+    event.preventDefault();
     if ( $(event.target).hasClass("active") ) { return }
     $grid_target.toggleClass("col-md-12");
   });
