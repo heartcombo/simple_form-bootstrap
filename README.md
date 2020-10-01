@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/rafaelfranca/simple_form-bootstrap.svg?branch=master)](https://travis-ci.org/rafaelfranca/simple_form-bootstrap)
 
-This is a example application using [Simple Form](https://github.com/plataformatec/simple_form)
+This is a example application using [Simple Form](https://github.com/heartcombo/simple_form)
 and [Bootstrap](http://getbootstrap.com/).
 
 ## Preview
