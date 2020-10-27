@@ -125,7 +125,7 @@ GEM
     pg (1.2.3)
     popper_js (1.16.0)
     public_suffix (4.0.5)
-    puma (5.0.2)
+    puma (5.0.3)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
