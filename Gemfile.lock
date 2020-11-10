@@ -103,7 +103,7 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    listen (3.2.1)
+    listen (3.3.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.7.0)
@@ -237,7 +237,7 @@ DEPENDENCIES
   jquery-rails
   kramdown (~> 2.3)
   kramdown-parser-gfm (~> 1.1)
-  listen (~> 3.2)
+  listen (~> 3.3)
   pg
   puma (~> 5.0)
   rails (~> 6.0.3)
