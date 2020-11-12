@@ -165,7 +165,7 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.7.1)
     rexml (3.2.4)
-    rouge (3.24.0)
+    rouge (3.25.0)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -242,7 +242,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 6.0.3)
   rails-i18n (~> 6.0)
-  rouge (~> 3.24)
+  rouge (~> 3.25)
   sass-rails (>= 6)
   selenium-webdriver
   simple_form (~> 5.0)
