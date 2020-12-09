@@ -61,7 +61,7 @@ gem 'jquery-rails'
 gem 'kramdown', '~> 2.3'
 gem 'kramdown-parser-gfm', '~> 1.1'
 gem 'rails-i18n', '~> 6.0'
-gem 'rouge', '~> 3.25'
+gem 'rouge', '~> 3.26'
 gem 'simple_form', '~> 5.0'
 gem 'validates_timeliness', '~> 4.1'
 
