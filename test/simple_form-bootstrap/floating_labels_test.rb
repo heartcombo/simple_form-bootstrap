@@ -64,4 +64,16 @@ class FloatingLabelsFormTest < ActionView::TestCase
     HTML
     assert_xml_equal expected, actual
   end
+
+  def test_textarea_field
+    actual = @builder.input(:bio)
+    expected = <<-HTML
+      <div class="form-label-group text optional user_bio">
+        <textarea class="form-control text optional" id="user_bio" name="user[bio]" placeholder="Tell us your story"></textarea>
+        <label class="text optional" for="user_bio">Bio</label>
+        <small class="form-text text-muted">Textarea input example</small>
+      </div>
+    HTML
+    assert_xml_equal expected, actual
+  end
 end
