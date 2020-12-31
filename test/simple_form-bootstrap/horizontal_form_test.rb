@@ -265,7 +265,7 @@ class HorizontalFormTest < ActionView::TestCase
         <label class="col-sm-3 col-form-label select optional" for="user_language">Language</label>
         <div class="col-sm-9">
           <select class="form-control select optional" id="user_language" name="user[language]">
-            <option value=""/>
+            <option label=" " value=""/>
             <option value="a">a</option>
             <option value="b">b</option>
           </select>

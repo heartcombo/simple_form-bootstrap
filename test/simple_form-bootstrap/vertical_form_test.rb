@@ -225,7 +225,7 @@ class VerticalFormTest < ActionView::TestCase
       <div class="form-group select optional user_language">
         <label class="select optional" for="user_language">Language</label>
         <select class="form-control select optional" id="user_language" name="user[language]">
-          <option value=""/>
+          <option label=" " value=""/>
           <option value="a">a</option>
           <option value="b">b</option>
         </select>
