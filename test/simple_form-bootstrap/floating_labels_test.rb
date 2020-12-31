@@ -38,7 +38,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="form-label-group select optional user_language">
         <select class="custom-select select optional" id="user_language" name="user[language]">
-          <option value=""/>
+          <option label=" " value=""/>
           <option value="a">a</option>
           <option value="b">b</option>
         </select>
