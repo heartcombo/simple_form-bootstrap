@@ -1,6 +1,6 @@
 .app-breadcrumb {
   [data-bs-toggle] {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       & { display: none; }
     }
   }
