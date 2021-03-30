@@ -9,13 +9,12 @@
         Swap
       </button>
 
-      <div class="btn-group btn-group-toggle mt-2 d-none" data-bs-toggle="buttons">
-        <label class="btn btn-sm btn-outline-secondary">
-          <input type="radio" name="view" id="stack" autocomplete="off"> Stack
-        </label>
-        <label class="btn btn-sm btn-outline-secondary active">
-          <input type="radio" name="view" id="split" autocomplete="off" checked> Split
-        </label>
+      <div class="btn-group d-none" role="group" data-bs-toggle="buttons">
+        <input type="radio" class="btn-check" name="view" id="stack" autocomplete="off">
+        <label class="btn btn-sm btn-outline-secondary" for="stack">Stack</label>
+
+        <input type="radio" class="btn-check" name="view" id="split" autocomplete="off" checked>
+        <label class="btn btn-sm btn-outline-secondary" for="split">Split</label>
       </div>
     </div>
   </div>
