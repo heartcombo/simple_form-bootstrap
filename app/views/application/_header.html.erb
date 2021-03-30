@@ -2,23 +2,23 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <%= link_to "Simple Form & Bootstrap", root_path, class: "navbar-brand" %>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbar-header">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbar-example" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbar-example" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Examples
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbar-example">
-              <%= link_to("Overview", examples_path, class: "dropdown-item") %>
-              <div class="dropdown-divider"></div>
+            <ul class="dropdown-menu" aria-labelledby="navbar-example">
+              <li><%= link_to("Overview", examples_path, class: "dropdown-item") %></li>
+              <li><hr class="dropdown-divider"></li>
               <% Examples::BaseController::TYPES.each do |form| %>
-                <%= link_to t("examples.index.#{form}.link"), [:new, :examples, form], class: "dropdown-item" %>
+                <li><%= link_to t("examples.index.#{form}.link"), [:new, :examples, form], class: "dropdown-item" %></li>
               <% end %>
-            </div>
+            </ul>
           </li>
           <%= content_tag(:li, link_to("Documentation", documentation_path, class: "nav-link"), class: "nav-item #{is_active?(documentation_path)}") %>
         </ul>
