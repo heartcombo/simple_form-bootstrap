@@ -2,8 +2,8 @@ $(document).ready(function() {
   'use strict';
 
   var $grid_target = $('[data-target="toggle.grid"]');
-  var $button      = $('[data-toggle="button"]');
-  var $buttons     = $('[data-toggle="buttons"]');
+  var $button      = $('[data-bs-toggle="button"]');
+  var $buttons     = $('[data-bs-toggle="buttons"]');
 
   // init
   if ( $grid_target.length >= 2 ) {
