@@ -22,7 +22,7 @@ module ErrorMessagesHelper
           icon_svg("alerts/error.svg", class: "d-flex mr-3 icon icon-3x") +
           content_tag(:div, class: "media-body") do
             list_items = messages.map { |msg| content_tag(:li, msg) }
-            content_tag(:a, "×", href: "#", class: "close", data: { dismiss: "alert" }) +
+            content_tag(:a, "×", href: "#", class: "close", data: { "bs-dismiss": "alert" }) +
             content_tag(:h6, options[:template_header], class: "text-uppercase text-reset my-1") +
             content_tag(:p, options[:template_body]) +
             content_tag(:ul, list_items.join.html_safe, class: "mb-0")
