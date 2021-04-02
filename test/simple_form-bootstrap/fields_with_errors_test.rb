@@ -19,7 +19,7 @@ class FieldsWithErrorsTest < ActionView::TestCase
     actual = @builder.input(:email)
     expected = <<-HTML
       <div class="mb-3 email required user_email">
-        <label class="email required" for="user_email">Email <abbr title="required">*</abbr></label>
+        <label class="form-label email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <input aria-invalid="true" class="form-control is-invalid string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
         <div class="invalid-feedback">Email is invalid</div>
         <div class="form-text">We'll never share your email with anyone else.</div>

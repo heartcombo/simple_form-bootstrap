@@ -10,7 +10,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:email)
     expected = <<-HTML
       <div class="mb-3 email required user_email">
-        <label class="email required" for="user_email">Email <abbr title="required">*</abbr></label>
+        <label class="form-label email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <input class="form-control string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
         <div class="form-text">We'll never share your email with anyone else.</div>
       </div>
@@ -175,7 +175,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:avatar, as: :file)
     expected = <<-HTML
       <div class="mb-3 file required user_avatar">
-        <label class="file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
+        <label class="form-label file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
         <input class="form-control-file file required" id="user_avatar" name="user[avatar]" type="file"/>
         <div class="form-text">File input example</div>
       </div>
@@ -187,7 +187,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:friends)
     expected = <<-HTML
       <div class="mb-3 integer optional user_friends">
-        <label class="integer optional" for="user_friends">Friends</label>
+        <label class="form-label integer optional" for="user_friends">Friends</label>
         <input class="form-control numeric integer optional" id="user_friends" name="user[friends]" placeholder="Number of Friends" step="1" type="number"/>
         <div class="form-text">Integer input example</div>
       </div>
@@ -199,7 +199,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:password)
     expected = <<-HTML
       <div class="mb-3 password optional user_password">
-        <label class="password optional" for="user_password">Password</label>
+        <label class="form-label password optional" for="user_password">Password</label>
         <input class="form-control password optional" id="user_password" name="user[password]" placeholder="Password" type="password"/>
         <div class="form-text">Password input example</div>
       </div>
@@ -211,7 +211,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:mood, as: :range)
     expected = <<-HTML
       <div class="mb-3 range optional user_mood">
-        <label class="range optional" for="user_mood">Mood</label>
+        <label class="form-label range optional" for="user_mood">Mood</label>
         <input class="form-control-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
         <div class="form-text">Integer range example</div>
       </div>
@@ -223,7 +223,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:language, collection: %w(a b))
     expected = <<-HTML
       <div class="mb-3 select optional user_language">
-        <label class="select optional" for="user_language">Language</label>
+        <label class="form-label select optional" for="user_language">Language</label>
         <select class="form-control select optional" id="user_language" name="user[language]">
           <option label=" " value=""/>
           <option value="a">a</option>
@@ -239,7 +239,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:music, collection: %w(a b), input_html: { multiple: true })
     expected = <<-HTML
       <div class="mb-3 select required user_music">
-        <label class="select required" for="user_music">Music <abbr title="required">*</abbr></label>
+        <label class="form-label select required" for="user_music">Music <abbr title="required">*</abbr></label>
         <input name="user[music][]" type="hidden" value=""/>
         <select class="form-control select required" id="user_music" multiple="multiple" name="user[music][]">
           <option value="a">a</option>
@@ -255,7 +255,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:name)
     expected = <<-HTML
       <div class="mb-3 string required user_name">
-        <label class="string required" for="user_name">Name <abbr title="required">*</abbr></label>
+        <label class="form-label string required" for="user_name">Name <abbr title="required">*</abbr></label>
         <input class="form-control string required" id="user_name" name="user[name]" placeholder="Your name" type="text"/>
         <div class="form-text">Text input example</div>
       </div>
@@ -267,7 +267,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:bio)
     expected = <<-HTML
       <div class="mb-3 text optional user_bio">
-        <label class="text optional" for="user_bio">Bio</label>
+        <label class="form-label text optional" for="user_bio">Bio</label>
         <textarea class="form-control text optional" id="user_bio" name="user[bio]" placeholder="Tell us your story"></textarea>
         <div class="form-text">Textarea input example</div>
       </div>
