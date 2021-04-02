@@ -176,7 +176,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="mb-3 file required user_avatar">
         <label class="form-label file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
-        <input class="form-control-file file required" id="user_avatar" name="user[avatar]" type="file"/>
+        <input class="form-control file required" id="user_avatar" name="user[avatar]" type="file"/>
         <div class="form-text">File input example</div>
       </div>
     HTML
