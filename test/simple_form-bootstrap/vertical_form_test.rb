@@ -9,7 +9,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_required_email_field
     actual = @builder.input(:email)
     expected = <<-HTML
-      <div class="form-group email required user_email">
+      <div class="mb-3 email required user_email">
         <label class="email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <input class="form-control string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
         <div class="form-text">We'll never share your email with anyone else.</div>
@@ -21,7 +21,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_collection_as_radio_buttons_inline
     actual = @builder.input(:color, as: :radio_buttons, collection: [:a, :b], wrapper: :vertical_collection_inline)
     expected = <<-HTML
-      <fieldset class="form-group radio_buttons required user_color">
+      <fieldset class="mb-3 radio_buttons required user_color">
         <legend class="col-form-label pt-0">Color <abbr title="required">*</abbr></legend>
         <input name="user[color]" type="hidden" value=""/>
         <div class="form-check form-check-inline">
@@ -41,7 +41,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_collection_as_radio_buttons
     actual = @builder.input(:pill, as: :radio_buttons, collection: [:a, :b])
     expected = <<-HTML
-      <fieldset class="form-group radio_buttons optional user_pill">
+      <fieldset class="mb-3 radio_buttons optional user_pill">
         <legend class="col-form-label pt-0">Pill</legend>
         <input name="user[pill]" type="hidden" value=""/>
         <div class="form-check">
@@ -61,7 +61,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_collection_as_radio_buttons_without_label
     actual = @builder.input(:pill, as: :radio_buttons, collection: [:a, :b], legend_tag: false)
     expected = <<-HTML
-      <fieldset class="form-group radio_buttons optional user_pill">
+      <fieldset class="mb-3 radio_buttons optional user_pill">
         <input name="user[pill]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input radio_buttons optional" id="user_pill_a" name="user[pill]" type="radio" value="a"/>
@@ -80,7 +80,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_collection_as_check_boxes_inline
     actual = @builder.input(:fruit, as: :check_boxes, collection: [:a, :b], wrapper: :vertical_collection_inline)
     expected = <<-HTML
-      <fieldset class="form-group check_boxes required user_fruit">
+      <fieldset class="mb-3 check_boxes required user_fruit">
         <legend class="col-form-label pt-0">Fruit <abbr title="required">*</abbr></legend>
         <input name="user[fruit][]" type="hidden" value=""/>
         <div class="form-check form-check-inline">
@@ -100,7 +100,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_collection_as_check_boxes
     actual = @builder.input(:choises, as: :check_boxes, collection: %w(a b))
     expected = <<-HTML
-      <fieldset class="form-group check_boxes required user_choises">
+      <fieldset class="mb-3 check_boxes required user_choises">
         <legend class="col-form-label pt-0">Choises <abbr title="required">*</abbr></legend>
         <input name="user[choises][]" type="hidden" value=""/>
         <div class="form-check">
@@ -120,7 +120,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_collection_as_check_boxes_without_legend
     actual = @builder.input(:choises, as: :check_boxes, collection: %w(a b), legend_tag: false)
     expected = <<-HTML
-      <fieldset class="form-group check_boxes required user_choises">
+      <fieldset class="mb-3 check_boxes required user_choises">
         <input name="user[choises][]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input check_boxes required" id="user_choises_a" name="user[choises][]" type="checkbox" value="a"/>
@@ -139,7 +139,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_boolean_as_radio_button
     actual = @builder.input(:active, as: :radio_buttons)
     expected = <<-HTML
-      <fieldset class="form-group radio_buttons required user_active">
+      <fieldset class="mb-3 radio_buttons required user_active">
         <legend class="col-form-label pt-0">Active <abbr title="required">*</abbr></legend>
         <input name="user[active]" type="hidden" value=""/>
         <div class="form-check">
@@ -159,7 +159,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_boolean_as_check_box
     actual = @builder.input(:terms)
     expected = <<-HTML
-      <fieldset class="form-group boolean optional user_terms">
+      <fieldset class="mb-3 boolean optional user_terms">
         <div class="form-check">
           <input name="user[terms]" type="hidden" value="0"/>
           <input class="form-check-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
@@ -174,7 +174,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_file_field
     actual = @builder.input(:avatar, as: :file)
     expected = <<-HTML
-      <div class="form-group file required user_avatar">
+      <div class="mb-3 file required user_avatar">
         <label class="file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
         <input class="form-control-file file required" id="user_avatar" name="user[avatar]" type="file"/>
         <div class="form-text">File input example</div>
@@ -186,7 +186,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_number_field
     actual = @builder.input(:friends)
     expected = <<-HTML
-      <div class="form-group integer optional user_friends">
+      <div class="mb-3 integer optional user_friends">
         <label class="integer optional" for="user_friends">Friends</label>
         <input class="form-control numeric integer optional" id="user_friends" name="user[friends]" placeholder="Number of Friends" step="1" type="number"/>
         <div class="form-text">Integer input example</div>
@@ -198,7 +198,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_password_field
     actual = @builder.input(:password)
     expected = <<-HTML
-      <div class="form-group password optional user_password">
+      <div class="mb-3 password optional user_password">
         <label class="password optional" for="user_password">Password</label>
         <input class="form-control password optional" id="user_password" name="user[password]" placeholder="Password" type="password"/>
         <div class="form-text">Password input example</div>
@@ -210,7 +210,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_range_field
     actual = @builder.input(:mood, as: :range)
     expected = <<-HTML
-      <div class="form-group range optional user_mood">
+      <div class="mb-3 range optional user_mood">
         <label class="range optional" for="user_mood">Mood</label>
         <input class="form-control-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
         <div class="form-text">Integer range example</div>
@@ -222,7 +222,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_select_field
     actual = @builder.input(:language, collection: %w(a b))
     expected = <<-HTML
-      <div class="form-group select optional user_language">
+      <div class="mb-3 select optional user_language">
         <label class="select optional" for="user_language">Language</label>
         <select class="form-control select optional" id="user_language" name="user[language]">
           <option label=" " value=""/>
@@ -238,7 +238,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_select_multi_field
     actual = @builder.input(:music, collection: %w(a b), input_html: { multiple: true })
     expected = <<-HTML
-      <div class="form-group select required user_music">
+      <div class="mb-3 select required user_music">
         <label class="select required" for="user_music">Music <abbr title="required">*</abbr></label>
         <input name="user[music][]" type="hidden" value=""/>
         <select class="form-control select required" id="user_music" multiple="multiple" name="user[music][]">
@@ -254,7 +254,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_text_field
     actual = @builder.input(:name)
     expected = <<-HTML
-      <div class="form-group string required user_name">
+      <div class="mb-3 string required user_name">
         <label class="string required" for="user_name">Name <abbr title="required">*</abbr></label>
         <input class="form-control string required" id="user_name" name="user[name]" placeholder="Your name" type="text"/>
         <div class="form-text">Text input example</div>
@@ -266,7 +266,7 @@ class VerticalFormTest < ActionView::TestCase
   def test_textarea_field
     actual = @builder.input(:bio)
     expected = <<-HTML
-      <div class="form-group text optional user_bio">
+      <div class="mb-3 text optional user_bio">
         <label class="text optional" for="user_bio">Bio</label>
         <textarea class="form-control text optional" id="user_bio" name="user[bio]" placeholder="Tell us your story"></textarea>
         <div class="form-text">Textarea input example</div>
