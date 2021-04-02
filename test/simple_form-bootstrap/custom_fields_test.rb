@@ -25,7 +25,7 @@ class CustomFieldsTest < ActionView::TestCase
           <input class="custom-file-input file required" id="user_avatar" name="user[avatar]" type="file"/>
           <label class="custom-file-label file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
         </div>
-        <small class="form-text text-muted">File input example</small>
+        <div class="form-text">File input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -45,7 +45,7 @@ class CustomFieldsTest < ActionView::TestCase
           <input class="custom-control-input radio_buttons required" id="user_color_b" name="user[color]" type="radio" value="b"/>
           <label class="custom-control-label collection_radio_buttons" for="user_color_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as inline radio buttons example</small>
+        <div class="form-text">Collection as inline radio buttons example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -65,7 +65,7 @@ class CustomFieldsTest < ActionView::TestCase
           <input class="custom-control-input radio_buttons optional" id="user_pill_b" name="user[pill]" type="radio" value="b"/>
           <label class="custom-control-label collection_radio_buttons" for="user_pill_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as radio buttons example</small>
+        <div class="form-text">Collection as radio buttons example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -84,7 +84,7 @@ class CustomFieldsTest < ActionView::TestCase
           <input class="custom-control-input radio_buttons optional" id="user_pill_b" name="user[pill]" type="radio" value="b"/>
           <label class="custom-control-label collection_radio_buttons" for="user_pill_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as radio buttons example</small>
+        <div class="form-text">Collection as radio buttons example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -104,7 +104,7 @@ class CustomFieldsTest < ActionView::TestCase
           <input class="custom-control-input check_boxes required" id="user_fruit_b" name="user[fruit][]" type="checkbox" value="b"/>
           <label class="custom-control-label collection_check_boxes" for="user_fruit_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as inline check boxes example</small>
+        <div class="form-text">Collection as inline check boxes example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -124,7 +124,7 @@ class CustomFieldsTest < ActionView::TestCase
           <input class="custom-control-input check_boxes required" id="user_choises_b" name="user[choises][]" type="checkbox" value="b"/>
           <label class="custom-control-label collection_check_boxes" for="user_choises_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as check boxes example</small>
+        <div class="form-text">Collection as check boxes example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -143,7 +143,7 @@ class CustomFieldsTest < ActionView::TestCase
           <input class="custom-control-input check_boxes required" id="user_choises_b" name="user[choises][]" type="checkbox" value="b"/>
           <label class="custom-control-label collection_check_boxes" for="user_choises_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as check boxes example</small>
+        <div class="form-text">Collection as check boxes example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -157,7 +157,7 @@ class CustomFieldsTest < ActionView::TestCase
           <input name="user[terms]" type="hidden" value="0"/>
           <input class="custom-control-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
           <label class="custom-control-label boolean optional" for="user_terms">Terms</label>
-          <small class="form-text text-muted">Boolean as check box example</small>
+          <div class="form-text">Boolean as check box example</div>
         </div>
       </fieldset>
     HTML
@@ -172,7 +172,7 @@ class CustomFieldsTest < ActionView::TestCase
           <input name="user[terms]" type="hidden" value="0"/>
           <input class="custom-control-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
           <label class="custom-control-label boolean optional" for="user_terms">Terms</label>
-          <small class="form-text text-muted">Boolean as check box example</small>
+          <div class="form-text">Boolean as check box example</div>
         </div>
       </fieldset>
     HTML
@@ -185,7 +185,7 @@ class CustomFieldsTest < ActionView::TestCase
       <div class="form-group range optional user_mood">
         <label class="range optional" for="user_mood">Mood</label>
         <input class="custom-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
-        <small class="form-text text-muted">Integer range example</small>
+        <div class="form-text">Integer range example</div>
       </div>
     HTML
     assert_xml_equal expected, actual

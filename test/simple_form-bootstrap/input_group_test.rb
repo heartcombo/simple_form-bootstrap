@@ -17,7 +17,7 @@ class InputGroupFormTest < ActionView::TestCase
           </div>
           <input class="form-control string required" id="user_name" name="user[name]" placeholder="Your name" type="text"/>
         </div>
-        <small class="form-text text-muted">Text input example</small>
+        <div class="form-text">Text input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -34,7 +34,7 @@ class InputGroupFormTest < ActionView::TestCase
             <span class="input-group-text">.00</span>
           </div>
         </div>
-        <small class="form-text text-muted">Text input example</small>
+        <div class="form-text">Text input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -54,7 +54,7 @@ class InputGroupFormTest < ActionView::TestCase
             <span class="input-group-text">.00</span>
           </div>
         </div>
-        <small class="form-text text-muted">Text input example</small>
+        <div class="form-text">Text input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual

@@ -15,7 +15,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
       <div class="form-label-group email required user_email">
         <input class="form-control string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
         <label class="email required" for="user_email">Email <abbr title="required">*</abbr></label>
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="form-text">We'll never share your email with anyone else.</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -27,7 +27,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
       <div class="form-label-group password optional user_password">
         <input class="form-control password optional" id="user_password" name="user[password]" placeholder="Password" type="password"/>
         <label class="password optional" for="user_password">Password</label>
-        <small class="form-text text-muted">Password input example</small>
+        <div class="form-text">Password input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -43,7 +43,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
           <option value="b">b</option>
         </select>
         <label class="select optional" for="user_language">Language</label>
-        <small class="form-text text-muted">Collection select example</small>
+        <div class="form-text">Collection select example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -59,7 +59,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
           <option value="b">b</option>
         </select>
         <label class="select required" for="user_music">Music <abbr title="required">*</abbr></label>
-        <small class="form-text text-muted">Collection multiple select example</small>
+        <div class="form-text">Collection multiple select example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -71,7 +71,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
       <div class="form-label-group text optional user_bio">
         <textarea class="form-control text optional" id="user_bio" name="user[bio]" placeholder="Tell us your story"></textarea>
         <label class="text optional" for="user_bio">Bio</label>
-        <small class="form-text text-muted">Textarea input example</small>
+        <div class="form-text">Textarea input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual

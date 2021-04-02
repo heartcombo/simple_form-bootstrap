@@ -12,7 +12,7 @@ class VerticalFormTest < ActionView::TestCase
       <div class="form-group email required user_email">
         <label class="email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <input class="form-control string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="form-text">We'll never share your email with anyone else.</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -32,7 +32,7 @@ class VerticalFormTest < ActionView::TestCase
           <input class="form-check-input radio_buttons required" id="user_color_b" name="user[color]" type="radio" value="b"/>
           <label class="form-check-label collection_radio_buttons" for="user_color_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as inline radio buttons example</small>
+        <div class="form-text">Collection as inline radio buttons example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -52,7 +52,7 @@ class VerticalFormTest < ActionView::TestCase
           <input class="form-check-input radio_buttons optional" id="user_pill_b" name="user[pill]" type="radio" value="b"/>
           <label class="form-check-label collection_radio_buttons" for="user_pill_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as radio buttons example</small>
+        <div class="form-text">Collection as radio buttons example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -71,7 +71,7 @@ class VerticalFormTest < ActionView::TestCase
           <input class="form-check-input radio_buttons optional" id="user_pill_b" name="user[pill]" type="radio" value="b"/>
           <label class="form-check-label collection_radio_buttons" for="user_pill_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as radio buttons example</small>
+        <div class="form-text">Collection as radio buttons example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -91,7 +91,7 @@ class VerticalFormTest < ActionView::TestCase
           <input class="form-check-input check_boxes required" id="user_fruit_b" name="user[fruit][]" type="checkbox" value="b"/>
           <label class="form-check-label collection_check_boxes" for="user_fruit_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as inline check boxes example</small>
+        <div class="form-text">Collection as inline check boxes example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -111,7 +111,7 @@ class VerticalFormTest < ActionView::TestCase
           <input class="form-check-input check_boxes required" id="user_choises_b" name="user[choises][]" type="checkbox" value="b"/>
           <label class="form-check-label collection_check_boxes" for="user_choises_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as check boxes example</small>
+        <div class="form-text">Collection as check boxes example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -130,7 +130,7 @@ class VerticalFormTest < ActionView::TestCase
           <input class="form-check-input check_boxes required" id="user_choises_b" name="user[choises][]" type="checkbox" value="b"/>
           <label class="form-check-label collection_check_boxes" for="user_choises_b">b</label>
         </div>
-        <small class="form-text text-muted">Collection as check boxes example</small>
+        <div class="form-text">Collection as check boxes example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -150,7 +150,7 @@ class VerticalFormTest < ActionView::TestCase
           <input class="form-check-input radio_buttons required" id="user_active_false" name="user[active]" readonly="readonly" type="radio" value="false"/>
           <label class="form-check-label collection_radio_buttons" for="user_active_false">No</label>
         </div>
-        <small class="form-text text-muted">Boolean as radio button example</small>
+        <div class="form-text">Boolean as radio button example</div>
       </fieldset>
     HTML
     assert_xml_equal expected, actual
@@ -164,7 +164,7 @@ class VerticalFormTest < ActionView::TestCase
           <input name="user[terms]" type="hidden" value="0"/>
           <input class="form-check-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
           <label class="form-check-label boolean optional" for="user_terms">Terms</label>
-          <small class="form-text text-muted">Boolean as check box example</small>
+          <div class="form-text">Boolean as check box example</div>
         </div>
       </fieldset>
     HTML
@@ -177,7 +177,7 @@ class VerticalFormTest < ActionView::TestCase
       <div class="form-group file required user_avatar">
         <label class="file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
         <input class="form-control-file file required" id="user_avatar" name="user[avatar]" type="file"/>
-        <small class="form-text text-muted">File input example</small>
+        <div class="form-text">File input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -189,7 +189,7 @@ class VerticalFormTest < ActionView::TestCase
       <div class="form-group integer optional user_friends">
         <label class="integer optional" for="user_friends">Friends</label>
         <input class="form-control numeric integer optional" id="user_friends" name="user[friends]" placeholder="Number of Friends" step="1" type="number"/>
-        <small class="form-text text-muted">Integer input example</small>
+        <div class="form-text">Integer input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -201,7 +201,7 @@ class VerticalFormTest < ActionView::TestCase
       <div class="form-group password optional user_password">
         <label class="password optional" for="user_password">Password</label>
         <input class="form-control password optional" id="user_password" name="user[password]" placeholder="Password" type="password"/>
-        <small class="form-text text-muted">Password input example</small>
+        <div class="form-text">Password input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -213,7 +213,7 @@ class VerticalFormTest < ActionView::TestCase
       <div class="form-group range optional user_mood">
         <label class="range optional" for="user_mood">Mood</label>
         <input class="form-control-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
-        <small class="form-text text-muted">Integer range example</small>
+        <div class="form-text">Integer range example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -229,7 +229,7 @@ class VerticalFormTest < ActionView::TestCase
           <option value="a">a</option>
           <option value="b">b</option>
         </select>
-        <small class="form-text text-muted">Collection select example</small>
+        <div class="form-text">Collection select example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -245,7 +245,7 @@ class VerticalFormTest < ActionView::TestCase
           <option value="a">a</option>
           <option value="b">b</option>
         </select>
-        <small class="form-text text-muted">Collection multiple select example</small>
+        <div class="form-text">Collection multiple select example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -257,7 +257,7 @@ class VerticalFormTest < ActionView::TestCase
       <div class="form-group string required user_name">
         <label class="string required" for="user_name">Name <abbr title="required">*</abbr></label>
         <input class="form-control string required" id="user_name" name="user[name]" placeholder="Your name" type="text"/>
-        <small class="form-text text-muted">Text input example</small>
+        <div class="form-text">Text input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
@@ -269,7 +269,7 @@ class VerticalFormTest < ActionView::TestCase
       <div class="form-group text optional user_bio">
         <label class="text optional" for="user_bio">Bio</label>
         <textarea class="form-control text optional" id="user_bio" name="user[bio]" placeholder="Tell us your story"></textarea>
-        <small class="form-text text-muted">Textarea input example</small>
+        <div class="form-text">Textarea input example</div>
       </div>
     HTML
     assert_xml_equal expected, actual
