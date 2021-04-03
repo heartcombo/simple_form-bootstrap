@@ -19,7 +19,8 @@ $(document).ready(function() {
   // stack / split view
   $buttons.click(function(event) {
     if ( $(event.target).hasClass("btn") ) { return; }
-    $grid_target.toggleClass("col-md-12");
+    var stack = $buttons.find(":checked").attr("id") === "stack";
+    $grid_target.toggleClass("col-md-12", stack);
   });
 
   // swap by press "s"
