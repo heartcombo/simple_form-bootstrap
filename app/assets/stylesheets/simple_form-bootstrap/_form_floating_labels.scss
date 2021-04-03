@@ -9,8 +9,7 @@ $sf-floating-input-padding-y: $input-padding-y * 2 !default;
   margin-bottom: 1rem;
 }
 
-.form-label-group > input,
-.form-label-group > .custom-select:not([multiple]) {
+.form-label-group > input {
   height: 3.125rem;
 }
 
@@ -58,7 +57,6 @@ $sf-floating-input-padding-y: $input-padding-y * 2 !default;
     }
   }
 
-  .custom-select,
   select.form-control {
     ~ label {
       width: auto;
