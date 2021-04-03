@@ -224,7 +224,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="mb-3 select optional user_language">
         <label class="form-label select optional" for="user_language">Language</label>
-        <select class="form-control select optional" id="user_language" name="user[language]">
+        <select class="form-select select optional" id="user_language" name="user[language]">
           <option label=" " value=""/>
           <option value="a">a</option>
           <option value="b">b</option>
@@ -241,7 +241,7 @@ class VerticalFormTest < ActionView::TestCase
       <div class="mb-3 select required user_music">
         <label class="form-label select required" for="user_music">Music <abbr title="required">*</abbr></label>
         <input name="user[music][]" type="hidden" value=""/>
-        <select class="form-control select required" id="user_music" multiple="multiple" name="user[music][]">
+        <select class="form-select select required" id="user_music" multiple="multiple" name="user[music][]">
           <option value="a">a</option>
           <option value="b">b</option>
         </select>

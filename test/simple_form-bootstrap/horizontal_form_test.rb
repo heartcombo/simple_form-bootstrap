@@ -11,7 +11,8 @@ class HorizontalFormTest < ActionView::TestCase
       file:          :horizontal_file,
       radio_buttons: :horizontal_collection,
       range:         :horizontal_range,
-      time:          :horizontal_multi_select
+      time:          :horizontal_multi_select,
+      select:        :horizontal_form,
     }
     @builder = SimpleForm::FormBuilder.new(:user, @user, self, wrapper: :horizontal_form, wrapper_mappings: wrapper_mappings)
   end
