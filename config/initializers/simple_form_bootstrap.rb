@@ -141,7 +141,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.optional :step
     b.use :label, class: 'form-label'
-    b.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :input, class: 'form-range', error_class: 'is-invalid', valid_class: 'is-valid'
     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
     b.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
   end

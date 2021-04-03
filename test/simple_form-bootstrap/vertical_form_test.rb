@@ -212,7 +212,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="mb-3 range optional user_mood">
         <label class="form-label range optional" for="user_mood">Mood</label>
-        <input class="form-control-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
+        <input class="form-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
         <div class="form-text">Integer range example</div>
       </div>
     HTML
