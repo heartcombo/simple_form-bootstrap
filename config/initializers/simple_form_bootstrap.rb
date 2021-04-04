@@ -150,7 +150,7 @@ SimpleForm.setup do |config|
   # horizontal forms
   #
   # horizontal default_wrapper
-  config.wrappers :horizontal_form, tag: 'div', class: 'form-group row' do |b|
+  config.wrappers :horizontal_form, tag: 'div', class: 'row mb-3' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
@@ -167,7 +167,7 @@ SimpleForm.setup do |config|
   end
 
   # horizontal input for boolean
-  config.wrappers :horizontal_boolean, tag: 'div', class: 'form-group row' do |b|
+  config.wrappers :horizontal_boolean, tag: 'div', class: 'row mb-3' do |b|
     b.use :html5
     b.optional :readonly
     b.wrapper tag: 'label', class: 'col-sm-3' do |ba|
@@ -184,7 +184,7 @@ SimpleForm.setup do |config|
   end
 
   # horizontal input for radio buttons and check boxes
-  config.wrappers :horizontal_collection, item_wrapper_class: 'form-check', item_label_class: 'form-check-label', tag: 'div', class: 'form-group row' do |b|
+  config.wrappers :horizontal_collection, item_wrapper_class: 'form-check', item_label_class: 'form-check-label', tag: 'div', class: 'row mb-3' do |b|
     b.use :html5
     b.optional :readonly
     b.use :label, class: 'col-sm-3 col-form-label pt-0'
@@ -196,7 +196,7 @@ SimpleForm.setup do |config|
   end
 
   # horizontal input for inline radio buttons and check boxes
-  config.wrappers :horizontal_collection_inline, item_wrapper_class: 'form-check form-check-inline', item_label_class: 'form-check-label', tag: 'div', class: 'form-group row' do |b|
+  config.wrappers :horizontal_collection_inline, item_wrapper_class: 'form-check form-check-inline', item_label_class: 'form-check-label', tag: 'div', class: 'row mb-3' do |b|
     b.use :html5
     b.optional :readonly
     b.use :label, class: 'col-sm-3 col-form-label pt-0'
@@ -208,7 +208,7 @@ SimpleForm.setup do |config|
   end
 
   # horizontal file input
-  config.wrappers :horizontal_file, tag: 'div', class: 'form-group row' do |b|
+  config.wrappers :horizontal_file, tag: 'div', class: 'row mb-3' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
@@ -223,7 +223,7 @@ SimpleForm.setup do |config|
   end
 
   # horizontal multi select
-  config.wrappers :horizontal_multi_select, tag: 'div', class: 'form-group row' do |b|
+  config.wrappers :horizontal_multi_select, tag: 'div', class: 'row mb-3' do |b|
     b.use :html5
     b.optional :readonly
     b.use :label, class: 'col-sm-3 col-form-label'
@@ -237,7 +237,7 @@ SimpleForm.setup do |config|
   end
 
   # horizontal range input
-  config.wrappers :horizontal_range, tag: 'div', class: 'form-group row' do |b|
+  config.wrappers :horizontal_range, tag: 'div', class: 'row mb-3' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :readonly
