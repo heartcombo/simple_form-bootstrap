@@ -209,7 +209,7 @@ class HorizontalFormTest < ActionView::TestCase
       <div class="row mb-3 file required user_avatar">
         <label class="col-sm-3 col-form-label file required" for="user_avatar">Avatar <abbr title="required">*</abbr></label>
         <div class="col-sm-9">
-          <input class="file required" id="user_avatar" name="user[avatar]" type="file"/>
+          <input class="form-control file required" id="user_avatar" name="user[avatar]" type="file"/>
           <div class="form-text">File input example</div>
         </div>
       </div>
