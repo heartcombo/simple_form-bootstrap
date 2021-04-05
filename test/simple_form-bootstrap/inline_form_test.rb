@@ -13,7 +13,7 @@ class InlineFormTest < ActionView::TestCase
     actual = @builder.input(:email, input_html: { class: "mb-2 mr-sm-2" })
     expected = <<-HTML
       <span class="email required user_email">
-        <label class="sr-only email required" for="user_email">Email <abbr title="required">*</abbr></label>
+        <label class="visually-hidden email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <input class="form-control string email required mb-2 mr-sm-2" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
       </span>
     HTML
