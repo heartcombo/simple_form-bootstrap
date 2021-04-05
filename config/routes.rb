@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   resources :examples, only: :index
   namespace :examples, path_names: { new: '' } do
-    resource :custom,           only: [:new, :create]
     resource :floating_label,   only: [:new, :create]
     resource :input_group,      only: [:new, :create]
     resource :vertical,         only: [:new, :create]

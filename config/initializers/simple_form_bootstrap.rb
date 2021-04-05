@@ -291,97 +291,6 @@ SimpleForm.setup do |config|
   end
 
 
-  # bootstrap custom forms
-  #
-  # custom input for boolean
-  config.wrappers :custom_boolean, tag: 'fieldset', class: 'form-group' do |b|
-    b.use :html5
-    b.optional :readonly
-    b.wrapper :form_check_wrapper, tag: 'div', class: 'custom-control custom-checkbox' do |bb|
-      bb.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
-      bb.use :label, class: 'custom-control-label'
-      bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
-      bb.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
-    end
-  end
-
-  # custom input switch for boolean
-  config.wrappers :custom_boolean_switch, tag: 'fieldset', class: 'form-group' do |b|
-    b.use :html5
-    b.optional :readonly
-    b.wrapper :form_check_wrapper, tag: 'div', class: 'custom-control custom-switch' do |bb|
-      bb.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
-      bb.use :label, class: 'custom-control-label'
-      bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
-      bb.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
-    end
-  end
-
-  # custom input for radio buttons and check boxes
-  config.wrappers :custom_collection, item_wrapper_class: 'custom-control', item_label_class: 'custom-control-label', tag: 'fieldset', class: 'form-group' do |b|
-    b.use :html5
-    b.optional :readonly
-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
-      ba.use :label_text
-    end
-    b.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
-    b.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
-  end
-
-  # custom input for inline radio buttons and check boxes
-  config.wrappers :custom_collection_inline, item_wrapper_class: 'custom-control custom-control-inline', item_label_class: 'custom-control-label', tag: 'fieldset', class: 'form-group' do |b|
-    b.use :html5
-    b.optional :readonly
-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
-      ba.use :label_text
-    end
-    b.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
-    b.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
-  end
-
-  # custom file input
-  config.wrappers :custom_file, tag: 'div', class: 'form-group' do |b|
-    b.use :html5
-    b.use :placeholder
-    b.optional :maxlength
-    b.optional :minlength
-    b.optional :readonly
-    b.use :label
-    b.wrapper :custom_file_wrapper, tag: 'div', class: 'custom-file' do |ba|
-      ba.use :input, class: 'custom-file-input', error_class: 'is-invalid', valid_class: 'is-valid'
-      ba.use :label, class: 'custom-file-label'
-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
-    end
-    b.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
-  end
-
-  # custom multi select
-  config.wrappers :custom_multi_select, tag: 'div', class: 'form-group' do |b|
-    b.use :html5
-    b.optional :readonly
-    b.use :label
-    b.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
-      ba.use :input, class: 'custom-select mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
-    end
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
-    b.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
-  end
-
-  # custom range input
-  config.wrappers :custom_range, tag: 'div', class: 'form-group' do |b|
-    b.use :html5
-    b.use :placeholder
-    b.optional :readonly
-    b.optional :step
-    b.use :label
-    b.use :input, class: 'custom-range', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
-    b.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
-  end
-
-
   # Input Group - custom component
   # see example app and config at https://github.com/heartcombo/simple_form-bootstrap
   config.wrappers :input_group, tag: 'div', class: 'form-group' do |b|
@@ -447,16 +356,4 @@ SimpleForm.setup do |config|
     time:          :vertical_multi_select,
     select:        :vertical_select
   }
-
-  # enable custom form wrappers
-  # config.wrapper_mappings = {
-  #   boolean:       :custom_boolean,
-  #   check_boxes:   :custom_collection,
-  #   date:          :custom_multi_select,
-  #   datetime:      :custom_multi_select,
-  #   file:          :custom_file,
-  #   radio_buttons: :custom_collection,
-  #   range:         :custom_range,
-  #   time:          :custom_multi_select
-  # }
 end
