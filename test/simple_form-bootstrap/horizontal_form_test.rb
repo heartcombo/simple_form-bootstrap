@@ -12,7 +12,7 @@ class HorizontalFormTest < ActionView::TestCase
       radio_buttons: :horizontal_collection,
       range:         :horizontal_range,
       time:          :horizontal_multi_select,
-      select:        :horizontal_form,
+      select:        :horizontal_select
     }
     @builder = SimpleForm::FormBuilder.new(:user, @user, self, wrapper: :horizontal_form, wrapper_mappings: wrapper_mappings)
   end
@@ -265,7 +265,7 @@ class HorizontalFormTest < ActionView::TestCase
       <div class="row mb-3 select optional user_language">
         <label class="col-sm-3 col-form-label select optional" for="user_language">Language</label>
         <div class="col-sm-9">
-          <select class="form-control select optional" id="user_language" name="user[language]">
+          <select class="form-select select optional" id="user_language" name="user[language]">
             <option label=" " value=""/>
             <option value="a">a</option>
             <option value="b">b</option>
@@ -284,7 +284,7 @@ class HorizontalFormTest < ActionView::TestCase
         <label class="col-sm-3 col-form-label select required" for="user_music">Music <abbr title="required">*</abbr></label>
         <div class="col-sm-9">
           <input name="user[music][]" type="hidden" value=""/>
-          <select class="form-control select required" id="user_music" multiple="multiple" name="user[music][]">
+          <select class="form-select select required" id="user_music" multiple="multiple" name="user[music][]">
             <option value="a">a</option>
             <option value="b">b</option>
           </select>
