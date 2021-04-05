@@ -189,8 +189,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:terms)
     expected = <<-HTML
       <div class="row mb-3 boolean optional user_terms">
-        <label class="col-sm-3">Terms</label>
-        <div class="col-sm-9">
+        <div class="col-sm-9 offset-sm-3">
           <div class="form-check">
             <input name="user[terms]" type="hidden" value="0"/>
             <input class="form-check-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
