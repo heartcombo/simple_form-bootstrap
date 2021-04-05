@@ -263,7 +263,7 @@ SimpleForm.setup do |config|
   # inline forms
   #
   # inline default_wrapper
-  config.wrappers :inline_form, tag: 'span' do |b|
+  config.wrappers :inline_form, tag: 'div', class: 'col-12' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
@@ -279,13 +279,15 @@ SimpleForm.setup do |config|
   end
 
   # inline input for boolean
-  config.wrappers :inline_boolean, tag: 'span', class: 'form-check mb-2 mr-sm-2' do |b|
+  config.wrappers :inline_boolean, tag: 'div', class: 'col-12' do |b|
     b.use :html5
     b.optional :readonly
-    b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :label, class: 'form-check-label'
-    b.use :error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
-    b.optional :hint, wrap_with: { tag: 'div', class: 'form-text' }
+    b.wrapper :form_check_wrapper, tag: 'div', class: 'form-check' do |bb|
+      bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+      bb.use :label, class: 'form-check-label'
+      bb.use :error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+      bb.optional :hint, wrap_with: { tag: 'div', class: 'form-text' }
+    end
   end
 
 

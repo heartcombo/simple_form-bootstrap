@@ -10,20 +10,20 @@ class InlineFormTest < ActionView::TestCase
   end
 
   def test_required_email_field
-    actual = @builder.input(:email, input_html: { class: "mb-2 mr-sm-2" })
+    actual = @builder.input(:email)
     expected = <<-HTML
-      <span class="email required user_email">
+      <div class="col-12 email required user_email">
         <label class="visually-hidden email required" for="user_email">Email <abbr title="required">*</abbr></label>
-        <input class="form-control string email required mb-2 mr-sm-2" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
-      </span>
+        <input class="form-control string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
+      </div>
     HTML
     assert_xml_equal expected, actual
   end
 
   def test_input_field
-    actual = @builder.input_field(:email, class: "form-control mb-2 mr-sm-2")
+    actual = @builder.input_field(:email, class: "form-control")
     expected = <<-HTML
-      <input class="string email required form-control mb-2 mr-sm-2" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
+      <input class="string email required form-control" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
     HTML
     assert_xml_equal expected, actual
   end
@@ -31,11 +31,13 @@ class InlineFormTest < ActionView::TestCase
   def test_boolean_as_check_box
     actual = @builder.input(:terms)
     expected = <<-HTML
-      <span class="form-check mb-2 mr-sm-2 boolean optional user_terms">
-        <input name="user[terms]" type="hidden" value="0"/>
-        <input class="form-check-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
-        <label class="form-check-label boolean optional" for="user_terms">Terms</label>
-      </span>
+      <div class="col-12 boolean optional user_terms">
+        <div class="form-check">
+          <input name="user[terms]" type="hidden" value="0"/>
+          <input class="form-check-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
+          <label class="form-check-label boolean optional" for="user_terms">Terms</label>
+        </div>
+      </div>
     HTML
     assert_xml_equal expected, actual
   end
