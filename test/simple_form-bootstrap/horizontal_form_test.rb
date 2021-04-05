@@ -249,7 +249,7 @@ class HorizontalFormTest < ActionView::TestCase
     actual = @builder.input(:mood, as: :range)
     expected = <<-HTML
       <div class="row mb-3 range optional user_mood">
-        <label class="col-sm-3 col-form-label range optional" for="user_mood">Mood</label>
+        <label class="col-sm-3 col-form-label pt-0 range optional" for="user_mood">Mood</label>
         <div class="col-sm-9">
           <input class="form-range numeric range optional" id="user_mood" name="user[mood]" step="1" type="range"/>
           <div class="form-text">Integer range example</div>

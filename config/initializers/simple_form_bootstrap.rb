@@ -254,7 +254,7 @@ SimpleForm.setup do |config|
     b.use :placeholder
     b.optional :readonly
     b.optional :step
-    b.use :label, class: 'col-sm-3 col-form-label'
+    b.use :label, class: 'col-sm-3 col-form-label pt-0'
     b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
       ba.use :input, class: 'form-range', error_class: 'is-invalid', valid_class: 'is-valid'
       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
