@@ -10,7 +10,7 @@ class InputGroupFormTest < ActionView::TestCase
     actual = @builder.input(:name, wrapper: :input_group, prepend: "$")
     expected = <<-HTML
       <div class="mb-3 string required user_name">
-        <label class="string required" for="user_name">Name <abbr title="required">*</abbr></label>
+        <label class="form-label string required" for="user_name">Name <abbr title="required">*</abbr></label>
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text">$</span>
@@ -27,7 +27,7 @@ class InputGroupFormTest < ActionView::TestCase
     actual = @builder.input(:name, wrapper: :input_group, append: ".00")
     expected = <<-HTML
       <div class="mb-3 string required user_name">
-        <label class="string required" for="user_name">Name <abbr title="required">*</abbr></label>
+        <label class="form-label string required" for="user_name">Name <abbr title="required">*</abbr></label>
         <div class="input-group">
           <input class="form-control string required" id="user_name" name="user[name]" placeholder="Your name" type="text"/>
           <div class="input-group-append">
@@ -44,7 +44,7 @@ class InputGroupFormTest < ActionView::TestCase
     actual = @builder.input(:name, wrapper: :input_group, prepend: "$", append: ".00")
     expected = <<-HTML
       <div class="mb-3 string required user_name">
-        <label class="string required" for="user_name">Name <abbr title="required">*</abbr></label>
+        <label class="form-label string required" for="user_name">Name <abbr title="required">*</abbr></label>
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text">$</span>

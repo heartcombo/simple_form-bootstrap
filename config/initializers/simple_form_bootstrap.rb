@@ -301,7 +301,7 @@ SimpleForm.setup do |config|
     b.optional :pattern
     b.optional :min_max
     b.optional :readonly
-    b.use :label
+    b.use :label, class: 'form-label'
     b.wrapper :input_group_tag, tag: 'div', class: 'input-group' do |ba|
       ba.optional :prepend
       ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
