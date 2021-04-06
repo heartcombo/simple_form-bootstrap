@@ -37,7 +37,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
     actual = @builder.input(:language, collection: %w(a b))
     expected = <<-HTML
       <div class="form-floating mb-3 select optional user_language">
-        <select class="custom-select select optional" id="user_language" name="user[language]">
+        <select class="form-select select optional" id="user_language" name="user[language]">
           <option label=" " value=""/>
           <option value="a">a</option>
           <option value="b">b</option>
