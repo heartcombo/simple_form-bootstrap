@@ -315,7 +315,7 @@ SimpleForm.setup do |config|
   # Floating Labels form
   #
   # floating labels default_wrapper
-  config.wrappers :floating_labels_form, tag: 'div', class: 'form-label-group' do |b|
+  config.wrappers :floating_labels_form, tag: 'div', class: 'form-floating mb-3' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
@@ -330,7 +330,7 @@ SimpleForm.setup do |config|
   end
 
   # custom multi select
-  config.wrappers :floating_labels_select, tag: 'div', class: 'form-label-group' do |b|
+  config.wrappers :floating_labels_select, tag: 'div', class: 'form-floating mb-3' do |b|
     b.use :html5
     b.optional :readonly
     b.use :input, class: 'custom-select', error_class: 'is-invalid', valid_class: 'is-valid'

@@ -12,7 +12,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
   def test_email_field
     actual = @builder.input(:email)
     expected = <<-HTML
-      <div class="form-label-group email required user_email">
+      <div class="form-floating mb-3 email required user_email">
         <input class="form-control string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
         <label class="email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <div class="form-text">We'll never share your email with anyone else.</div>
@@ -24,7 +24,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
   def test_password_field
     actual = @builder.input(:password)
     expected = <<-HTML
-      <div class="form-label-group password optional user_password">
+      <div class="form-floating mb-3 password optional user_password">
         <input class="form-control password optional" id="user_password" name="user[password]" placeholder="Password" type="password"/>
         <label class="password optional" for="user_password">Password</label>
         <div class="form-text">Password input example</div>
@@ -36,7 +36,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
   def test_select_field
     actual = @builder.input(:language, collection: %w(a b))
     expected = <<-HTML
-      <div class="form-label-group select optional user_language">
+      <div class="form-floating mb-3 select optional user_language">
         <select class="custom-select select optional" id="user_language" name="user[language]">
           <option label=" " value=""/>
           <option value="a">a</option>
@@ -52,7 +52,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
   def test_select_multi_field
     actual = @builder.input(:music, collection: %w(a b), input_html: { multiple: true })
     expected = <<-HTML
-      <div class="form-label-group select required user_music">
+      <div class="form-floating mb-3 select required user_music">
         <input name="user[music][]" type="hidden" value=""/>
         <select class="custom-select select required" id="user_music" multiple="multiple" name="user[music][]">
           <option value="a">a</option>
@@ -68,7 +68,7 @@ class FloatingLabelsFormTest < ActionView::TestCase
   def test_textarea_field
     actual = @builder.input(:bio)
     expected = <<-HTML
-      <div class="form-label-group text optional user_bio">
+      <div class="form-floating mb-3 text optional user_bio">
         <textarea class="form-control text optional" id="user_bio" name="user[bio]" placeholder="Tell us your story"></textarea>
         <label class="text optional" for="user_bio">Bio</label>
         <div class="form-text">Textarea input example</div>
