@@ -1,13 +1,11 @@
 # custom component requires input group wrapper
 module InputGroup
   def prepend(wrapper_options = nil)
-    span_tag = content_tag(:span, options[:prepend], class: "input-group-text")
-    template.content_tag(:div, span_tag, class: "input-group-prepend")
+    template.content_tag(:span, options[:prepend], class: "input-group-text")
   end
 
   def append(wrapper_options = nil)
-    span_tag = content_tag(:span, options[:append], class: "input-group-text")
-    template.content_tag(:div, span_tag, class: "input-group-append")
+    template.content_tag(:span, options[:append], class: "input-group-text")
   end
 end
 
