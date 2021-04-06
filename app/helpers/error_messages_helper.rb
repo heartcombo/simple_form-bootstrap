@@ -18,9 +18,11 @@ module ErrorMessagesHelper
     messages = objects.compact.flat_map { |o| o.errors.full_messages }
     unless messages.empty?
       content_tag(:div, class: "alert alert-danger alert-form alert-dismissible") do
-        content_tag(:div, class: "media") do
-          icon_svg("alerts/error.svg", class: "d-flex mr-3 icon icon-3x") +
-          content_tag(:div, class: "media-body") do
+        content_tag(:div, class: "d-flex") do
+          content_tag(:div, class: "flex-shrink-0") do
+            icon_svg("alerts/error.svg", class: "icon icon-3x")
+          end +
+          content_tag(:div, class: "flex-grow-1 ms-3") do
             list_items = messages.map { |msg| content_tag(:li, msg) }
             content_tag(:a, "×", href: "#", class: "close", data: { "bs-dismiss": "alert" }) +
             content_tag(:h6, options[:template_header], class: "text-uppercase text-reset my-1") +
