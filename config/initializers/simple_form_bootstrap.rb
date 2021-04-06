@@ -118,7 +118,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.use :label, class: 'form-label'
     b.use :input, class: 'form-select', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
     b.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
   end
 
@@ -142,7 +142,7 @@ SimpleForm.setup do |config|
     b.optional :step
     b.use :label, class: 'form-label'
     b.use :input, class: 'form-range', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
     b.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
   end
 
@@ -174,7 +174,7 @@ SimpleForm.setup do |config|
       wr.wrapper :form_check_wrapper, tag: 'div', class: 'form-check' do |bb|
         bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
         bb.use :label, class: 'form-check-label'
-        bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+        bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
         bb.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
       end
     end
@@ -214,7 +214,7 @@ SimpleForm.setup do |config|
     b.use :label, class: 'col-sm-3 col-form-label'
     b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
       ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
       ba.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
     end
   end
@@ -226,7 +226,7 @@ SimpleForm.setup do |config|
     b.use :label, class: 'col-sm-3 col-form-label'
     b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
       ba.use :input, class: 'form-select', error_class: 'is-invalid', valid_class: 'is-valid'
-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
       ba.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
     end
   end
@@ -254,7 +254,7 @@ SimpleForm.setup do |config|
     b.use :label, class: 'col-sm-3 col-form-label pt-0'
     b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
       ba.use :input, class: 'form-range', error_class: 'is-invalid', valid_class: 'is-valid'
-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
       ba.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
     end
   end
