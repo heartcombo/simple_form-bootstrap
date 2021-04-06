@@ -11,7 +11,7 @@ class InputGroupFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="mb-3 string required user_name">
         <label class="form-label string required" for="user_name">Name <abbr title="required">*</abbr></label>
-        <div class="input-group">
+        <div class="input-group has-validation">
           <span class="input-group-text">$</span>
           <input class="form-control string required" id="user_name" name="user[name]" placeholder="Your name" type="text"/>
         </div>
@@ -26,7 +26,7 @@ class InputGroupFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="mb-3 string required user_name">
         <label class="form-label string required" for="user_name">Name <abbr title="required">*</abbr></label>
-        <div class="input-group">
+        <div class="input-group has-validation">
           <input class="form-control string required" id="user_name" name="user[name]" placeholder="Your name" type="text"/>
           <span class="input-group-text">.00</span>
         </div>
@@ -41,7 +41,7 @@ class InputGroupFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="mb-3 string required user_name">
         <label class="form-label string required" for="user_name">Name <abbr title="required">*</abbr></label>
-        <div class="input-group">
+        <div class="input-group has-validation">
           <span class="input-group-text">$</span>
           <input class="form-control string required" id="user_name" name="user[name]" placeholder="Your name" type="text"/>
           <span class="input-group-text">.00</span>

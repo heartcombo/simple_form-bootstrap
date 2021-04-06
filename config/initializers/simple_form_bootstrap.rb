@@ -302,12 +302,12 @@ SimpleForm.setup do |config|
     b.optional :min_max
     b.optional :readonly
     b.use :label, class: 'form-label'
-    b.wrapper :input_group_tag, tag: 'div', class: 'input-group' do |ba|
+    b.wrapper :input_group_tag, tag: 'div', class: 'input-group has-validation' do |ba|
       ba.optional :prepend
       ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
       ba.optional :append
+      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
     end
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
     b.use :hint, wrap_with: { tag: 'div', class: 'form-text' }
   end
 

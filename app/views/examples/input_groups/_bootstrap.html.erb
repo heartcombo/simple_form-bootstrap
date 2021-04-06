@@ -3,46 +3,46 @@
 
   <div class="mb-3">
     <label for="exampleInputName" class="form-label">Name</label>
-    <div class="input-group">
+    <div class="input-group has-validation">
       <span class="input-group-text" id="basic-addon1">@</span>
       <input type="text" class="form-control" id="exampleInputName" placeholder="Your name" required>
+      <div class="invalid-feedback">Name can't be blank</div>
+      <div class="valid-feedback">Looks good!</div>
     </div>
-    <div class="invalid-feedback">Name can't be blank</div>
-    <div class="valid-feedback">Looks good!</div>
     <div class="form-text">Text input example</div>
   </div>
 
   <div class="mb-3">
     <label for="exampleInputEmail" class="form-label">Email</label>
-    <div class="input-group">
+    <div class="input-group has-validation">
       <span class="input-group-text" id="basic-addon1">example-</span>
       <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" autocomplete="email" required>
       <span class="input-group-text" id="basic-addon1">@gmail.com</span>
+      <div class="invalid-feedback">Email can't be blank</div>
+      <div class="valid-feedback">Looks good!</div>
     </div>
-    <div class="invalid-feedback">Email can't be blank</div>
-    <div class="valid-feedback">Looks good!</div>
     <div class="form-text">We'll never share your email with anyone else.</div>
   </div>
 
   <div class="mb-3">
     <label for="exampleInputPassword" class="form-label">Password</label>
-    <div class="input-group">
+    <div class="input-group has-validation">
       <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" autocomplete="current-password" required>
       <span class="input-group-text" id="basic-addon1">🙊</span>
+      <div class="invalid-feedback">Please provide a valid value.</div>
+      <div class="valid-feedback">Looks good!</div>
     </div>
-    <div class="invalid-feedback">Please provide a valid value.</div>
-    <div class="valid-feedback">Looks good!</div>
     <div class="form-text">Password input example</div>
   </div>
 
   <div class="mb-3">
     <label for="exampleTextareaBio" class="form-label">Bio</label>
-    <div class="input-group">
+    <div class="input-group has-validation">
       <span class="input-group-text">With textarea</span>
       <textarea class="form-control" id="exampleTextareaBio" rows="2" placeholder="Tell us your story" required></textarea>
+      <div class="invalid-feedback">Please provide a valid value.</div>
+      <div class="valid-feedback">Looks good!</div>
     </div>
-    <div class="invalid-feedback">Please provide a valid value.</div>
-    <div class="valid-feedback">Looks good!</div>
     <div class="form-text">Textarea input example</div>
   </div>
 
