@@ -49,22 +49,6 @@ class FloatingLabelsFormTest < ActionView::TestCase
     assert_xml_equal expected, actual
   end
 
-  def test_select_multi_field
-    actual = @builder.input(:music, collection: %w(a b), input_html: { multiple: true })
-    expected = <<-HTML
-      <div class="form-floating mb-3 select required user_music">
-        <input name="user[music][]" type="hidden" value=""/>
-        <select class="custom-select select required" id="user_music" multiple="multiple" name="user[music][]">
-          <option value="a">a</option>
-          <option value="b">b</option>
-        </select>
-        <label class="select required" for="user_music">Music <abbr title="required">*</abbr></label>
-        <div class="form-text">Collection multiple select example</div>
-      </div>
-    HTML
-    assert_xml_equal expected, actual
-  end
-
   def test_textarea_field
     actual = @builder.input(:bio)
     expected = <<-HTML

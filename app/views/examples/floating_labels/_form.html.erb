@@ -14,8 +14,6 @@
 
   <%= f.input :password %>
 
-  <%= f.input :music, collection: User::MUSIC, input_html: { multiple: true } %>
-
   <%= f.input :language, collection: User::LANGUAGE, prompt: :translate %>
 
   <%= f.input :bio %>
