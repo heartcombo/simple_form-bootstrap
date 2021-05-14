@@ -1,3 +1,8 @@
+/*
+ * Keep in sync with `assets/stylesheets/_bootstrap.scss` from
+ * `bootstrap-rubygem`.
+ */
+
 @import "bootstrap/functions";
 
 $custom-colors: ( "bootstrap": #563d7c, "simpleform": #00617f );
@@ -39,6 +44,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrap/popover";
 @import "bootstrap/carousel";
 @import "bootstrap/spinners";
+@import "bootstrap/offcanvas";
 
 // Helpers
 @import "bootstrap/helpers";
