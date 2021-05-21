@@ -7,9 +7,11 @@
       <%= content_tag :div, class: "alert alert-#{type} alert-flash" do %>
         <div class="container">
 
-          <div class="media">
-            <%= icon_svg("alerts/#{type}.svg", class: "d-flex mr-3 icon icon-3x") %>
-            <div class="media-body">
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <%= icon_svg("alerts/#{type}.svg", class: "icon icon-3x") %>
+            </div>
+            <div class="flex-grow-1 ms-3">
               <%= content_tag(:h6, t(".headline.#{type}"), class: "text-uppercase text-reset my-1") %>
               <% if body.kind_of?(Array) %>
                 <ul class="mb-0">

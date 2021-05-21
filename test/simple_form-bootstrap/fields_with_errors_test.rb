@@ -18,11 +18,11 @@ class FieldsWithErrorsTest < ActionView::TestCase
   def test_required_email_field_with_error
     actual = @builder.input(:email)
     expected = <<-HTML
-      <div class="form-group email required user_email form-group-invalid">
-        <label class="email required" for="user_email">Email <abbr title="required">*</abbr></label>
+      <div class="mb-3 email required user_email">
+        <label class="form-label email required" for="user_email">Email <abbr title="required">*</abbr></label>
         <input aria-invalid="true" class="form-control is-invalid string email required" id="user_email" name="user[email]" placeholder="Enter email" type="email"/>
         <div class="invalid-feedback">Email is invalid</div>
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="form-text">We'll never share your email with anyone else.</div>
       </div>
     HTML
     assert_xml_equal expected, actual

@@ -7,27 +7,3 @@
     }
   }
 }
-
-// optional custom form spacing
-.custom-control-inline {
-  .custom-control-label {
-    &.collection_check_boxes,
-    &.collection_radio_buttons {
-      margin-right: .265625rem;
-    }
-  }
-}
-
-// required custom form radio button fix
-.form-group.radio_buttons {
-  > .custom-control {
-    @extend .custom-radio;
-  }
-}
-
-// required custom form check box fix
-.form-group.check_boxes {
-  > .custom-control {
-    @extend .custom-checkbox;
-  }
-}

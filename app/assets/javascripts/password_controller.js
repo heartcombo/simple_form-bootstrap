@@ -1,8 +1,8 @@
 $(document).ready(function() {
   'use strict';
 
-  var $bootstrap = $('#exampleInputPassword').next('.input-group-append');
-  var $simple_form = $('#user_password').next('.input-group-append');
+  var $bootstrap = $("#exampleInputPassword").next(".input-group-text");
+  var $simple_form = $("#user_password").next(".input-group-text");
 
   var $pw_appends = $bootstrap.add($simple_form);
 
@@ -11,10 +11,10 @@ $(document).ready(function() {
     $(this).toggleClass('active');
     if ( $(this).hasClass('active') ) {
       $(this).prev().prop("type", "text");
-      $(this).find('.input-group-text').html("🙈");
+      $(this).text("🙈");
     } else {
       $(this).prev().prop("type", "password");
-      $(this).find('.input-group-text').html("🙊");
+      $(this).text("🙊");
     }
     $(this).prev().focus();
   });

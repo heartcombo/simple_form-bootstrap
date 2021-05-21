@@ -2,8 +2,8 @@ $(document).ready(function() {
   'use strict';
 
   var $grid_target = $('[data-target="toggle.grid"]');
-  var $button      = $('[data-toggle="button"]');
-  var $buttons     = $('[data-toggle="buttons"]');
+  var $button      = $('[data-bs-toggle="button"]');
+  var $buttons     = $('[data-bs-toggle="buttons"]');
 
   // init
   if ( $grid_target.length >= 2 ) {
@@ -18,9 +18,9 @@ $(document).ready(function() {
 
   // stack / split view
   $buttons.click(function(event) {
-    event.preventDefault();
-    if ( $(event.target).hasClass("active") ) { return }
-    $grid_target.toggleClass("col-md-12");
+    if ( $(event.target).hasClass("btn") ) { return; }
+    var stack = $buttons.find(":checked").attr("id") === "stack";
+    $grid_target.toggleClass("col-md-12", stack);
   });
 
   // swap by press "s"

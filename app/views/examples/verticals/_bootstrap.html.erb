@@ -1,50 +1,50 @@
 <form class="needs-validation" novalidate>
   <div class="alert alert-danger d-none">Please review the problems below:</div>
 
-  <div class="form-group">
-    <label for="exampleInputName">Name</label>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Name</label>
     <input type="text" class="form-control" id="exampleInputName" placeholder="Your name" required>
     <div class="invalid-feedback">Name can't be blank</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Text input example</small>
+    <div class="form-text">Text input example</div>
   </div>
 
-  <div class="form-group">
-    <label for="exampleInputEmail">Email</label>
+  <div class="mb-3">
+    <label for="exampleInputEmail" class="form-label">Email</label>
     <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" autocomplete="email" required>
     <div class="invalid-feedback">Email can't be blank</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="form-text">We'll never share your email with anyone else.</div>
   </div>
 
-  <div class="form-group">
-    <label for="exampleInputPassword">Password</label>
+  <div class="mb-3">
+    <label for="exampleInputPassword" class="form-label">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" autocomplete="current-password" required>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Password input example</small>
+    <div class="form-text">Password input example</div>
   </div>
 
-  <div class="form-group">
-    <label for="exampleCustomFile">Avatar</label>
-    <input type="file" class="form-control-file" id="exampleCustomFile" required>
+  <div class="mb-3">
+    <label for="exampleCustomFile" class="form-label">Avatar</label>
+    <input type="file" class="form-control" id="exampleCustomFile" required>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">File input example</small>
+    <div class="form-text">File input example</div>
   </div>
 
-  <div class="form-group">
-    <label for="exampleTextareaBio">Bio</label>
+  <div class="mb-3">
+    <label for="exampleTextareaBio" class="form-label">Bio</label>
     <textarea class="form-control" id="exampleTextareaBio" rows="2" placeholder="Tell us your story" required></textarea>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Textarea input example</small>
+    <div class="form-text">Textarea input example</div>
   </div>
 
-  <div class="form-group">
-    <label>Birthday</label>
+  <div class="mb-3">
+    <label class="form-label">Birthday</label>
     <div class="d-flex flex-row justify-content-between align-items-center">
-      <select id="exampleInputDateYear" class="form-control mr-1" required>
+      <select id="exampleInputDateYear" class="form-select me-1" required>
         <option></option>
         <option value="2013">2013</option>
         <option value="2014">2014</option>
@@ -59,7 +59,7 @@
         <option value="2023">2023</option>
       </select>
 
-      <select id="exampleInputDateMonth" class="form-control mx-1" required>
+      <select id="exampleInputDateMonth" class="form-select mx-1" required>
         <option></option>
         <option value="1">January</option>
         <option value="2">February</option>
@@ -75,7 +75,7 @@
         <option value="12">December</option>
       </select>
 
-      <select id="exampleInputDateDay" class="form-control ml-1" required>
+      <select id="exampleInputDateDay" class="form-select ms-1" required>
         <option></option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -112,10 +112,10 @@
     </div>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Date multi select example</small>
+    <div class="form-text">Date multi select example</div>
   </div>
 
-  <fieldset class="form-group">
+  <fieldset class="mb-3">
     <legend class="col-form-label pt-0">Color</legend>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="radio" name="exampleInlineRadioColor" id="exampleInlineRadio1" value="option1" required>
@@ -151,10 +151,10 @@
     </div>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Collection as inline radio buttons example</small>
+    <div class="form-text">Collection as inline radio buttons example</div>
   </fieldset>
 
-  <fieldset class="form-group">
+  <fieldset class="mb-3">
     <legend class="col-form-label pt-0">Fruit</legend>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="checkbox" id="exampleInlineCheckbox1" value="option1" required>
@@ -196,12 +196,12 @@
       <input class="form-check-input" type="checkbox" id="exampleInlineCheckbox10" value="option10" required>
       <label class="form-check-label" for="exampleInlineCheckbox10">Pineapple</label>
     </div>
-    <small class="form-text text-muted">Collection as inline check boxes example</small>
+    <div class="form-text">Collection as inline check boxes example</div>
   </fieldset>
 
-  <div class="form-group">
-    <label for="exampleSelectMusic">Music</label>
-    <select multiple="" class="form-control" id="exampleSelectMusic" required>
+  <div class="mb-3">
+    <label for="exampleSelectMusic" class="form-label">Music</label>
+    <select multiple="" class="form-select" id="exampleSelectMusic" required>
       <option value="rock">Rock</option>
       <option value="pop">Pop</option>
       <option value="jazz">Jazz</option>
@@ -214,12 +214,12 @@
     </select>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Collection multiple select example</small>
+    <div class="form-text">Collection multiple select example</div>
   </div>
 
-  <div class="form-group">
-    <label for="exampleSelectLanguage">Language</label>
-    <select class="form-control" id="exampleSelectLanguage" required>
+  <div class="mb-3">
+    <label for="exampleSelectLanguage" class="form-label">Language</label>
+    <select class="form-select" id="exampleSelectLanguage" required>
       <option value="">Select your Language</option>
       <option value="en">English</option>
       <option value="de">German</option>
@@ -228,10 +228,10 @@
     </select>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Collection select example</small>
+    <div class="form-text">Collection select example</div>
   </div>
 
-  <fieldset class="form-group">
+  <fieldset class="mb-3">
     <legend class="col-form-label pt-0">Pill</legend>
     <div class="form-check">
       <input class="form-check-input" type="radio" name="exampleRadiosPill" id="exampleRadiosPillRed" value="red" required>
@@ -247,10 +247,10 @@
     </div>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Collection as radio buttons example</small>
+    <div class="form-text">Collection as radio buttons example</div>
   </fieldset>
 
-  <fieldset class="form-group">
+  <fieldset class="mb-3">
     <legend class="col-form-label pt-0">Choises</legend>
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="exampleCheckbox1" value="option1" required>
@@ -270,29 +270,29 @@
     </div>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Collection as check boxes example</small>
+    <div class="form-text">Collection as check boxes example</div>
   </fieldset>
 
-  <div class="form-group">
-    <label for="exampleInputFriends">Friends</label>
+  <div class="mb-3">
+    <label for="exampleInputFriends" class="form-label">Friends</label>
     <input type="number" class="form-control" id="exampleInputFriends" placeholder="Number of Friends" required>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Integer input example</small>
+    <div class="form-text">Integer input example</div>
   </div>
 
-  <div class="form-group">
-    <label for="exampleRangeMood">Mood</label>
-    <input type="range" class="form-control-range" id="exampleRangeMood" required>
+  <div class="mb-3">
+    <label for="exampleRangeMood" class="form-label">Mood</label>
+    <input type="range" class="form-range" id="exampleRangeMood" required>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Integer range example</small>
+    <div class="form-text">Integer range example</div>
   </div>
 
-  <div class="form-group">
-    <label>Awake</label>
+  <div class="mb-3">
+    <label class="form-label">Awake</label>
     <div class="d-flex flex-row justify-content-between align-items-center">
-      <select id="exampleInputTimeHour" class="form-control mr-1" required>
+      <select id="exampleInputTimeHour" class="form-select me-1" required>
         <option></option>
         <option value="00">00</option>
         <option value="01">01</option>
@@ -320,7 +320,7 @@
         <option value="23">23</option>
       </select>
       :
-      <select id="exampleInputTimeMinute" class="form-control ml-1" required>
+      <select id="exampleInputTimeMinute" class="form-select ms-1" required>
         <option></option>
         <option value="00">00</option>
         <option value="30">30</option>
@@ -328,13 +328,13 @@
     </div>
     <div class="invalid-feedback">Please provide a valid value.</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Time multi select example</small>
+    <div class="form-text">Time multi select example</div>
   </div>
 
-  <div class="form-group">
-    <label>First kiss</label>
+  <div class="mb-3">
+    <label class="form-label">First kiss</label>
     <div class="d-flex flex-row justify-content-between align-items-center">
-      <select id="exampleInputDatetimeYear" class="form-control mr-1" required>
+      <select id="exampleInputDatetimeYear" class="form-select me-1" required>
         <option></option>
         <option value="2013">2013</option>
         <option value="2014">2014</option>
@@ -349,7 +349,7 @@
         <option value="2023">2023</option>
       </select>
 
-      <select id="exampleInputDatetimeMonth" class="form-control mx-1" required>
+      <select id="exampleInputDatetimeMonth" class="form-select mx-1" required>
         <option></option>
         <option value="1">January</option>
         <option value="2">February</option>
@@ -365,7 +365,7 @@
         <option value="12">December</option>
       </select>
 
-      <select id="exampleInputDatetimeDay" class="form-control mx-1" required>
+      <select id="exampleInputDatetimeDay" class="form-select mx-1" required>
         <option></option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -400,7 +400,7 @@
         <option value="31">31</option>
       </select>
       —
-      <select id="exampleInputDatetimeHour" class="form-control mx-1" required>
+      <select id="exampleInputDatetimeHour" class="form-select mx-1" required>
         <option></option>
         <option value="00">00</option>
         <option value="01">01</option>
@@ -428,16 +428,16 @@
         <option value="23">23</option>
       </select>
       :
-      <select id="exampleInputDatetimeMinute" class="form-control ml-1" required>
+      <select id="exampleInputDatetimeMinute" class="form-select me-1" required>
         <option></option>
         <option value="00">00</option>
         <option value="30">30</option>
       </select>
     </div>
-    <small class="form-text text-muted">Datetime multi select example</small>
+    <div class="form-text">Datetime multi select example</div>
   </div>
 
-  <fieldset class="form-group">
+  <fieldset class="mb-3">
     <legend class="col-form-label pt-0">Active</legend>
     <div class="form-check">
       <input class="form-check-input" type="radio" name="exampleBooleanRadio" id="exampleBooleanRadioYes" value="red" required>
@@ -449,16 +449,16 @@
     </div>
     <div class="invalid-feedback">Terms must be accepted</div>
     <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Boolean as radio button example</small>
+    <div class="form-text">Boolean as radio button example</div>
   </fieldset>
 
-  <fieldset class="form-group">
+  <fieldset class="mb-3">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="exampleCheckTerms" required>
       <label class="form-check-label" for="exampleCheckTerms">Terms</label>
       <div class="invalid-feedback">Terms must be accepted</div>
       <div class="valid-feedback">Looks good!</div>
-      <small class="form-text text-muted">Boolean as check box example</small>
+      <div class="form-text">Boolean as check box example</div>
     </div>
   </fieldset>
 
