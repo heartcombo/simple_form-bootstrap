@@ -7,9 +7,9 @@ and [Bootstrap](http://getbootstrap.com/).
 
 ## Preview
 
-An example application is running:
+An example application running the **bootstrap-v4** branch:
 
-:tv: https://simple-form-bootstrap.herokuapp.com/
+:tv: https://simple-form-bootstrap-v4.herokuapp.com/
 
 ## License
 
