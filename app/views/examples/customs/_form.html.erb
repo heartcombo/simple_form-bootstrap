@@ -1,0 +1,13 @@
+<%= simple_form_for @user, url: examples_custom_path do |f| %>
+
+  <%= f.error_notification %>
+
+  <%= render partial: "shared/form_unused_as_hidden", locals: {
+    f: f, fields: [:name, :email, :password, :bio, :avatar, :birthday, :color, :fruit, :music, :language, :pill, :choises, :active, :friends, :mood, :awake, :first_kiss]
+  } %>
+
+  <%= f.input :terms, wrapper: :custom_boolean_switch %>
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>

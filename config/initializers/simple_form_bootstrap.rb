@@ -291,6 +291,21 @@ SimpleForm.setup do |config|
   end
 
 
+  # bootstrap custom forms
+  #
+  # custom input switch for boolean
+  config.wrappers :custom_boolean_switch, class: 'mb-3' do |b|
+    b.use :html5
+    b.optional :readonly
+    b.wrapper :form_check_wrapper, tag: 'div', class: 'form-check form-switch' do |bb|
+      bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+      bb.use :label, class: 'form-check-label'
+      bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+      bb.use :hint, wrap_with: { class: 'form-text' }
+    end
+  end
+
+
   # Input Group - custom component
   # see example app and config at https://github.com/heartcombo/simple_form-bootstrap
   config.wrappers :input_group, class: 'mb-3' do |b|
