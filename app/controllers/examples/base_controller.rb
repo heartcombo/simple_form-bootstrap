@@ -1,5 +1,5 @@
 class Examples::BaseController < ApplicationController
-  TYPES = [:vertical, :horizontal, :inline, :input_group, :floating_label]
+  TYPES = [:vertical, :horizontal, :inline, :input_group, :floating_label, :custom]
 
   private
 

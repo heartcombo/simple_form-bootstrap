@@ -53,6 +53,10 @@ en:
               blacklist: Rock is forbidden.
   examples:
     index:
+      custom:
+        link: Custom Form
+        subtitle: Reference Examples
+        title: Custom Form
       floating_label:
         link: Floating Labels Form
         subtitle: Reference Examples
