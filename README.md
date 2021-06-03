@@ -1,6 +1,6 @@
 # Simple Form and Bootstrap
 
-[![Build Status](https://api.travis-ci.org/heartcombo/simple_form-bootstrap.svg?branch=master)](https://travis-ci.org/github/heartcombo/simple_form-bootstrap)
+[![Build Status](https://github.com/heartcombo/simple_form-bootstrap/actions/workflows/test.yml/badge.svg?branch=bootstrap-v4)](https://github.com/heartcombo/simple_form-bootstrap/actions)
 
 This is a example application using [Simple Form](https://github.com/heartcombo/simple_form)
 and [Bootstrap](http://getbootstrap.com/).
