@@ -200,6 +200,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    stimulus-rails (0.6.0)
+      rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
     timeliness (0.4.4)
@@ -251,6 +253,7 @@ DEPENDENCIES
   simple_form (~> 5.1)
   spring
   sqlite3 (~> 1.4)
+  stimulus-rails
   tzinfo-data
   validates_timeliness (~> 4.1)
   web-console (>= 4.1.0)
