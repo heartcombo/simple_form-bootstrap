@@ -94,6 +94,8 @@ GEM
       activesupport (>= 5.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    importmap-rails (0.7.6)
+      rails (>= 6.0.0)
     inline_svg (1.7.2)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
@@ -231,6 +233,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   diffy
   equivalent-xml
+  importmap-rails
   inline_svg (~> 1.7)
   jbuilder (~> 2.11)
   jquery-rails
