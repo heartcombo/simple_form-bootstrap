@@ -10,7 +10,7 @@
     <%= csp_meta_tag %>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <%= javascript_importmap_tags %>
+    <%= javascript_importmap_tags "app" %>
   </head>
   <%= content_tag :body, data: { action: action_name, controller: controller_name, path: request.path } do %>
     <%= render "header" %>
