@@ -26,13 +26,16 @@
 
   <div class="mb-3">
     <label for="exampleInputPassword" class="form-label">Password</label>
-    <div class="input-group has-validation">
-      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" autocomplete="current-password" required>
-      <span class="input-group-text">🙊</span>
+    <div class="input-group has-validation" data-controller="password-visibility" data-password-visibility-hidden-class="d-none">
+      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" data-password-visibility-target="input" autocomplete="current-password" required>
+      <a href="" class="input-group-text text-decoration-none" data-action="password-visibility#toggle">
+        <span data-password-visibility-target="icon">🙈</span>
+        <span data-password-visibility-target="icon" class="d-none">🙊</span>
+      </a>
       <div class="invalid-feedback">Please provide a valid value.</div>
       <div class="valid-feedback">Looks good!</div>
     </div>
-    <div class="form-text">Password input example</div>
+    <div class="form-text">Password input example modified markup with <a href="https://stimulus-components.netlify.app/docs/stimulus-password-visibility/">stimulus-password-visibility</a></div>
   </div>
 
   <div class="mb-3">
