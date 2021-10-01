@@ -15,6 +15,5 @@
 //= require jquery3
 
 // custom
-//= require bootstrap_static_form_validation
 //= require fill_controller
 //= require toggle_controller
