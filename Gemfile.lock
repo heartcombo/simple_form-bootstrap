@@ -94,6 +94,8 @@ GEM
       activesupport (>= 5.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    importmap-rails (0.7.6)
+      rails (>= 6.0.0)
     inline_svg (1.7.2)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
@@ -198,12 +200,11 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    stimulus-rails (0.6.0)
+      rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
     timeliness (0.4.4)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     validates_timeliness (4.1.1)
@@ -234,6 +235,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   diffy
   equivalent-xml
+  importmap-rails
   inline_svg (~> 1.7)
   jbuilder (~> 2.11)
   jquery-rails
@@ -251,7 +253,7 @@ DEPENDENCIES
   simple_form (~> 5.1)
   spring
   sqlite3 (~> 1.4)
-  turbolinks (~> 5)
+  stimulus-rails
   tzinfo-data
   validates_timeliness (~> 4.1)
   web-console (>= 4.1.0)
