@@ -15,5 +15,4 @@
 //= require jquery3
 
 // custom
-//= require fill_controller
 //= require toggle_controller
