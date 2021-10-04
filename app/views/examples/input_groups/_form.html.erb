@@ -17,8 +17,8 @@
   <%# https://stimulus-components.netlify.app/docs/stimulus-password-visibility/ %>
   <div data-controller="password-visibility" data-password-visibility-hidden-class="d-none">
     <% toggle_visibility = content_tag(:a, href: "", class: "pe-auto text-decoration-none", data: { action: "password-visibility#toggle" }) do
-      content_tag(:span, "🙊", data: { password_visibility_target: "icon" }) +
-      content_tag(:span, "🙈", class: "d-none", data: { password_visibility_target: "icon" })
+      content_tag(:span, "🙈", data: { password_visibility_target: "icon" }) +
+      content_tag(:span, "🙊", class: "d-none", data: { password_visibility_target: "icon" })
     end %>
 
     <%= f.input :password, append: toggle_visibility, input_html: { data: { password_visibility_target: "input" }} %>

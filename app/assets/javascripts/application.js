@@ -13,6 +13,3 @@
 //= require rails-ujs
 
 //= require jquery3
-
-// custom
-//= require toggle_controller
