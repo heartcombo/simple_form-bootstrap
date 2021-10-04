@@ -5,16 +5,16 @@
     </ol>
 
     <div>
-      <button type="button" class="btn btn-sm btn-outline-secondary me-2 d-none" data-bs-toggle="tooltip" data-bs-placement="bottom" title="compare by clicking fast" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
+      <button type="button" class="btn btn-sm btn-outline-secondary me-2 d-none" data-toggle-target="buttonSwap" data-action="click->toggle#swapCard" data-bs-toggle="tooltip" data-bs-placement="bottom" title="compare by clicking fast" aria-pressed="false" autocomplete="off">
         Swap
       </button>
 
-      <div class="btn-group d-none" role="group" data-bs-toggle="buttons">
+      <div class="btn-group d-none" role="group" data-toggle-target="buttonGroup">
         <input type="radio" class="btn-check" name="view" id="stack" autocomplete="off">
-        <label class="btn btn-sm btn-outline-secondary" for="stack">Stack</label>
+        <label class="btn btn-sm btn-outline-secondary" data-action="click->toggle#stackCard" for="stack">Stack</label>
 
         <input type="radio" class="btn-check" name="view" id="split" autocomplete="off" checked>
-        <label class="btn btn-sm btn-outline-secondary" for="split">Split</label>
+        <label class="btn btn-sm btn-outline-secondary" data-action="click->toggle#splitCard" for="split">Split</label>
       </div>
     </div>
   </div>
