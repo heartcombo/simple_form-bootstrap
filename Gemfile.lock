@@ -126,7 +126,7 @@ GEM
     pg (1.2.3)
     popper_js (2.9.3)
     public_suffix (4.0.6)
-    puma (5.3.1)
+    puma (5.5.1)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -238,7 +238,7 @@ DEPENDENCIES
   kramdown-parser-gfm (~> 1.1)
   listen (~> 3.4)
   pg
-  puma (~> 5.3)
+  puma (~> 5.5)
   rack-mini-profiler (~> 2.3)
   rails (~> 6.1.4, >= 6.1.4.1)
   rails-i18n (~> 6.0)
