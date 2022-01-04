@@ -23,7 +23,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <fieldset class="mb-3 radio_buttons required user_color">
         <legend class="col-form-label pt-0">Color <abbr title="required">*</abbr></legend>
-        <input name="user[color]" type="hidden" value=""/>
+        <input autocomplete="off" name="user[color]" type="hidden" value=""/>
         <div class="form-check form-check-inline">
           <input class="form-check-input radio_buttons required" id="user_color_a" name="user[color]" type="radio" value="a"/>
           <label class="form-check-label collection_radio_buttons" for="user_color_a">a</label>
@@ -43,7 +43,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <fieldset class="mb-3 radio_buttons optional user_pill">
         <legend class="col-form-label pt-0">Pill</legend>
-        <input name="user[pill]" type="hidden" value=""/>
+        <input autocomplete="off" name="user[pill]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input radio_buttons optional" id="user_pill_a" name="user[pill]" type="radio" value="a"/>
           <label class="form-check-label collection_radio_buttons" for="user_pill_a">a</label>
@@ -62,7 +62,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:pill, as: :radio_buttons, collection: [:a, :b], legend_tag: false)
     expected = <<-HTML
       <fieldset class="mb-3 radio_buttons optional user_pill">
-        <input name="user[pill]" type="hidden" value=""/>
+        <input autocomplete="off" name="user[pill]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input radio_buttons optional" id="user_pill_a" name="user[pill]" type="radio" value="a"/>
           <label class="form-check-label collection_radio_buttons" for="user_pill_a">a</label>
@@ -82,7 +82,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <fieldset class="mb-3 check_boxes required user_fruit">
         <legend class="col-form-label pt-0">Fruit <abbr title="required">*</abbr></legend>
-        <input name="user[fruit][]" type="hidden" value=""/>
+        <input autocomplete="off" name="user[fruit][]" type="hidden" value=""/>
         <div class="form-check form-check-inline">
           <input class="form-check-input check_boxes required" id="user_fruit_a" name="user[fruit][]" type="checkbox" value="a"/>
           <label class="form-check-label collection_check_boxes" for="user_fruit_a">a</label>
@@ -102,7 +102,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <fieldset class="mb-3 check_boxes required user_choises">
         <legend class="col-form-label pt-0">Choises <abbr title="required">*</abbr></legend>
-        <input name="user[choises][]" type="hidden" value=""/>
+        <input autocomplete="off" name="user[choises][]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input check_boxes required" id="user_choises_a" name="user[choises][]" type="checkbox" value="a"/>
           <label class="form-check-label collection_check_boxes" for="user_choises_a">a</label>
@@ -121,7 +121,7 @@ class VerticalFormTest < ActionView::TestCase
     actual = @builder.input(:choises, as: :check_boxes, collection: %w(a b), legend_tag: false)
     expected = <<-HTML
       <fieldset class="mb-3 check_boxes required user_choises">
-        <input name="user[choises][]" type="hidden" value=""/>
+        <input autocomplete="off" name="user[choises][]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input check_boxes required" id="user_choises_a" name="user[choises][]" type="checkbox" value="a"/>
           <label class="form-check-label collection_check_boxes" for="user_choises_a">a</label>
@@ -141,7 +141,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <fieldset class="mb-3 radio_buttons required user_active">
         <legend class="col-form-label pt-0">Active <abbr title="required">*</abbr></legend>
-        <input name="user[active]" type="hidden" value=""/>
+        <input autocomplete="off" name="user[active]" type="hidden" value=""/>
         <div class="form-check">
           <input class="form-check-input radio_buttons required" id="user_active_true" name="user[active]" type="radio" value="true"/>
           <label class="form-check-label collection_radio_buttons" for="user_active_true">Yes</label>
@@ -161,7 +161,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <fieldset class="mb-3 boolean optional user_terms">
         <div class="form-check">
-          <input name="user[terms]" type="hidden" value="0"/>
+          <input autocomplete="off" name="user[terms]" type="hidden" value="0"/>
           <input class="form-check-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
           <label class="form-check-label boolean optional" for="user_terms">Terms</label>
           <div class="form-text">Boolean as check box example</div>
@@ -240,7 +240,7 @@ class VerticalFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="mb-3 select required user_music">
         <label class="form-label select required" for="user_music">Music <abbr title="required">*</abbr></label>
-        <input name="user[music][]" type="hidden" value=""/>
+        <input autocomplete="off" name="user[music][]" type="hidden" value=""/>
         <select class="form-select select required" id="user_music" multiple="multiple" name="user[music][]">
           <option value="a">a</option>
           <option value="b">b</option>

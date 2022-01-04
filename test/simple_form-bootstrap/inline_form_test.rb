@@ -33,7 +33,7 @@ class InlineFormTest < ActionView::TestCase
     expected = <<-HTML
       <div class="col-12 boolean optional user_terms">
         <div class="form-check">
-          <input name="user[terms]" type="hidden" value="0"/>
+          <input autocomplete="off" name="user[terms]" type="hidden" value="0"/>
           <input class="form-check-input boolean optional" id="user_terms" name="user[terms]" type="checkbox" value="1"/>
           <label class="form-check-label boolean optional" for="user_terms">Terms</label>
         </div>
