@@ -80,7 +80,8 @@ gem 'kramdown-parser-gfm', '~> 1.1'
 gem 'rails-i18n', '~> 7.0'
 gem 'rouge', '~> 3.26'
 gem 'simple_form', '~> 5.1'
-gem 'validates_timeliness', '~> 4.1'
+# gem 'validates_timeliness', '~> 4.1'
+gem 'validates_timeliness', github: 'mitsuru/validates_timeliness', branch: 'rails7'
 
 group :test, :development do
   gem 'diffy'

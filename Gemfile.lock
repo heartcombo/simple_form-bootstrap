@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/mitsuru/validates_timeliness.git
+  revision: e47b1f58f5cfceed73b01ec7a1eef77c44c4a9c2
+  branch: rails7
+  specs:
+    validates_timeliness (6.0.0.beta2)
+      activemodel (>= 6.0.0, < 7.1)
+      timeliness (>= 0.3.10, < 1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -199,8 +208,6 @@ GEM
     timeliness (0.4.4)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    validates_timeliness (4.1.1)
-      timeliness (>= 0.3.10, < 1)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -243,7 +250,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   stimulus-rails
   tzinfo-data
-  validates_timeliness (~> 4.1)
+  validates_timeliness!
   web-console
   webdrivers
 
