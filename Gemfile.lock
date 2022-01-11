@@ -196,11 +196,8 @@ GEM
       rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
-    timeliness (0.4.4)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    validates_timeliness (4.1.1)
-      timeliness (>= 0.3.10, < 1)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -243,7 +240,6 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   stimulus-rails
   tzinfo-data
-  validates_timeliness (~> 4.1)
   web-console
   webdrivers
 
