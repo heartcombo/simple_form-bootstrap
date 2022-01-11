@@ -78,8 +78,9 @@ GEM
       popper_js (>= 2.9.3, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
-    capybara (3.35.3)
+    capybara (3.36.0)
       addressable
+      matrix
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
       rack (>= 1.6.0)
@@ -124,6 +125,7 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
+    matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.7.1)
@@ -187,7 +189,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
-    regexp_parser (2.0.3)
+    regexp_parser (2.2.0)
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
