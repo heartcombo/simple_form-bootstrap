@@ -43,7 +43,7 @@ class User < ApplicationRecord
   validates :password,    length: { within: 8..40 }
   validates :avatar,      presence: true
   validates :bio,         length: { within: 100..900 }
-  validates :birthday,    presence: true, timeliness: { type: :date, :after => lambda { Date.today } }
+  validates :birthday,    presence: true, comparison: { greater_than: ->(_) { Date.today } }
   validates :color,       presence: true
   validates :fruit,       presence: true, exclusion_array: { in: User::FRUIT.first, presence: true, deny_blank: true }
   validates :music,       presence: true, exclusion_array: { in: User::MUSIC.first, presence: true, deny_blank: true }
@@ -53,7 +53,7 @@ class User < ApplicationRecord
   validates :active,      presence: true, acceptance: true
   validates :friends,     numericality: { only_integer: true, greater_than: 1, less_than: 10_000 }
   validates :mood,        numericality: { only_integer: true, greater_than: 50, less_than_or_equal_to: 100 }
-  validates :awake,       presence: true, timeliness: { type: :time, before: '12:00' }
-  validates :first_kiss,  presence: true, timeliness: { type: :datetime, after: '20:00' }
+  validates :awake,       presence: true, comparison: { less_than: ->(_) { Date.today.beginning_of_day + 12.hours } }
+  validates :first_kiss,  presence: true, comparison: { greater_than: ->(_) { Date.today.beginning_of_day + 20.hours } }
   validates :terms,       acceptance: true
 end
