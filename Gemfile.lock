@@ -247,7 +247,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.0)
+    sqlite3 (2.7.4)
       mini_portile2 (~> 2.8.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
@@ -300,14 +300,14 @@ DEPENDENCIES
   selenium-webdriver
   simple_form (~> 5.1)
   sprockets-rails
-  sqlite3 (~> 1.4)
+  sqlite3
   stimulus-rails
   tzinfo-data
   web-console
   webdrivers
 
 RUBY VERSION
-   ruby 3.2.9p265
+   ruby 3.4.7p58
 
 BUNDLED WITH
    2.4.6

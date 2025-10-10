@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.9"
+ruby "3.4.7"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.0"
@@ -84,7 +84,7 @@ gem 'simple_form', '~> 5.1'
 group :test, :development do
   gem 'diffy'
   gem 'equivalent-xml'
-  gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3'
 end
 
 group :production do
