@@ -126,9 +126,6 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     json (2.13.2)
     kramdown (2.4.0)
       rexml
@@ -291,7 +288,6 @@ DEPENDENCIES
   equivalent-xml
   importmap-rails
   inline_svg (~> 1.7)
-  jbuilder
   kramdown (~> 2.3)
   kramdown-parser-gfm (~> 1.1)
   pg
