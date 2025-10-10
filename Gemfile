@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.4.7"
 
-gem "rails", "~> 7.2.0"
+gem "rails", "~> 8.0.0"
 gem "sprockets-rails"
 gem "puma"
 gem "importmap-rails"
@@ -32,7 +32,7 @@ gem 'bootstrap', '~> 5.1'
 gem 'inline_svg', '~> 1.7'
 gem 'kramdown', '~> 2.3'
 gem 'kramdown-parser-gfm', '~> 1.1'
-gem 'rails-i18n', '~> 7.0'
+gem 'rails-i18n'
 gem 'rouge', '~> 3.26'
 gem 'simple_form', '~> 5.1'
 
