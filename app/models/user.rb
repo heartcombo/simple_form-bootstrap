@@ -26,9 +26,9 @@
 #
 
 class User < ApplicationRecord
-  serialize :fruit, JSON
-  serialize :music, JSON
-  serialize :choises, JSON
+  serialize :fruit, coder: JSON
+  serialize :music, coder: JSON
+  serialize :choises, coder: JSON
 
   AVATAR = Mime::LOOKUP.keys.keep_if{ |v| v =~ /image/ }
   COLOR = [:red, :pink, :violet, :indigo, :blue, :teal, :green, :yellow]
