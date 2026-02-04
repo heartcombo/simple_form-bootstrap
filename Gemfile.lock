@@ -150,6 +150,7 @@ GEM
     mini_portile2 (2.8.9)
     minitest (6.0.1)
       prism (~> 1.5)
+    minitest-mock (5.27.0)
     msgpack (1.8.0)
     net-imap (0.6.2)
       date
@@ -296,6 +297,7 @@ DEPENDENCIES
   inline_svg (~> 1.7)
   kramdown (~> 2.3)
   kramdown-parser-gfm (~> 1.1)
+  minitest-mock
   pg
   puma
   rails (~> 8.1.0)
