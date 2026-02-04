@@ -14,6 +14,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "minitest-mock"
 
+gem 'sqlite3'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -40,9 +42,4 @@ gem 'simple_form', '~> 5.1'
 group :test, :development do
   gem 'diffy'
   gem 'equivalent-xml'
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
 end

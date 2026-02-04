@@ -165,7 +165,6 @@ GEM
     nokogiri (1.19.0)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    pg (1.6.3)
     popper_js (2.11.8)
     pp (0.6.3)
       prettyprint
@@ -298,7 +297,6 @@ DEPENDENCIES
   kramdown (~> 2.3)
   kramdown-parser-gfm (~> 1.1)
   minitest-mock
-  pg
   puma
   rails (~> 8.1.0)
   rails-i18n
