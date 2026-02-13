@@ -41,6 +41,10 @@ gem 'rails-i18n'
 gem 'rouge', '~> 3.26'
 gem 'simple_form', '~> 5.1'
 
+group :production do
+  gem 'mini_racer'
+end
+
 group :test, :development do
   gem 'diffy'
   gem 'equivalent-xml'
