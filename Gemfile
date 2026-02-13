@@ -15,8 +15,7 @@ gem "stimulus-rails"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem "minitest-mock"
-
-gem 'sqlite3'
+gem "sqlite3"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -33,19 +32,16 @@ group :test do
 end
 
 # Custom
-gem 'bootstrap', '~> 5.1'
-gem 'inline_svg', '~> 1.7'
-gem 'kramdown', '~> 2.3'
-gem 'kramdown-parser-gfm', '~> 1.1'
-gem 'rails-i18n'
-gem 'rouge', '~> 3.26'
-gem 'simple_form', '~> 5.1'
-
-group :production do
-  gem 'mini_racer'
-end
+gem "bootstrap", "~> 5.1"
+gem "sassc-rails", "~> 2.1"
+gem "inline_svg", "~> 1.7"
+gem "kramdown", "~> 2.3"
+gem "kramdown-parser-gfm", "~> 1.1"
+gem "rails-i18n"
+gem "rouge", "~> 3.26"
+gem "simple_form", "~> 5.1"
 
 group :test, :development do
-  gem 'diffy'
-  gem 'equivalent-xml'
+  gem "diffy"
+  gem "equivalent-xml"
 end
