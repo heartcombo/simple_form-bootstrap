@@ -10,28 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2018_02_19_221860) do
+ActiveRecord::Schema[8.1].define(version: 2018_02_19_221860) do
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password"
+    t.boolean "active"
     t.string "avatar"
+    t.time "awake"
     t.text "bio"
     t.date "birthday"
-    t.string "color"
-    t.string "fruit"
-    t.string "music"
-    t.string "pill"
     t.string "choises"
-    t.string "language"
-    t.integer "friends"
-    t.integer "mood"
-    t.time "awake"
-    t.datetime "first_kiss", precision: nil
-    t.boolean "active"
-    t.boolean "terms"
+    t.string "color"
     t.datetime "created_at", precision: nil, null: false
+    t.string "email"
+    t.datetime "first_kiss", precision: nil
+    t.integer "friends"
+    t.string "fruit"
+    t.string "language"
+    t.integer "mood"
+    t.string "music"
+    t.string "name"
+    t.string "password"
+    t.string "pill"
+    t.boolean "terms"
     t.datetime "updated_at", precision: nil, null: false
   end
-
 end
